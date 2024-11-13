@@ -1,0 +1,4661 @@
+===============================================================================
+Module : uvm_pkg
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+  0.00 --     --     --     --     --       0.00 
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/uvm_pkg.sv
+
+Module self-instances :
+
+SCORE LINE COND TOGGLE FSM BRANCH ASSERT NAME 
+
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : uvm_pkg
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       2     0         0.00    0                 0.00    
+Cover properties 0     0                 0                         
+Cover sequences  0     0                 0                         
+Total            2     0         0.00    0                 0.00    
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name                                            Attempts Real Successes Failures Incomplete 
+\uvm_reg_map::do_read .unnamed$$_0.unnamed$$_1  0        0              0        0          
+\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1 0        0              0        0          
+
+
+===============================================================================
+Module : modem_if
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 11.11 --     --      11.11 --     --     --     
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../agents/modem_agent/modem_if.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME          
+ 11.11 --     --      11.11 --     --     --     uart_tb.MODEM 
+
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : modem_if
+                Total Covered Percent 
+Totals          9     1       11.11   
+Total Bits      18    2       11.11   
+Total Bits 0->1 9     1       11.11   
+Total Bits 1->0 9     1       11.11   
+
+                             
+Signals          9  1 11.11  
+Signal Bits      18 2 11.11  
+Signal Bits 0->1 9  1 11.11  
+Signal Bits 1->0 9  1 11.11  
+
+Signal Details
+     Toggle Toggle 1->0 Toggle 0->1 
+nRTS No     No          No          
+nCTS No     No          No          
+nDTR No     No          No          
+nDSR No     No          No          
+nRI  No     No          No          
+nDCD No     No          No          
+OUT1 No     No          No          
+OUT2 No     No          No          
+CLK  Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.MODEM
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 11.11 --     --      11.11 --     --     --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 11.11 --     --      11.11 --     --     --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME     
+ 11.11 --     --      11.11 --     --     --     modem_if 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 87.50 100.00 --      75.00 --     --     --     uart_tb 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : vcs_paramclassrepository
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 20.00 --     --     --     --     --      20.00 
+
+Module self-instances :
+
+SCORE LINE COND TOGGLE FSM BRANCH ASSERT NAME 
+
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : vcs_paramclassrepository
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       10    2         20.00   2                 20.00   
+Cover properties 0     0                 0                         
+Cover sequences  0     0                 0                         
+Total            10    2         20.00   2                 20.00   
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name                                                  Attempts Real Successes Failures Incomplete 
+\baud_rate_test_seq::body .unnamed$$_1                0        0              0        0          
+\modem_basic_sequence::body .unnamed$$_1              0        0              0        0          
+\rx_errors_int_vseq::body .unnamed$$_1                0        0              0        0          
+\rx_errors_int_vseq::body .unnamed$$_3                0        0              0        0          
+\uart_host_mcr_seq::body .unnamed$$_0                 0        0              0        0          
+\uart_rx_seq::body .unnamed$$_1                       0        0              0        0          
+\uvm_component_name_check_visitor::visit .unnamed$$_0 138      138            0        0          
+\word_format_int_vseq::body .unnamed$$_1              0        0              0        0          
+\word_format_int_vseq::body .unnamed$$_3              0        0              0        0          
+\word_format_poll_vseq::body .unnamed$$_1             2        2              0        0          
+
+
+===============================================================================
+Module : apb_if
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 59.32 --     --      18.64 --     --     100.00 
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../agents/apb_agent/apb_if.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME        
+ 59.32 --     --      18.64 --     --     100.00 uart_tb.APB 
+
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : apb_if
+                Total Covered Percent 
+Totals          10    4       40.00   
+Total Bits      236   44      18.64   
+Total Bits 0->1 118   23      19.49   
+Total Bits 1->0 118   21      17.80   
+
+                          
+Ports          2 1 50.00  
+Port Bits      4 3 75.00  
+Port Bits 0->1 2 2 100.00 
+Port Bits 1->0 2 1 50.00  
+
+                               
+Signals          8   3  37.50  
+Signal Bits      232 41 17.67  
+Signal Bits 0->1 116 21 18.10  
+Signal Bits 1->0 116 20 17.24  
+
+Port Details
+        Toggle Toggle 1->0 Toggle 0->1 Direction 
+PCLK    Yes    Yes         Yes         INPUT     
+PRESETn No     No          Yes         INPUT     
+
+Signal Details
+             Toggle Toggle 1->0 Toggle 0->1 
+PADDR[1:0]   No     No          No          
+PADDR[5:2]   Yes    Yes         Yes         
+PADDR[31:6]  No     No          No          
+PRDATA[1:0]  Yes    Yes         Yes         
+PRDATA[4:2]  No     No          No          
+PRDATA[7:5]  Yes    Yes         Yes         
+PRDATA[31:8] No     No          No          
+PWDATA[2:0]  Yes    Yes         Yes         
+PWDATA[3]    No     No          Yes         
+PWDATA[7:4]  Yes    Yes         Yes         
+PWDATA[31:8] No     No          No          
+PSEL[0]      Yes    Yes         Yes         
+PSEL[15:1]   No     No          No          
+PENABLE      Yes    Yes         Yes         
+PWRITE       Yes    Yes         Yes         
+PREADY       Yes    Yes         Yes         
+PSLVERR      No     No          No          
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : apb_if
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       1     1         100.00  1                 100.00  
+Cover properties 1     1         100.00  1                 100.00  
+Cover sequences  0     0                 0                         
+Total            2     2         100.00  2                 100.00  
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name     Attempts Real Successes Failures Incomplete 
+CHK_PSEL 15313    15313          0        0          
+
+
+-------------------------------------------------------------------------------
+
+Cover Directives for Properties: Details
+
+Name       Attempts Matches Incomplete 
+COVER_PSEL 15313    15313   0          
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.APB
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 59.32 --     --      18.64 --     --     100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 59.32 --     --      18.64 --     --     100.00 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME   
+ 59.32 --     --      18.64 --     --     100.00 apb_if 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 87.50 100.00 --      75.00 --     --     --     uart_tb 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : interrupt_if
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 66.67 --     --      66.67 --     --     --     
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../uvm_tb/tb/interrupt_if.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME        
+ 66.67 --     --      66.67 --     --     --     uart_tb.IRQ 
+
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : interrupt_if
+                Total Covered Percent 
+Totals          3     2       66.67   
+Total Bits      6     4       66.67   
+Total Bits 0->1 3     2       66.67   
+Total Bits 1->0 3     2       66.67   
+
+                            
+Signals          3 2 66.67  
+Signal Bits      6 4 66.67  
+Signal Bits 0->1 3 2 66.67  
+Signal Bits 1->0 3 2 66.67  
+
+Signal Details
+         Toggle Toggle 1->0 Toggle 0->1 
+IRQ      No     No          No          
+CLK      Yes    Yes         Yes         
+baud_out Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.IRQ
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 66.67 --     --      66.67 --     --     --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 66.67 --     --      66.67 --     --     --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME         
+ 66.67 --     --      66.67 --     --     --     interrupt_if 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 87.50 100.00 --      75.00 --     --     --     uart_tb 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : apb_monitor
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 73.79 100.00 --      21.36 --     --     100.00 
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../protocol_monitor/apb_monitor.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                         
+ 73.79 100.00 --      21.36 --     --     100.00 uart_tb.APB_PROTOCOL_MONITOR 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : apb_monitor
+
+             Line No.   Total   Covered  Percent
+TOTAL                        2        2   100.00
+INITIAL           144        2        2   100.00
+
+143                     initial begin
+144        1/1            foreach(APB_protocol_cg[i]) begin
+145        1/1              APB_protocol_cg[i] = new();
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : apb_monitor
+                Total Covered Percent 
+Totals          10    5       50.00   
+Total Bits      206   44      21.36   
+Total Bits 0->1 103   23      22.33   
+Total Bits 1->0 103   21      20.39   
+
+                             
+Ports          10  5  50.00  
+Port Bits      206 44 21.36  
+Port Bits 0->1 103 23 22.33  
+Port Bits 1->0 103 21 20.39  
+
+Port Details
+             Toggle Toggle 1->0 Toggle 0->1 Direction 
+PCLK         Yes    Yes         Yes         INPUT     
+PRESETn      No     No          Yes         INPUT     
+PADDR[1:0]   No     No          No          INPUT     
+PADDR[5:2]   Yes    Yes         Yes         INPUT     
+PADDR[31:6]  No     No          No          INPUT     
+PWDATA[2:0]  Yes    Yes         Yes         INPUT     
+PWDATA[3]    No     No          Yes         INPUT     
+PWDATA[7:4]  Yes    Yes         Yes         INPUT     
+PWDATA[31:8] No     No          No          INPUT     
+PRDATA[1:0]  Yes    Yes         Yes         INPUT     
+PRDATA[4:2]  No     No          No          INPUT     
+PRDATA[7:5]  Yes    Yes         Yes         INPUT     
+PRDATA[31:8] No     No          No          INPUT     
+PSEL         Yes    Yes         Yes         INPUT     
+PWRITE       Yes    Yes         Yes         INPUT     
+PENABLE      Yes    Yes         Yes         INPUT     
+PREADY       Yes    Yes         Yes         INPUT     
+PSLVERR      No     No          No          INPUT     
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : apb_monitor
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       15    15        100.00  15                100.00  
+Cover properties 0     0                 0                         
+Cover sequences  1     1         100.00  1                 100.00  
+Total            16    16        100.00  16                100.00  
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name             Attempts Real Successes Failures Incomplete 
+PADDR_STABLE     15313    1              0        0          
+PADDR_VALID      15313    309            0        0          
+PENABLE_DEASSERT 15313    62             0        0          
+PENABLE_VALID    15313    309            0        0          
+PREADY_VALID     15313    62             0        0          
+PSEL_2_PENABLE   15313    1              0        0          
+PSEL_ONLY_ONE    15313    15313          0        0          
+PSEL_STABLE      15313    1              0        0          
+PSEL_VALID       15313    15313          0        0          
+PSLVERR_VALID    15313    62             0        0          
+PWDATA_STABLE    15313    1              0        0          
+PWDATA_VALID     15313    59             0        0          
+PWRITE_STABLE    15313    1              0        0          
+PWRITE_VALID     15313    309            0        0          
+RESET_VALID      15313    15313          0        0          
+
+
+-------------------------------------------------------------------------------
+
+Cover Directives for Sequences: Details
+
+Name        Attempts All Matches First Matches Incomplete 
+unnamed$$_7 15313    62          62            0          
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.APB_PROTOCOL_MONITOR
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 73.79 100.00 --      21.36 --     --     100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 73.79 100.00 --      21.36 --     --     100.00 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME        
+ 73.79 100.00 --      21.36 --     --     100.00 apb_monitor 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 87.50 100.00 --      75.00 --     --     --     uart_tb 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : uart_rx_fifo
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 76.80  85.00 --      73.96 --      71.43 --     
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../rtl/uart/uart_rx_fifo.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                           
+ 76.80  85.00 --      73.96 --      71.43 --     uart_tb.DUT.rx_channel.rx_fifo 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : uart_rx_fifo
+
+             Line No.   Total   Covered  Percent
+TOTAL                       20       17    85.00
+ALWAYS             43       17       14    82.35
+ALWAYS             76        1        1   100.00
+ALWAYS             79        1        1   100.00
+ALWAYS             82        1        1   100.00
+
+42                        begin
+43         1/1              if(rstn == 0) begin
+44         1/1                count <= 0;
+45         1/1                ip_count <= 0;
+46         1/1                op_count <= 0;
+47         1/1                foreach(data_fifo[i]) begin
+48         1/1                  data_fifo[i] = 0;
+49                            end
+50                          end
+51                          else begin
+52         1/1                case({push, pop})
+53                              2'b01: begin
+54         1/1                           if(count > 0) begin
+55         1/1                             op_count <= op_count + 1;
+56         1/1                             count <= count - 1;
+57                                       end
+                        MISSING_ELSE
+58                                     end
+59                              2'b10: begin
+60         1/1                           if(count <= 5'hf) begin
+61         1/1                             ip_count <= ip_count + 1;
+62         1/1                             data_fifo[ip_count] <= data_in;
+63         1/1                             count <= count + 1;
+64                                       end
+                   ==>  MISSING_ELSE
+65                                     end
+66                              2'b11: begin
+67         0/1     ==>                   op_count <= op_count + 1;
+68         0/1     ==>                   ip_count <= ip_count + 1;
+69         0/1     ==>                   data_fifo[ip_count] <= data_in;
+70                                     end
+                        MISSING_DEFAULT
+71                            endcase
+72                          end
+73                        end
+74                      
+75                      always_comb
+76         1/1            data_out = data_fifo[op_count];
+77                      
+78                      always_comb
+79         1/1            fifo_empty = ~(|count);
+80                      
+81                      always_comb
+82         1/1            fifo_full = (count == 5'b10000);
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : uart_rx_fifo
+                Total Covered Percent 
+Totals          12    6       50.00   
+Total Bits      434   321     73.96   
+Total Bits 0->1 217   161     74.19   
+Total Bits 1->0 217   160     73.73   
+
+                            
+Ports          9  4  44.44  
+Port Bits      66 49 74.24  
+Port Bits 0->1 33 25 75.76  
+Port Bits 1->0 33 24 72.73  
+
+                                
+Signals          3   2   66.67  
+Signal Bits      368 272 73.91  
+Signal Bits 0->1 184 136 73.91  
+Signal Bits 1->0 184 136 73.91  
+
+Port Details
+               Toggle Toggle 1->0 Toggle 0->1 Direction 
+clk            Yes    Yes         Yes         INPUT     
+rstn           No     No          Yes         INPUT     
+push           Yes    Yes         Yes         INPUT     
+pop            Yes    Yes         Yes         INPUT     
+data_in[7:0]   Yes    Yes         Yes         INPUT     
+data_in[10:8]  No     No          No          INPUT     
+fifo_empty     Yes    Yes         Yes         OUTPUT    
+fifo_full      No     No          No          OUTPUT    
+count[3:0]     Yes    Yes         Yes         OUTPUT    
+count[4]       No     No          No          OUTPUT    
+data_out[7:0]  Yes    Yes         Yes         OUTPUT    
+data_out[10:8] No     No          No          OUTPUT    
+
+Signal Details
+                                    Toggle Toggle 1->0 Toggle 0->1 
+ip_count[3:0]                       Yes    Yes         Yes         
+op_count[3:0]                       Yes    Yes         Yes         
+data_fifo[0][7:0]                   Yes    Yes         Yes         
+data_fifo[1][7:0]                   Yes    Yes         Yes         
+data_fifo[2][7:0]                   Yes    Yes         Yes         
+data_fifo[3][7:0]                   Yes    Yes         Yes         
+data_fifo[4][7:0]                   Yes    Yes         Yes         
+data_fifo[5][7:0]                   Yes    Yes         Yes         
+data_fifo[6][7:0]                   Yes    Yes         Yes         
+data_fifo[7][7:0]                   Yes    Yes         Yes         
+data_fifo[8][7:0]                   Yes    Yes         Yes         
+data_fifo[9][7:0]                   Yes    Yes         Yes         
+data_fifo[10][7:0]                  Yes    Yes         Yes         
+data_fifo[11][7:0]                  Yes    Yes         Yes         
+data_fifo[12][7:0]                  Yes    Yes         Yes         
+data_fifo[13][7:0]                  Yes    Yes         Yes         
+data_fifo[14][7:0]                  Yes    Yes         Yes         
+data_fifo[15][7:0]                  Yes    Yes         Yes         
+Other bits of data_fifo[15:0][10:0] No     No          No          
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : uart_rx_fifo
+         Line No. Total Covered Percent 
+Branches          7     5       71.43   
+IF       43       7     5       71.43   
+
+
+43             if(rstn == 0) begin
+               -1-  
+44               count <= 0;
+                 ==>
+45               ip_count <= 0;
+46               op_count <= 0;
+47               foreach(data_fifo[i]) begin
+48                 data_fifo[i] = 0;
+49               end
+50             end
+51             else begin
+52               case({push, pop})
+                 -2-  
+53                 2'b01: begin
+54                          if(count > 0) begin
+                            -3-  
+55                            op_count <= op_count + 1;
+                              ==>
+56                            count <= count - 1;
+57                          end
+                            MISSING_ELSE
+                            ==>
+58                        end
+59                 2'b10: begin
+60                          if(count <= 5'hf) begin
+                            -4-  
+61                            ip_count <= ip_count + 1;
+                              ==>
+62                            data_fifo[ip_count] <= data_in;
+63                            count <= count + 1;
+64                          end
+                            MISSING_ELSE
+                            ==>
+65                        end
+66                 2'b11: begin
+67                          op_count <= op_count + 1;
+                            ==>
+68                          ip_count <= ip_count + 1;
+69                          data_fifo[ip_count] <= data_in;
+70                        end
+                          MISSING_DEFAULT
+                          ==>
+
+Branches:
+
+-1- -2-             -3- -4- Status      
+1   -               -   -   Covered     
+0   2'b01           1   -   Covered     
+0   2'b01           0   -   Covered     
+0   2'b10           -   1   Covered     
+0   2'b10           -   0   Not Covered 
+0   2'b11           -   -   Not Covered 
+0   MISSING_DEFAULT -   -   Covered     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.DUT.rx_channel.rx_fifo
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 76.80  85.00 --      73.96 --      71.43 --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 76.80  85.00 --      73.96 --      71.43 --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME         
+ 76.80  85.00 --      73.96 --      71.43 --     uart_rx_fifo 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME       
+ 78.70  94.96  96.97  74.11  64.52  91.67  50.00 rx_channel 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : uart_rx
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 78.70  94.96  96.97  74.11  64.52  91.67  50.00 
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../rtl/uart/uart_rx.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                   
+ 78.70  94.96  96.97  74.11  64.52  91.67  50.00 uart_tb.DUT.rx_channel 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : uart_rx
+
+             Line No.   Total   Covered  Percent
+TOTAL                      119      113    94.96
+ALWAYS             65        4        4   100.00
+ALWAYS             75       10        8    80.00
+ALWAYS             89      105      101    96.19
+
+64                      always @(posedge PCLK) begin
+65         1/1            if(PRESETn == 0) begin
+66         1/1              filter <= 3'b111;
+67                        end
+68                        else begin
+69         1/1              filter[0] <= RXD;
+70         1/1              filter[2:1] <= filter[1:0];
+71                        end
+72                      end
+73                      
+74                      always_comb
+75         1/1            case(filter)
+76         1/1              3'b000: filtered_rxd = 0;
+77         1/1              3'b001: filtered_rxd = 0;
+78         0/1     ==>      3'b010: filtered_rxd = 0;
+79         1/1              3'b011: filtered_rxd = 1;
+80         1/1              3'b100: filtered_rxd = 0;
+81         0/1     ==>      3'b101: filtered_rxd = 1;
+82         1/1              3'b110: filtered_rxd = 1;
+83         1/1              3'b111: filtered_rxd = 1;
+84         1/1              default: filtered_rxd = 1;
+85                        endcase
+86                      
+87                      // RX FSM:
+88                      always @(posedge PCLK) begin
+89         1/1            if(PRESETn == 0) begin
+90         1/1              rx_state <= IDLE;
+91         1/1              bit_counter <= 0;
+92         1/1              push_rx_fifo <= 0;
+93         1/1              rx_buffer <= 0;
+94         1/1              rx_overrun <= 0;
+95         1/1              parity_error <= 0;
+96         1/1              framing_error <= 0;
+97         1/1              break_error <= 0;
+98         1/1              rx_idle <= 1;
+99                        end
+100                       else begin
+101        1/1              case(rx_state)
+102                           IDLE: begin
+103        1/1                        push_rx_fifo <= 0;
+104        1/1                        rx_buffer <= 0;
+105        1/1                        bit_counter <= 0;
+106        1/1                        if(filtered_rxd == 0) begin
+107        1/1                          rx_state <= START;
+108        1/1                          rx_idle <= 0;
+109                                   end
+110                                   else begin
+111        1/1                          rx_idle <= 1;
+112                                   end
+113                                 end
+114                           START: begin
+115        1/1                         if(enable == 1) begin
+116        1/1                           if((bit_counter == 4'h6) && (filtered_rxd == 0)) begin
+117        1/1                             rx_state <= BIT0;
+118        1/1                             bit_counter <= 0;
+119                                      end
+120                                      else begin
+121        1/1                             if(filtered_rxd == 1) begin
+122        0/1     ==>                       rx_state <= IDLE;
+123                                        end
+124                                        else begin
+125        1/1                               bit_counter <= bit_counter + 1;
+126                                        end
+127                                      end
+128                                    end
+                        MISSING_ELSE
+129                                  end
+130                           BIT0: begin
+131        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+132        1/1                           rx_state <= BIT1;
+133        1/1                           rx_buffer[0] <= filtered_rxd;
+134                                    end
+                        MISSING_ELSE
+135        1/1                         if(enable == 1) begin
+136        1/1                           bit_counter <= bit_counter + 1;
+137                                    end
+                        MISSING_ELSE
+138                                  end
+139                           BIT1: begin
+140        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+141        1/1                           rx_buffer[1] <= filtered_rxd;
+142        1/1                           rx_state <= BIT2;
+143                                    end
+                        MISSING_ELSE
+144        1/1                         if(enable == 1) begin
+145        1/1                           bit_counter <= bit_counter + 1;
+146                                    end
+                        MISSING_ELSE
+147                                  end
+148                           BIT2: begin
+149        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+150        1/1                           rx_state <= BIT3;
+151        1/1                           rx_buffer[2] <= filtered_rxd;
+152                                    end
+                        MISSING_ELSE
+153        1/1                         if(enable == 1) begin
+154        1/1                           bit_counter <= bit_counter + 1;
+155                                    end
+                        MISSING_ELSE
+156                                  end
+157                           BIT3: begin
+158        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+159        1/1                           rx_buffer[3] <= filtered_rxd;
+160        1/1                           rx_state <= BIT4;
+161                                    end
+                        MISSING_ELSE
+162        1/1                         if(enable == 1) begin
+163        1/1                           bit_counter <= bit_counter + 1;
+164                                    end
+                        MISSING_ELSE
+165                                  end
+166                           BIT4: begin
+167        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+168        1/1                           rx_buffer[4] <= filtered_rxd;
+169        1/1                           if(LCR[1:0] != 0) begin
+170                     
+171        1/1                             rx_state <= BIT5;
+172                                      end
+173                                      else begin
+174        1/1                             if(LCR[3] == 1) begin
+175        1/1                               rx_state <= PARITY;
+176                                        end
+177                                        else begin
+178        1/1                               rx_state <= STOP1;
+179                                        end
+180                                      end
+181                                    end
+                        MISSING_ELSE
+182        1/1                         if(enable == 1) begin
+183        1/1                           bit_counter <= bit_counter + 1;
+184                                    end
+                        MISSING_ELSE
+185                                  end
+186                           BIT5: begin
+187        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+188        1/1                           rx_buffer[5] <= filtered_rxd;
+189        1/1                           if(LCR[1:0] > 2'b01) begin
+190        1/1                             rx_state <= BIT6;
+191        1/1                             rx_buffer[5] <= filtered_rxd;
+192                                      end
+193                                      else begin
+194        1/1                             if(LCR[3] == 1) begin
+195        1/1                               rx_state <= PARITY;
+196                                        end
+197                                        else begin
+198        1/1                               rx_state <= STOP1;
+199                                        end
+200                                      end
+201                                    end
+                        MISSING_ELSE
+202        1/1                         if(enable == 1) begin
+203        1/1                           bit_counter <= bit_counter + 1;
+204                                    end
+                        MISSING_ELSE
+205                                  end
+206                           BIT6: begin
+207        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+208        1/1                           rx_buffer[6] <= filtered_rxd;
+209        1/1                           if(LCR[1:0] == 2'b11) begin
+210        1/1                             rx_state <= BIT7;
+211                                      end
+212                                      else begin
+213        1/1                             if(LCR[3] == 1) begin
+214        1/1                               rx_state <= PARITY;
+215                                        end
+216                                        else begin
+217        1/1                               rx_state <= STOP1;
+218                                        end
+219                                      end
+220                                    end
+                        MISSING_ELSE
+221        1/1                         if(enable == 1) begin
+222        1/1                           bit_counter <= bit_counter + 1;
+223                                    end
+                        MISSING_ELSE
+224                                  end
+225                           BIT7: begin
+226        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+227        1/1                           rx_buffer[7] <= filtered_rxd;
+228        1/1                           if(LCR[3] == 1) begin
+229        1/1                             rx_state <= PARITY;
+230                                      end
+231                                      else begin
+232        1/1                             rx_state <= STOP1;
+233                                      end
+234                                    end
+                        MISSING_ELSE
+235        1/1                         if(enable == 1) begin
+236        1/1                           bit_counter <= bit_counter + 1;
+237                                    end
+                        MISSING_ELSE
+238                                  end
+239                           PARITY: begin
+240        1/1                          if((enable == 1) && (bit_counter == 4'hf)) begin
+241        1/1                            rx_state <= STOP1;
+242        1/1                            case(LCR[5:3])
+243        1/1                              3'b001: rx_buffer[9] <= ~(filtered_rxd == ~(^rx_buffer));
+244        1/1                              3'b011: rx_buffer[9] <= ~(filtered_rxd == (^rx_buffer));
+245        1/1                              3'b101: rx_buffer[9] <= ~filtered_rxd; // Stick 1
+246        1/1                              3'b111: rx_buffer[9] <= filtered_rxd; // Stick 0
+247        0/1     ==>                      default: rx_buffer[9] <= 0;
+248                                       endcase
+249                                     end
+                        MISSING_ELSE
+250        1/1                          if(enable == 1) begin
+251        1/1                            bit_counter <= bit_counter + 1;
+252                                     end
+                        MISSING_ELSE
+253                                   end
+254                            STOP1: begin
+255        1/1                          parity_error <= rx_buffer[9];
+256        1/1                          if((enable == 1) && (bit_counter == 4'hf)) begin
+257        1/1                            rx_state <= STOP2;
+258        1/1                            rx_buffer[8] <= ~filtered_rxd;
+259        1/1                            rx_buffer[10] <= ~(|{filtered_rxd, rx_buffer}); // Break error
+260                                     end
+                        MISSING_ELSE
+261        1/1                          if(enable == 1) begin
+262        1/1                            bit_counter <= bit_counter + 1;
+263                                     end
+                        MISSING_ELSE
+264                                   end
+265                            STOP2: begin
+266        1/1                          framing_error <= rx_buffer[8];
+267        1/1                          break_error <= rx_buffer[10];
+268        1/1                          push_rx_fifo <= 1;
+269        1/1                          rx_state <= IDLE;
+270        1/1                          if(rx_fifo_count == 4'hf) begin
+271        0/1     ==>                    rx_overrun <= 1;
+272                                     end
+273                                     else begin
+274        1/1                            rx_overrun <= 0;
+275                                     end
+276                                   end
+277        0/1     ==>         default: rx_state <= IDLE;
+
+-------------------------------------------------------------------------------
+Cond Coverage for Module : uart_rx
+
+               Total   Covered  Percent
+Conditions         33       32    96.97
+Logical            33       32    96.97
+Non-Logical         0        0
+Event               0        0
+
+ LINE       116
+ EXPRESSION ((bit_counter == 4'h6) && (filtered_rxd == 1'b0))
+             ----------1----------    -----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Not Covered
+ 1   1  Covered
+
+ LINE       131
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       140
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       149
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       158
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       167
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       187
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       207
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       226
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       240
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       256
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : uart_rx
+                Total Covered Percent 
+Totals          20    10      50.00   
+Total Bits      112   83      74.11   
+Total Bits 0->1 56    43      76.79   
+Total Bits 1->0 56    40      71.43   
+
+                            
+Ports          16 7  43.75  
+Port Bits      74 51 68.92  
+Port Bits 0->1 37 27 72.97  
+Port Bits 1->0 37 24 64.86  
+
+                              
+Signals          4  3  75.00  
+Signal Bits      38 32 84.21  
+Signal Bits 0->1 19 16 84.21  
+Signal Bits 1->0 19 16 84.21  
+
+Port Details
+                   Toggle Toggle 1->0 Toggle 0->1 Direction 
+PCLK               Yes    Yes         Yes         INPUT     
+PRESETn            No     No          Yes         INPUT     
+RXD                Yes    Yes         Yes         INPUT     
+pop_rx_fifo        Yes    Yes         Yes         INPUT     
+enable             Yes    Yes         Yes         INPUT     
+LCR[4:0]           Yes    Yes         Yes         INPUT     
+LCR[5]             No     No          Yes         INPUT     
+LCR[6]             No     No          No          INPUT     
+LCR[7]             No     No          Yes         INPUT     
+rx_idle            Yes    Yes         Yes         OUTPUT    
+rx_fifo_out[7:0]   Yes    Yes         Yes         OUTPUT    
+rx_fifo_out[10:8]  No     No          No          OUTPUT    
+rx_fifo_count[3:0] Yes    Yes         Yes         OUTPUT    
+rx_fifo_count[4]   No     No          No          OUTPUT    
+push_rx_fifo       Yes    Yes         Yes         OUTPUT    
+rx_fifo_empty      Yes    Yes         Yes         OUTPUT    
+rx_fifo_full       No     No          No          OUTPUT    
+rx_overrun         No     No          No          OUTPUT    
+parity_error       No     No          No          OUTPUT    
+framing_error      No     No          No          OUTPUT    
+break_error        No     No          No          OUTPUT    
+
+Signal Details
+                 Toggle Toggle 1->0 Toggle 0->1 
+bit_counter[3:0] Yes    Yes         Yes         
+rx_buffer[7:0]   Yes    Yes         Yes         
+rx_buffer[10:8]  No     No          No          
+filter[2:0]      Yes    Yes         Yes         
+filtered_rxd     Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+FSM Coverage for Module : uart_rx
+Summary for FSM :: rx_state
+            Total Covered Percent 
+States      13    13      100.00  
+Transitions 31    20      64.52   
+Sequences   0     0               
+
+State, Transition and Sequence Details for FSM :: rx_state
+-------------------------------------------------------------------------------
+states Covered 
+IDLE   Covered 
+START  Covered 
+BIT0   Covered 
+BIT1   Covered 
+BIT2   Covered 
+BIT3   Covered 
+BIT4   Covered 
+BIT5   Covered 
+BIT6   Covered 
+BIT7   Covered 
+PARITY Covered 
+STOP1  Covered 
+STOP2  Covered 
+
+transitions   Covered     
+IDLE->START   Covered     
+START->IDLE   Not Covered 
+START->BIT0   Covered     
+BIT0->IDLE    Not Covered 
+BIT0->BIT1    Covered     
+BIT1->IDLE    Not Covered 
+BIT1->BIT2    Covered     
+BIT2->IDLE    Not Covered 
+BIT2->BIT3    Covered     
+BIT3->IDLE    Not Covered 
+BIT3->BIT4    Covered     
+BIT4->IDLE    Not Covered 
+BIT4->BIT5    Covered     
+BIT4->PARITY  Covered     
+BIT4->STOP1   Covered     
+BIT5->IDLE    Not Covered 
+BIT5->BIT6    Covered     
+BIT5->PARITY  Covered     
+BIT5->STOP1   Covered     
+BIT6->IDLE    Not Covered 
+BIT6->BIT7    Covered     
+BIT6->PARITY  Covered     
+BIT6->STOP1   Covered     
+BIT7->IDLE    Not Covered 
+BIT7->PARITY  Covered     
+BIT7->STOP1   Covered     
+PARITY->IDLE  Not Covered 
+PARITY->STOP1 Covered     
+STOP1->IDLE   Not Covered 
+STOP1->STOP2  Covered     
+STOP2->IDLE   Covered     
+
+sequences Covered 
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : uart_rx
+         Line No. Total Covered Percent 
+Branches          72    66      91.67   
+IF       65       2     2       100.00  
+CASE     75       9     7       77.78   
+IF       89       61    57      93.44   
+
+
+65           if(PRESETn == 0) begin
+             -1-  
+66             filter <= 3'b111;
+               ==>
+67           end
+68           else begin
+69             filter[0] <= RXD;
+               ==>
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+75           case(filter)
+             -1-  
+76             3'b000: filtered_rxd = 0;
+               ==>
+77             3'b001: filtered_rxd = 0;
+               ==>
+78             3'b010: filtered_rxd = 0;
+               ==>
+79             3'b011: filtered_rxd = 1;
+               ==>
+80             3'b100: filtered_rxd = 0;
+               ==>
+81             3'b101: filtered_rxd = 1;
+               ==>
+82             3'b110: filtered_rxd = 1;
+               ==>
+83             3'b111: filtered_rxd = 1;
+               ==>
+84             default: filtered_rxd = 1;
+               ==>
+
+Branches:
+
+-1-     Status      
+3'b000  Covered     
+3'b001  Covered     
+3'b010  Not Covered 
+3'b011  Covered     
+3'b100  Covered     
+3'b101  Not Covered 
+3'b110  Covered     
+3'b111  Covered     
+default Covered     
+
+
+89           if(PRESETn == 0) begin
+             -1-  
+90             rx_state <= IDLE;
+               ==>
+91             bit_counter <= 0;
+92             push_rx_fifo <= 0;
+93             rx_buffer <= 0;
+94             rx_overrun <= 0;
+95             parity_error <= 0;
+96             framing_error <= 0;
+97             break_error <= 0;
+98             rx_idle <= 1;
+99           end
+100          else begin
+101            case(rx_state)
+               -2-  
+102              IDLE: begin
+103                      push_rx_fifo <= 0;
+104                      rx_buffer <= 0;
+105                      bit_counter <= 0;
+106                      if(filtered_rxd == 0) begin
+                         -3-  
+107                        rx_state <= START;
+                           ==>
+108                        rx_idle <= 0;
+109                      end
+110                      else begin
+111                        rx_idle <= 1;
+                           ==>
+112                      end
+113                    end
+114              START: begin
+115                       if(enable == 1) begin
+                          -4-  
+116                         if((bit_counter == 4'h6) && (filtered_rxd == 0)) begin
+                            -5-  
+117                           rx_state <= BIT0;
+                              ==>
+118                           bit_counter <= 0;
+119                         end
+120                         else begin
+121                           if(filtered_rxd == 1) begin
+                              -6-  
+122                             rx_state <= IDLE;
+                                ==>
+123                           end
+124                           else begin
+125                             bit_counter <= bit_counter + 1;
+                                ==>
+126                           end
+127                         end
+128                       end
+                          MISSING_ELSE
+                          ==>
+129                     end
+130              BIT0: begin
+131                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -7-  
+132                         rx_state <= BIT1;
+                            ==>
+133                         rx_buffer[0] <= filtered_rxd;
+134                       end
+                          MISSING_ELSE
+                          ==>
+135                       if(enable == 1) begin
+                          -8-  
+136                         bit_counter <= bit_counter + 1;
+                            ==>
+137                       end
+                          MISSING_ELSE
+                          ==>
+138                     end
+139              BIT1: begin
+140                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -9-  
+141                         rx_buffer[1] <= filtered_rxd;
+                            ==>
+142                         rx_state <= BIT2;
+143                       end
+                          MISSING_ELSE
+                          ==>
+144                       if(enable == 1) begin
+                          -10-  
+145                         bit_counter <= bit_counter + 1;
+                            ==>
+146                       end
+                          MISSING_ELSE
+                          ==>
+147                     end
+148              BIT2: begin
+149                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -11-  
+150                         rx_state <= BIT3;
+                            ==>
+151                         rx_buffer[2] <= filtered_rxd;
+152                       end
+                          MISSING_ELSE
+                          ==>
+153                       if(enable == 1) begin
+                          -12-  
+154                         bit_counter <= bit_counter + 1;
+                            ==>
+155                       end
+                          MISSING_ELSE
+                          ==>
+156                     end
+157              BIT3: begin
+158                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -13-  
+159                         rx_buffer[3] <= filtered_rxd;
+                            ==>
+160                         rx_state <= BIT4;
+161                       end
+                          MISSING_ELSE
+                          ==>
+162                       if(enable == 1) begin
+                          -14-  
+163                         bit_counter <= bit_counter + 1;
+                            ==>
+164                       end
+                          MISSING_ELSE
+                          ==>
+165                     end
+166              BIT4: begin
+167                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -15-  
+168                         rx_buffer[4] <= filtered_rxd;
+169                         if(LCR[1:0] != 0) begin
+                            -16-  
+170        
+171                           rx_state <= BIT5;
+                              ==>
+172                         end
+173                         else begin
+174                           if(LCR[3] == 1) begin
+                              -17-  
+175                             rx_state <= PARITY;
+                                ==>
+176                           end
+177                           else begin
+178                             rx_state <= STOP1;
+                                ==>
+179                           end
+180                         end
+181                       end
+                          MISSING_ELSE
+                          ==>
+182                       if(enable == 1) begin
+                          -18-  
+183                         bit_counter <= bit_counter + 1;
+                            ==>
+184                       end
+                          MISSING_ELSE
+                          ==>
+185                     end
+186              BIT5: begin
+187                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -19-  
+188                         rx_buffer[5] <= filtered_rxd;
+189                         if(LCR[1:0] > 2'b01) begin
+                            -20-  
+190                           rx_state <= BIT6;
+                              ==>
+191                           rx_buffer[5] <= filtered_rxd;
+192                         end
+193                         else begin
+194                           if(LCR[3] == 1) begin
+                              -21-  
+195                             rx_state <= PARITY;
+                                ==>
+196                           end
+197                           else begin
+198                             rx_state <= STOP1;
+                                ==>
+199                           end
+200                         end
+201                       end
+                          MISSING_ELSE
+                          ==>
+202                       if(enable == 1) begin
+                          -22-  
+203                         bit_counter <= bit_counter + 1;
+                            ==>
+204                       end
+                          MISSING_ELSE
+                          ==>
+205                     end
+206              BIT6: begin
+207                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -23-  
+208                         rx_buffer[6] <= filtered_rxd;
+209                         if(LCR[1:0] == 2'b11) begin
+                            -24-  
+210                           rx_state <= BIT7;
+                              ==>
+211                         end
+212                         else begin
+213                           if(LCR[3] == 1) begin
+                              -25-  
+214                             rx_state <= PARITY;
+                                ==>
+215                           end
+216                           else begin
+217                             rx_state <= STOP1;
+                                ==>
+218                           end
+219                         end
+220                       end
+                          MISSING_ELSE
+                          ==>
+221                       if(enable == 1) begin
+                          -26-  
+222                         bit_counter <= bit_counter + 1;
+                            ==>
+223                       end
+                          MISSING_ELSE
+                          ==>
+224                     end
+225              BIT7: begin
+226                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -27-  
+227                         rx_buffer[7] <= filtered_rxd;
+228                         if(LCR[3] == 1) begin
+                            -28-  
+229                           rx_state <= PARITY;
+                              ==>
+230                         end
+231                         else begin
+232                           rx_state <= STOP1;
+                              ==>
+233                         end
+234                       end
+                          MISSING_ELSE
+                          ==>
+235                       if(enable == 1) begin
+                          -29-  
+236                         bit_counter <= bit_counter + 1;
+                            ==>
+237                       end
+                          MISSING_ELSE
+                          ==>
+238                     end
+239              PARITY: begin
+240                        if((enable == 1) && (bit_counter == 4'hf)) begin
+                           -30-  
+241                          rx_state <= STOP1;
+242                          case(LCR[5:3])
+                             -31-  
+243                            3'b001: rx_buffer[9] <= ~(filtered_rxd == ~(^rx_buffer));
+                               ==>
+244                            3'b011: rx_buffer[9] <= ~(filtered_rxd == (^rx_buffer));
+                               ==>
+245                            3'b101: rx_buffer[9] <= ~filtered_rxd; // Stick 1
+                               ==>
+246                            3'b111: rx_buffer[9] <= filtered_rxd; // Stick 0
+                               ==>
+247                            default: rx_buffer[9] <= 0;
+                               ==>
+248                          endcase
+249                        end
+                           MISSING_ELSE
+                           ==>
+250                        if(enable == 1) begin
+                           -32-  
+251                          bit_counter <= bit_counter + 1;
+                             ==>
+252                        end
+                           MISSING_ELSE
+                           ==>
+253                      end
+254               STOP1: begin
+255                        parity_error <= rx_buffer[9];
+256                        if((enable == 1) && (bit_counter == 4'hf)) begin
+                           -33-  
+257                          rx_state <= STOP2;
+                             ==>
+258                          rx_buffer[8] <= ~filtered_rxd;
+259                          rx_buffer[10] <= ~(|{filtered_rxd, rx_buffer}); // Break error
+260                        end
+                           MISSING_ELSE
+                           ==>
+261                        if(enable == 1) begin
+                           -34-  
+262                          bit_counter <= bit_counter + 1;
+                             ==>
+263                        end
+                           MISSING_ELSE
+                           ==>
+264                      end
+265               STOP2: begin
+266                        framing_error <= rx_buffer[8];
+267                        break_error <= rx_buffer[10];
+268                        push_rx_fifo <= 1;
+269                        rx_state <= IDLE;
+270                        if(rx_fifo_count == 4'hf) begin
+                           -35-       
+271                          rx_overrun <= 1;
+                             ==>
+272                        end
+273                        else begin
+274                          rx_overrun <= 0;
+                             ==>
+275                        end
+276                      end
+277               default: rx_state <= IDLE;
+                  ==>
+
+Branches:
+
+-1- -2-     -3- -4- -5- -6- -7- -8- -9- -10- -11- -12- -13- -14- -15- -16- -17- -18- -19- -20- -21- -22- -23- -24- -25- -26- -27- -28- -29- -30- -31-    -32- -33- -34- -35- Status      
+1   -       -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   IDLE    1   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   IDLE    0   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   START   -   1   1   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   START   -   1   0   1   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Not Covered 
+0   START   -   1   0   0   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   START   -   0   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT0    -   -   -   -   1   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT0    -   -   -   -   0   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT0    -   -   -   -   -   1   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT0    -   -   -   -   -   0   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT1    -   -   -   -   -   -   1   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT1    -   -   -   -   -   -   0   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT1    -   -   -   -   -   -   -   1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT1    -   -   -   -   -   -   -   0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT2    -   -   -   -   -   -   -   -    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT2    -   -   -   -   -   -   -   -    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT2    -   -   -   -   -   -   -   -    -    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT2    -   -   -   -   -   -   -   -    -    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT3    -   -   -   -   -   -   -   -    -    -    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT3    -   -   -   -   -   -   -   -    -    -    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT3    -   -   -   -   -   -   -   -    -    -    -    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT3    -   -   -   -   -   -   -   -    -    -    -    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    -    1    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    -    1    0    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    -    1    0    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    -    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    1    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    0    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    1    1    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    1    0    1    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    1    0    0    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    0    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    1    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    0    -    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    1    1    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    1    0    1    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    1    0    0    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    0    -    -    -    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    0    -    -    -    -    -       -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    1    -    -    -       -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    0    -    -    -       -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    0    -    -    -    -       -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    -    -       -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    0    -    -       -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    3'b001  -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    3'b011  -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    3'b101  -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    3'b111  -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    default -    -    -    -    Not Covered 
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    0    -       -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       1    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       0    -    -    -    Covered     
+0   STOP1   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    1    -    -    Covered     
+0   STOP1   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    0    -    -    Covered     
+0   STOP1   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    1    -    Covered     
+0   STOP1   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    0    -    Covered     
+0   STOP2   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    1    Not Covered 
+0   STOP2   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    0    Covered     
+0   default -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    Not Covered 
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : uart_rx
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       4     4         100.00  2                 50.00   
+Cover properties 0     0                 0                         
+Cover sequences  0     0                 0                         
+Total            4     4         100.00  2                 50.00   
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name      Attempts Real Successes Failures Incomplete 
+RX_BE_CHK 11074018 0              0        0          
+RX_FE_CHK 11074018 685            0        0          
+RX_OE_CHK 11074018 0              0        0          
+RX_PE_CHK 11074018 685            0        0          
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.DUT.rx_channel
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 78.70  94.96  96.97  74.11  64.52  91.67  50.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 78.15  93.53  96.97  73.99  64.52  89.87  50.00 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 78.70  94.96  96.97  74.11  64.52  91.67  50.00 uart_rx 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME 
+ 81.69 --     100.00  45.06 --     100.00 --     DUT  
+
+
+Subtrees :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 76.80  85.00 --      73.96 --      71.43 --     rx_fifo 
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : uart_16550
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 81.69 --     100.00  45.06 --     100.00 --     
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../rtl/uart/uart_16550.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME        
+ 81.69 --     100.00  45.06 --     100.00 --     uart_tb.DUT 
+
+
+
+-------------------------------------------------------------------------------
+Cond Coverage for Module : uart_16550
+
+               Total   Covered  Percent
+Conditions          4        4   100.00
+Logical             4        4   100.00
+Non-Logical         0        0
+Event               0        0
+
+ LINE       164
+ EXPRESSION (loopback ? TXD : RXD)
+             ----1---
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       165
+ EXPRESSION (loopback ? 1'b1 : TXDout)
+             ----1---
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : uart_16550
+                Total Covered Percent 
+Totals          44    30      68.18   
+Total Bits      324   146     45.06   
+Total Bits 0->1 162   75      46.30   
+Total Bits 1->0 162   71      43.83   
+
+                             
+Ports          22  17 77.27  
+Port Bits      230 75 32.61  
+Port Bits 0->1 115 38 33.04  
+Port Bits 1->0 115 37 32.17  
+
+                              
+Signals          22 13 59.09  
+Signal Bits      94 71 75.53  
+Signal Bits 0->1 47 37 78.72  
+Signal Bits 1->0 47 34 72.34  
+
+Port Details
+             Toggle Toggle 1->0 Toggle 0->1 Direction 
+PCLK         Yes    Yes         Yes         INPUT     
+PRESETn      No     No          Yes         INPUT     
+PADDR[1:0]   No     No          No          INPUT     
+PADDR[5:2]   Yes    Yes         Yes         INPUT     
+PADDR[31:6]  No     No          No          INPUT     
+PWDATA[7:0]  Yes    Yes         Yes         INPUT     
+PWDATA[31:8] No     No          No          INPUT     
+PRDATA[7:0]  Yes    Yes         Yes         OUTPUT    
+PRDATA[31:8] No     No          No          OUTPUT    
+PWRITE       Yes    Yes         Yes         INPUT     
+PENABLE      Yes    Yes         Yes         INPUT     
+PSEL         Yes    Yes         Yes         INPUT     
+PREADY       Yes    Yes         Yes         OUTPUT    
+PSLVERR      No     No          No          OUTPUT    
+IRQ          Yes    Yes         Yes         OUTPUT    
+TXD          Yes    Yes         Yes         OUTPUT    
+RXD          Yes    Yes         Yes         INPUT     
+nRTS         Yes    Yes         Yes         OUTPUT    
+nDTR         Yes    Yes         Yes         OUTPUT    
+nOUT1        Yes    Yes         Yes         OUTPUT    
+nOUT2        Yes    Yes         Yes         OUTPUT    
+nCTS         Yes    Yes         Yes         INPUT     
+nDSR         Yes    Yes         Yes         INPUT     
+nDCD         Yes    Yes         Yes         INPUT     
+nRI          Yes    Yes         Yes         INPUT     
+baud_o       Yes    Yes         Yes         OUTPUT    
+
+Signal Details
+                   Toggle Toggle 1->0 Toggle 0->1 
+tx_fifo_we         Yes    Yes         Yes         
+tx_enable          Yes    Yes         Yes         
+tx_fifo_count[4:0] Yes    Yes         Yes         
+tx_fifo_empty      Yes    Yes         Yes         
+tx_fifo_full       Yes    Yes         Yes         
+tx_busy            Yes    Yes         Yes         
+rx_data_out[7:0]   Yes    Yes         Yes         
+rx_data_out[10:8]  No     No          No          
+rx_idle            Yes    Yes         Yes         
+rx_overrun         No     No          No          
+parity_error       No     No          No          
+framing_error      No     No          No          
+break_error        No     No          No          
+rx_fifo_count[3:0] Yes    Yes         Yes         
+rx_fifo_count[4]   No     No          No          
+rx_fifo_empty      Yes    Yes         Yes         
+push_rx_fifo       Yes    Yes         Yes         
+rx_enable          Yes    Yes         Yes         
+rx_fifo_re         Yes    Yes         Yes         
+loopback           No     No          Yes         
+LCR[4:0]           Yes    Yes         Yes         
+LCR[5]             No     No          Yes         
+LCR[6]             No     No          No          
+LCR[7]             No     No          Yes         
+rx_fifo_full       No     No          No          
+TXDout             Yes    Yes         Yes         
+RXDin              Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : uart_16550
+         Line No. Total Covered Percent 
+Branches          4     4       100.00  
+TERNARY  164      2     2       100.00  
+TERNARY  165      2     2       100.00  
+
+
+164        assign RXDin = loopback ? TXD : RXD;
+                                   -1-  
+                                   ==>  
+                                   ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+165        assign TXD = loopback ? 1'b1 : TXDout;
+                                 -1-  
+                                 ==>  
+                                 ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.DUT
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 81.69 --     100.00  45.06 --     100.00 --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 83.06  95.56  96.24  70.11  68.18  93.25  75.00 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME       
+ 81.69 --     100.00  45.06 --     100.00 --     uart_16550 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 87.50 100.00 --      75.00 --     --     --     uart_tb 
+
+
+Subtrees :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME       
+ 88.76  97.28  92.98  57.17 100.00  96.34 --     control    
+ 78.15  93.53  96.97  73.99  64.52  89.87  50.00 rx_channel 
+ 92.53  95.80 100.00  98.59  67.74  93.06 100.00 tx_channel 
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : uart_tx_fifo
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 85.04  83.33 --      99.69 --      57.14 100.00 
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../rtl/uart/uart_tx_fifo.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                           
+ 85.04  83.33 --      99.69 --      57.14 100.00 uart_tb.DUT.tx_channel.tx_fifo 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : uart_tx_fifo
+
+             Line No.   Total   Covered  Percent
+TOTAL                       18       15    83.33
+ALWAYS             43       15       12    80.00
+ALWAYS             73        1        1   100.00
+ALWAYS             76        1        1   100.00
+ALWAYS             79        1        1   100.00
+
+42                        begin
+43         1/1              if(rstn == 0) begin
+44         1/1                count <= 0;
+45         1/1                ip_count <= 0;
+46         1/1                op_count <= 0;
+47                          end
+48                          else begin
+49         1/1                case({push, pop})
+50                              2'b01: begin
+51         1/1                           if(count > 0) begin
+52         1/1                             op_count <= op_count + 1;
+53         1/1                             count <= count - 1;
+54                                       end
+                   ==>  MISSING_ELSE
+55                                     end
+56                              2'b10: begin
+57         1/1                           if(count <= 5'hf) begin
+58         1/1                             ip_count <= ip_count + 1;
+59         1/1                             data_fifo[ip_count] <= data_in;
+60         1/1                             count <= count + 1;
+61                                       end
+                   ==>  MISSING_ELSE
+62                                     end
+63                              2'b11: begin
+64         0/1     ==>                   op_count <= op_count + 1;
+65         0/1     ==>                   ip_count <= ip_count + 1;
+66         0/1     ==>                   data_fifo[ip_count] <= data_in;
+67                                     end
+                        MISSING_DEFAULT
+68                            endcase
+69                          end
+70                        end
+71                      
+72                      always_comb
+73         1/1            data_out = data_fifo[op_count];
+74                      
+75                      always_comb
+76         1/1            fifo_empty = ~(|count);
+77                      
+78                      always_comb
+79         1/1            fifo_full = (count == 5'b10000);
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : uart_tx_fifo
+                Total Covered Percent 
+Totals          12    11      91.67   
+Total Bits      326   325     99.69   
+Total Bits 0->1 163   163     100.00  
+Total Bits 1->0 163   162     99.39   
+
+                            
+Ports          9  8  88.89  
+Port Bits      54 53 98.15  
+Port Bits 0->1 27 27 100.00 
+Port Bits 1->0 27 26 96.30  
+
+                                
+Signals          3   3   100.00 
+Signal Bits      272 272 100.00 
+Signal Bits 0->1 136 136 100.00 
+Signal Bits 1->0 136 136 100.00 
+
+Port Details
+              Toggle Toggle 1->0 Toggle 0->1 Direction 
+clk           Yes    Yes         Yes         INPUT     
+rstn          No     No          Yes         INPUT     
+push          Yes    Yes         Yes         INPUT     
+pop           Yes    Yes         Yes         INPUT     
+data_in[7:0]  Yes    Yes         Yes         INPUT     
+fifo_empty    Yes    Yes         Yes         OUTPUT    
+fifo_full     Yes    Yes         Yes         OUTPUT    
+count[4:0]    Yes    Yes         Yes         OUTPUT    
+data_out[7:0] Yes    Yes         Yes         OUTPUT    
+
+Signal Details
+                     Toggle Toggle 1->0 Toggle 0->1 
+ip_count[3:0]        Yes    Yes         Yes         
+op_count[3:0]        Yes    Yes         Yes         
+data_fifo[15:0][7:0] Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : uart_tx_fifo
+         Line No. Total Covered Percent 
+Branches          7     4       57.14   
+IF       43       7     4       57.14   
+
+
+43             if(rstn == 0) begin
+               -1-  
+44               count <= 0;
+                 ==>
+45               ip_count <= 0;
+46               op_count <= 0;
+47             end
+48             else begin
+49               case({push, pop})
+                 -2-  
+50                 2'b01: begin
+51                          if(count > 0) begin
+                            -3-  
+52                            op_count <= op_count + 1;
+                              ==>
+53                            count <= count - 1;
+54                          end
+                            MISSING_ELSE
+                            ==>
+55                        end
+56                 2'b10: begin
+57                          if(count <= 5'hf) begin
+                            -4-  
+58                            ip_count <= ip_count + 1;
+                              ==>
+59                            data_fifo[ip_count] <= data_in;
+60                            count <= count + 1;
+61                          end
+                            MISSING_ELSE
+                            ==>
+62                        end
+63                 2'b11: begin
+64                          op_count <= op_count + 1;
+                            ==>
+65                          ip_count <= ip_count + 1;
+66                          data_fifo[ip_count] <= data_in;
+67                        end
+                          MISSING_DEFAULT
+                          ==>
+
+Branches:
+
+-1- -2-             -3- -4- Status      
+1   -               -   -   Covered     
+0   2'b01           1   -   Covered     
+0   2'b01           0   -   Not Covered 
+0   2'b10           -   1   Covered     
+0   2'b10           -   0   Not Covered 
+0   2'b11           -   -   Not Covered 
+0   MISSING_DEFAULT -   -   Covered     
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : uart_tx_fifo
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       3     3         100.00  3                 100.00  
+Cover properties 0     0                 0                         
+Cover sequences  0     0                 0                         
+Total            3     3         100.00  3                 100.00  
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name              Attempts Real Successes Failures Incomplete 
+TX_FIFO_EMPTY_CHK 11074018 10865246       0        0          
+TX_FIFO_FULL_CHK  11074018 3830           0        0          
+TX_FIFO_OK_CHK    11074018 204936         0        0          
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.DUT.tx_channel.tx_fifo
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 85.04  83.33 --      99.69 --      57.14 100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 85.04  83.33 --      99.69 --      57.14 100.00 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME         
+ 85.04  83.33 --      99.69 --      57.14 100.00 uart_tx_fifo 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME       
+ 92.95  98.02 100.00  95.00  67.74  96.92 100.00 tx_channel 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : uart_tb
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 87.50 100.00 --      75.00 --     --     --     
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../uvm_tb/tb/uart_tb.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 87.50 100.00 --      75.00 --     --     --     uart_tb 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : uart_tb
+
+             Line No.   Total   Covered  Percent
+TOTAL                       18       18   100.00
+INITIAL            85        6        6   100.00
+INITIAL            96        9        9   100.00
+INITIAL           116        3        3   100.00
+
+84                      initial begin
+85         1/1            uvm_config_db #(virtual apb_if)::set(null, "uvm_test_top", "APB", APB);
+86         1/1            uvm_config_db #(virtual serial_if)::set(null, "uvm_test_top", "RX_UART", RX_UART);
+87         1/1            uvm_config_db #(virtual serial_if)::set(null, "uvm_test_top", "TX_UART", TX_UART);
+88         1/1            uvm_config_db #(virtual modem_if)::set(null, "uvm_test_top", "MODEM", MODEM);
+89         1/1            uvm_config_db #(virtual interrupt_if)::set(null, "uvm_test_top", "IRQ", IRQ);
+90         1/1            run_test();
+91                      end
+92                      
+93                      
+94                      // Simple clock/reset
+95                      initial begin
+96         1/1            PCLK = 0;
+97         1/1            PRESETn = 0;
+98         1/1            repeat(10) begin
+99         2/2              #1ns PCLK = ~PCLK;
+100                       end
+                        REPEAT_FALSE
+101        1/1            PRESETn = 1;
+102        1/1            forever begin
+103        2/2              #1ns PCLK = ~PCLK;
+104                       end
+105                     end
+106                     
+107                     // Some interface signal assignments:
+108                     assign IRQ.CLK = PCLK;
+109                     assign MODEM.CLK = PCLK;
+110                     assign RX_UART.clk = IRQ.baud_out;
+111                     assign TX_UART.clk = IRQ.baud_out;
+112                     
+113                     
+114                     initial begin
+115                     
+116        1/1             $fsdbDumpfile("uart.fsdb");
+117        1/1             $fsdbDumpvars(0,"+all",uart_tb);
+118        1/1             $fsdbDumpon();
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : uart_tb
+                Total Covered Percent 
+Totals          2     1       50.00   
+Total Bits      4     3       75.00   
+Total Bits 0->1 2     2       100.00  
+Total Bits 1->0 2     1       50.00   
+
+                            
+Signals          2 1 50.00  
+Signal Bits      4 3 75.00  
+Signal Bits 0->1 2 2 100.00 
+Signal Bits 1->0 2 1 50.00  
+
+Signal Details
+        Toggle Toggle 1->0 Toggle 0->1 
+PCLK    Yes    Yes         Yes         
+PRESETn No     No          Yes         
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 87.50 100.00 --      75.00 --     --     --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 84.26  95.76  96.24  59.79  68.18  93.25  92.31 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 87.50 100.00 --      75.00 --     --     --     uart_tb 
+
+
+Parent : 
+
+none
+----------------
+
+
+Subtrees :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                 
+ 59.32 --     --      18.64 --     --     100.00 APB                  
+ 73.79 100.00 --      21.36 --     --     100.00 APB_PROTOCOL_MONITOR 
+ 83.06  95.56  96.24  70.11  68.18  93.25  75.00 DUT                  
+ 66.67 --     --      66.67 --     --     --     IRQ                  
+ 11.11 --     --      11.11 --     --     --     MODEM                
+ 50.00 --     --      50.00 --     --     --     RX_UART              
+100.00 --     --     100.00 --     --     --     TX_UART              
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : uart_register_file
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 88.76  97.28  92.98  57.17 100.00  96.34 --     
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../rtl/uart/uart_register_file.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                
+ 88.76  97.28  92.98  57.17 100.00  96.34 --     uart_tb.DUT.control 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : uart_register_file
+
+             Line No.   Total   Covered  Percent
+TOTAL                      147      143    97.28
+ALWAYS            154       23       22    95.65
+ALWAYS            198        5        5   100.00
+ALWAYS            217        5        5   100.00
+ALWAYS            233        9        9   100.00
+ALWAYS            258        4        4   100.00
+ALWAYS            271        4        4   100.00
+ALWAYS            289        4        4   100.00
+ALWAYS            302        4        4   100.00
+ALWAYS            316       13       11    84.62
+ALWAYS            339        6        6   100.00
+ALWAYS            354       10       10   100.00
+ALWAYS            379       11       10    90.91
+ALWAYS            407        5        5   100.00
+ALWAYS            419        5        5   100.00
+ALWAYS            441        7        7   100.00
+ALWAYS            462        3        3   100.00
+ALWAYS            472        6        6   100.00
+ALWAYS            485       23       23   100.00
+
+153                       begin
+154        1/1              if (PRESETn == 0)
+155                           begin
+156        1/1                  we = 0;
+157        1/1                  re = 0;
+158        1/1                  PREADY = 0;
+159        1/1                  fsm_state = IDLE;
+160                           end
+161                         else
+162        1/1                case (fsm_state)
+163                             IDLE: begin
+164        1/1                          we <= 0;
+165        1/1                          re <= 0;
+166        1/1                          PREADY <= 0;
+167        1/1                          if (PSEL)
+168        1/1                            fsm_state <= SETUP;
+                        MISSING_ELSE
+169                                   end
+170                             SETUP: begin
+171        1/1                           re <= 0;
+172        1/1                           if (PSEL && PENABLE)
+173                                        begin
+174        1/1                               fsm_state <= ACCESS;
+175        1/1                               if (PWRITE)
+176        1/1                                 we <= 1;
+                        MISSING_ELSE
+177                                        end
+178                                      else
+179        1/1                             fsm_state <= IDLE;
+180                                    end
+181                             ACCESS: begin
+182        1/1                            PREADY <= 1;
+183        1/1                            we <= 0;
+184        1/1                            if(PWRITE == 0)
+185        1/1                              re <= 1;
+                        MISSING_ELSE
+186        1/1                            fsm_state <= IDLE;
+187                                     end
+188        0/1     ==>          default: fsm_state <= IDLE;
+189                           endcase
+190                       end
+191                     
+192                     // One clock pulse per enable
+193                     assign baud_o = ~PCLK && enable;
+194                     
+195                     // Interrupt line
+196                     always @(posedge PCLK)
+197                       begin
+198        1/1              if(PRESETn == 0) begin
+199        1/1                irq <= 0;
+200                         end
+201        1/1              else if((re == 1) && (PADDR == `IIR)) begin
+202        1/1                irq <= 0;
+203                         end
+204                         else begin
+205        1/1                irq <= (IER[0] & rx_int) | (IER[1] & tx_int) | (IER[2] & ls_int) | (IER[3] & ms_int);
+206                         end
+207                       end
+208                     
+209                     // Loopback:
+210                     assign loopback = MCR[4];
+211                     
+212                     // The register implementations:
+213                     
+214                     // TX Data register strobe
+215                     always @(posedge PCLK)
+216                       begin
+217        1/1              if(PRESETn == 0) begin
+218        1/1                tx_fifo_we <= 0;
+219                         end
+220                         else begin
+221        1/1                if((we == 1) && (PADDR == `DR)) begin
+222        1/1                  tx_fifo_we <= 1;
+223                           end
+224                           else begin
+225        1/1                  tx_fifo_we <= 0;
+226                           end
+227                         end
+228                       end
+229                     
+230                     // DIVISOR - baud rate divider
+231                     always @(posedge PCLK)
+232                       begin
+233        1/1              if(PRESETn == 0) begin
+234        1/1                DIVISOR <= 0;
+235        1/1                start_dlc <= 0;
+236                         end
+237                         else begin
+238        1/1                if(we == 1) begin
+239        1/1                  case(PADDR)
+240                               `DIV1: begin
+241        1/1                             DIVISOR[7:0] <= PWDATA[7:0];
+242        1/1                             start_dlc <= 1;
+243                                      end
+244                               `DIV2: begin
+245        1/1                             DIVISOR[15:8] <= PWDATA[7:0];
+246                                      end
+                        MISSING_DEFAULT
+247                             endcase
+248                           end
+249                           else begin
+250        1/1                  start_dlc <= 0;
+251                           end
+252                         end
+253                       end
+254                     
+255                     // LCR - Line control register
+256                     always @(posedge PCLK)
+257                       begin
+258        1/1              if(PRESETn == 0) begin
+259        1/1                LCR <= 0;
+260                         end
+261                         else begin
+262        1/1                if((we == 1) && (PADDR == `LCR)) begin
+263        1/1                  LCR <= PWDATA[7:0];
+264                           end
+                        MISSING_ELSE
+265                         end
+266                       end
+267                     
+268                     // MCR - Control register
+269                     always @(posedge PCLK)
+270                       begin
+271        1/1              if(PRESETn == 0) begin
+272        1/1                MCR <= 0;
+273                         end
+274                         else begin
+275        1/1                if((we == 1) && (PADDR == `MCR)) begin
+276        1/1                  MCR <= PWDATA[4:0];
+277                           end
+                        MISSING_ELSE
+278                         end
+279                       end
+280                     
+281                     assign out1n = MCR[2];
+282                     assign out2n = MCR[3];
+283                     assign dtrn = ~MCR[0];
+284                     assign rtsn = ~MCR[1];
+285                     
+286                     // FCR - FIFO Control Register:
+287                     always @(posedge PCLK)
+288                       begin
+289        1/1              if(PRESETn == 0) begin
+290        1/1                FCR <= 8'hc0;
+291                         end
+292                         else begin
+293        1/1                if((we == 1) && (PADDR == `FCR)) begin
+294        1/1                  FCR <= PWDATA[7:0];
+295                           end
+                        MISSING_ELSE
+296                         end
+297                       end
+298                     
+299                     // IER - Interrupt Masks:
+300                     always @(posedge PCLK)
+301                       begin
+302        1/1              if(PRESETn == 0) begin
+303        1/1                IER <= 0;
+304                         end
+305                         else begin
+306        1/1                if((we == 1) && (PADDR == `IER)) begin
+307        1/1                  IER <= PWDATA[3:0];
+308                           end
+                        MISSING_ELSE
+309                         end
+310                       end
+311                     
+312                     //
+313                     // Read back path:
+314                     //
+315                     always_comb begin
+316        1/1              PSLVERR = 0;
+317        1/1              case(PADDR)
+318        1/1                `DR: PRDATA = {24'h0, rx_data_out[7:0]};
+319        1/1                `IER: PRDATA = {28'h0, IER};
+320        1/1                `IIR: PRDATA = {28'hc, IIR};
+321        1/1                `LCR: PRDATA = {24'h0, LCR};
+322        1/1                `MCR: PRDATA = {28'h0, MCR};
+323                     //parker      `LSR: PRDATA = {24'h0, fifo_error, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
+324        1/1                `LSR: PRDATA = {24'h0, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
+325                     
+326        1/1                `MSR: PRDATA = {24'h0, MSR};
+327        1/1                `DIV1: PRDATA = {24'h0, DIVISOR[7:0]};
+328        1/1                `DIV2: PRDATA = {24'h0, DIVISOR[15:8]};
+329                           default: begin
+330        0/1     ==>                   PRDATA = 32'h0;
+331        0/1     ==>                   PSLVERR = 1;
+332                                    end
+333                         endcase
+334                     end
+335                     
+336                     // Read pulse to pop the Rx Data FIFO
+337                     always @(posedge PCLK)
+338                     begin
+339        1/1            if (PRESETn == 0)
+340        1/1              rx_fifo_re <= 0;
+341                       else
+342        1/1            if (rx_fifo_re) // restore the signal to 0 after one clock cycle
+343        1/1              rx_fifo_re <= 0;
+344                       else
+345        1/1            if ((re) && (PADDR == `DR))
+346        1/1              rx_fifo_re <= 1; // advance read pointer
+                        MISSING_ELSE
+347                     end
+348                     
+349                     //
+350                     // LSR RX error bits
+351                     //
+352                     always @(posedge PCLK)
+353                     begin
+354        1/1            if(PRESETn == 0) begin
+355        1/1              ls_int <= 0;
+356        1/1              LSR <= 0;
+357                       end
+358                       else begin
+359        1/1              if((PADDR == `LSR) && (re == 1)) begin
+360        1/1                LSR <= 0;
+361        1/1                ls_int <= 0;
+362                         end
+363        1/1              else if(rx_fifo_re == 1) begin
+364        1/1                LSR <= {rx_data_out[10], rx_data_out[8], rx_data_out[9], rx_overrun};
+365        1/1                ls_int <= |{rx_data_out[10:8], rx_fifo_over_threshold};
+366                         end
+367                         else begin
+368        1/1                ls_int <= |LSR;
+369                         end
+370                       end
+371                     end
+372                     
+373                     
+374                     
+375                     
+376                     // Interrupt Identification register
+377                     always @(posedge PCLK)
+378                     begin
+379        1/1            if(PRESETn == 0) begin
+380        1/1              IIR <= 4'h1;
+381                       end
+382                       else begin
+383        1/1              if((ls_int == 1) && (IER[2] == 1)) begin
+384        0/1     ==>        IIR <= 4'h6;
+385                         end
+386        1/1              else if((rx_int == 1) && (IER[0] == 1)) begin
+387        1/1                IIR <= 4'h4;
+388                         end
+389        1/1              else if((tx_int == 1) && (IER[1] == 1)) begin
+390        1/1                IIR <= 4'h2;
+391                         end
+392        1/1              else if((ms_int == 1) && (IER[3] == 1)) begin
+393        1/1                IIR <= 4'h0;
+394                         end
+395                         else begin
+396        1/1                IIR <= 4'h1;
+397                         end
+398                       end
+399                     end
+400                     
+401                     //
+402                     // Baud rate generator:
+403                     //
+404                     // Frequency divider
+405                     always @(posedge PCLK)
+406                     begin
+407        1/1            if (PRESETn == 0)
+408        1/1              dlc <= #1 0;
+409                       else
+410        1/1              if (start_dlc | ~ (|dlc))
+411        1/1                  dlc <= DIVISOR - 1;               // preset counter
+412                         else
+413        1/1                dlc <= dlc - 1;              // decrement counter
+414                     end
+415                     
+416                     // Enable signal generation logic
+417                     always @(posedge PCLK)
+418                     begin
+419        1/1            if (PRESETn == 0)
+420        1/1              enable <= 1'b0;
+421                       else
+422        1/1              if (|DIVISOR & ~(|dlc))     // dl>0 & dlc==0
+423        1/1                enable <= 1'b1;
+424                         else
+425        1/1                enable <= 1'b0;
+426                     end
+427                     
+428                     assign tx_enable = enable;
+429                     
+430                     assign rx_enable = enable;
+431                     
+432                     
+433                     //
+434                     // Interrupts
+435                     //
+436                     // TX Interrupt - Triggered when TX FIFO contents below threshold
+437                     //                Cleared by a write to the interrupt clear bit
+438                     //
+439                     always @(posedge PCLK)
+440                       begin
+441        1/1              if(PRESETn == 0) begin
+442        1/1                tx_int <= 0;
+443        1/1                last_tx_fifo_empty <= 0;
+444                         end
+445                         else begin
+446        1/1                last_tx_fifo_empty <= tx_fifo_empty;
+447        1/1                if((re == 1) && (PADDR == `IIR) && (PRDATA[3:0] == 4'h2)) begin
+448        1/1                  tx_int <= 0;
+449                           end
+450                           else begin
+451        1/1                  tx_int <= (tx_fifo_empty & ~last_tx_fifo_empty) | tx_int;
+452                           end
+453                         end
+454                       end
+455                     
+456                     //
+457                     // RX Interrupt - Triggered when RX FIFO contents above threshold
+458                     //                Cleared by a write to the interrupt clear bit
+459                     //
+460                     always @(posedge PCLK)
+461                       begin
+462        1/1              if(PRESETn == 0) begin
+463        1/1                rx_int <= 0;
+464                         end
+465                         else begin
+466        1/1                rx_int <= rx_fifo_over_threshold;
+467                         end
+468                       end
+469                     
+470                     // RX FIFO over its threshold
+471                     always_comb
+472        1/1            case(FCR[7:6])
+473        1/1              2'h0: rx_fifo_over_threshold = (rx_fifo_count >= 1);
+474        1/1              2'h1: rx_fifo_over_threshold = (rx_fifo_count >= 4);
+475        1/1              2'h2: rx_fifo_over_threshold = (rx_fifo_count >= 8);
+476        1/1              2'h3: rx_fifo_over_threshold = (rx_fifo_count >= 14);
+477        1/1              default: rx_fifo_over_threshold = 0;
+478                       endcase
+479                     
+480                     //
+481                     // Modem Status register and interrupt:
+482                     //
+483                     always @(posedge PCLK)
+484                       begin
+485        1/1              if(PRESETn == 0) begin
+486        1/1                ms_int <= 0;
+487        1/1                nCTS_1 <= 0;
+488        1/1                nDSR_1 <= 0;
+489        1/1                nRI_1 <= 0;
+490        1/1                nDCD_1 <= 0;
+491        1/1                MSR[7:0] <= 0;
+492                         end
+493                         else begin
+494        1/1                if((re == 1) && (PADDR == `MSR)) begin
+495        1/1                  ms_int <= 0;
+496        1/1                  MSR[3:0] <= 0;
+497                           end
+498                           else begin
+499        1/1                  ms_int <= ms_int | ((nCTS_1 ^ ctsn) | (nDSR_1 ^ dsrn) | (nDCD_1 ^ dcdn) | (~rin & nRI_1));
+500        1/1                  MSR[0] <= (nCTS_1 ^ ctsn) | MSR[0];
+501        1/1                  MSR[1] <= (nDSR_1 ^ dsrn) | MSR[1];
+502        1/1                  MSR[2] <= (~rin & nRI_1) | MSR[2];
+503        1/1                  MSR[3] <= (nDCD_1 ^ dcdn) | MSR[3];
+504        1/1                  nCTS_1 <= ctsn;
+505        1/1                  nDSR_1 <= dsrn;
+506        1/1                  nRI_1 <= rin;
+507        1/1                  nDCD_1 <= dcdn;
+508        1/1                  MSR[4] <= loopback ? MCR[1]: ~ctsn;
+509        1/1                  MSR[5] <= loopback ? MCR[0] : ~dsrn;
+510        1/1                  MSR[6] <= loopback ? MCR[2] : ~rin;
+511        1/1                  MSR[7] <= loopback ? MCR[3] : ~dcdn;
+
+-------------------------------------------------------------------------------
+Cond Coverage for Module : uart_register_file
+
+               Total   Covered  Percent
+Conditions         57       53    92.98
+Logical            57       53    92.98
+Non-Logical         0        0
+Event               0        0
+
+ LINE       172
+ EXPRESSION (PSEL && PENABLE)
+             --1-    ---2---
+
+-1- -2- Status
+ 0   1  Not Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       201
+ EXPRESSION ((re == 1'b1) && (PADDR == 5'h02))
+             ------1-----    --------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       221
+ EXPRESSION ((we == 1'b1) && (PADDR == 5'b0))
+             ------1-----    -------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       262
+ EXPRESSION ((we == 1'b1) && (PADDR == 5'h03))
+             ------1-----    --------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       275
+ EXPRESSION ((we == 1'b1) && (PADDR == 5'h04))
+             ------1-----    --------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       293
+ EXPRESSION ((we == 1'b1) && (PADDR == 5'h02))
+             ------1-----    --------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       306
+ EXPRESSION ((we == 1'b1) && (PADDR == 5'b1))
+             ------1-----    -------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       345
+ EXPRESSION (re && (PADDR == 5'b0))
+             -1    -------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       359
+ EXPRESSION ((PADDR == 5'h05) && (re == 1'b1))
+             --------1-------    ------2-----
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       383
+ EXPRESSION ((ls_int == 1'b1) && (IER[2] == 1'b1))
+             --------1-------    --------2-------
+
+-1- -2- Status
+ 0   1  Not Covered
+ 1   0  Covered
+ 1   1  Not Covered
+
+ LINE       386
+ EXPRESSION ((rx_int == 1'b1) && (IER[0] == 1'b1))
+             --------1-------    --------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Not Covered
+ 1   1  Covered
+
+ LINE       389
+ EXPRESSION ((tx_int == 1'b1) && (IER[1] == 1'b1))
+             --------1-------    --------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       392
+ EXPRESSION ((ms_int == 1'b1) && (IER[3] == 1'b1))
+             --------1-------    --------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       447
+ EXPRESSION ((re == 1'b1) && (PADDR == 5'h02) && (PRDATA[3:0] == 4'h2))
+             ------1-----    --------2-------    ----------3----------
+
+-1- -2- -3- Status
+ 0   1   1  Covered
+ 1   0   1  Covered
+ 1   1   0  Covered
+ 1   1   1  Covered
+
+ LINE       494
+ EXPRESSION ((re == 1'b1) && (PADDR == 5'h06))
+             ------1-----    --------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       508
+ EXPRESSION (loopback ? MCR[1] : ((~ctsn)))
+             ----1---
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       509
+ EXPRESSION (loopback ? MCR[0] : ((~dsrn)))
+             ----1---
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       510
+ EXPRESSION (loopback ? MCR[2] : ((~rin)))
+             ----1---
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       511
+ EXPRESSION (loopback ? MCR[3] : ((~dcdn)))
+             ----1---
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       193
+ EXPRESSION (((~PCLK)) && enable)
+             ----1----    ---2--
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : uart_register_file
+                Total Covered Percent 
+Totals          84    43      51.19   
+Total Bits      474   271     57.17   
+Total Bits 0->1 237   141     59.49   
+Total Bits 1->0 237   130     54.85   
+
+                              
+Ports          40  26  65.00  
+Port Bits      262 138 52.67  
+Port Bits 0->1 131 71  54.20  
+Port Bits 1->0 131 67  51.15  
+
+                                
+Signals          44  17  38.64  
+Signal Bits      212 133 62.74  
+Signal Bits 0->1 106 70  66.04  
+Signal Bits 1->0 106 63  59.43  
+
+Port Details
+                   Toggle Toggle 1->0 Toggle 0->1 Direction 
+PCLK               Yes    Yes         Yes         INPUT     
+PRESETn            No     No          Yes         INPUT     
+PSEL               Yes    Yes         Yes         INPUT     
+PWRITE             Yes    Yes         Yes         INPUT     
+PENABLE            Yes    Yes         Yes         INPUT     
+PADDR[3:0]         Yes    Yes         Yes         INPUT     
+PADDR[4]           No     No          No          INPUT     
+PWDATA[7:0]        Yes    Yes         Yes         INPUT     
+PWDATA[31:8]       No     No          No          INPUT     
+PRDATA[7:0]        Yes    Yes         Yes         OUTPUT    
+PRDATA[31:8]       No     No          No          OUTPUT    
+PREADY             Yes    Yes         Yes         OUTPUT    
+PSLVERR            No     No          No          OUTPUT    
+LCR[4:0]           Yes    Yes         Yes         OUTPUT    
+LCR[5]             No     No          Yes         OUTPUT    
+LCR[6]             No     No          No          OUTPUT    
+LCR[7]             No     No          Yes         OUTPUT    
+tx_fifo_we         Yes    Yes         Yes         OUTPUT    
+tx_enable          Yes    Yes         Yes         OUTPUT    
+tx_fifo_count[4:0] Yes    Yes         Yes         INPUT     
+tx_fifo_empty      Yes    Yes         Yes         INPUT     
+tx_fifo_full       Yes    Yes         Yes         INPUT     
+tx_busy            Yes    Yes         Yes         INPUT     
+rx_data_out[7:0]   Yes    Yes         Yes         INPUT     
+rx_data_out[10:8]  No     No          No          INPUT     
+rx_idle            Yes    Yes         Yes         INPUT     
+rx_overrun         No     No          No          INPUT     
+parity_error       No     No          No          INPUT     
+framing_error      No     No          No          INPUT     
+break_error        No     No          No          INPUT     
+rx_fifo_count[3:0] Yes    Yes         Yes         INPUT     
+rx_fifo_count[4]   No     No          No          INPUT     
+rx_fifo_empty      Yes    Yes         Yes         INPUT     
+rx_fifo_full       No     No          No          INPUT     
+push_rx_fifo       Yes    Yes         Yes         INPUT     
+rx_enable          Yes    Yes         Yes         OUTPUT    
+rx_fifo_re         Yes    Yes         Yes         OUTPUT    
+loopback           No     No          Yes         OUTPUT    
+ctsn               Yes    Yes         Yes         INPUT     
+dsrn               Yes    Yes         Yes         INPUT     
+dcdn               Yes    Yes         Yes         INPUT     
+rin                Yes    Yes         Yes         INPUT     
+rtsn               Yes    Yes         Yes         OUTPUT    
+dtrn               Yes    Yes         Yes         OUTPUT    
+out1n              Yes    Yes         Yes         OUTPUT    
+out2n              Yes    Yes         Yes         OUTPUT    
+irq                Yes    Yes         Yes         OUTPUT    
+baud_o             Yes    Yes         Yes         OUTPUT    
+
+Signal Details
+                       Toggle Toggle 1->0 Toggle 0->1 
+tx_state[2:0]          No     No          No          
+rx_state[3:0]          No     No          No          
+we                     Yes    Yes         Yes         
+re                     Yes    Yes         Yes         
+rx_fifo_over_threshold Yes    Yes         Yes         
+IER[1:0]               No     No          Yes         
+IER[2]                 No     No          No          
+IER[3]                 No     No          Yes         
+IIR[2:0]               Yes    Yes         Yes         
+IIR[3]                 No     No          No          
+FCR[0]                 No     No          No          
+FCR[1]                 No     No          Yes         
+FCR[2]                 No     No          No          
+FCR[3]                 No     No          Yes         
+FCR[4]                 No     No          No          
+FCR[5]                 No     No          Yes         
+FCR[7:6]               Yes    Yes         Yes         
+MCR[3:0]               Yes    Yes         Yes         
+MCR[4]                 No     No          Yes         
+MSR[7:0]               Yes    Yes         Yes         
+LSR[3:0]               No     No          No          
+DIVISOR[15:0]          Yes    Yes         Yes         
+dlc[15:0]              Yes    Yes         Yes         
+enable                 Yes    Yes         Yes         
+start_dlc              Yes    Yes         Yes         
+rx_enabled             No     No          No          
+tx_enabled             No     No          No          
+rx_overrun_int         No     No          No          
+reset_overrun          No     No          No          
+tx_int                 Yes    Yes         Yes         
+rx_int                 Yes    Yes         Yes         
+rx_parity_int          No     No          No          
+rx_framing_int         No     No          No          
+rx_break_int           No     No          No          
+cts_0                  No     No          No          
+cts_1                  No     No          No          
+cts_int                No     No          No          
+dcd_0                  No     No          No          
+dcd_1                  No     No          No          
+dcd_int                No     No          No          
+dsr_0                  No     No          No          
+dsr_1                  No     No          No          
+dsr_int                No     No          No          
+ri_0                   No     No          No          
+ri_1                   No     No          No          
+ri_int                 No     No          No          
+ms_int                 Yes    Yes         Yes         
+nDCD_1                 Yes    Yes         Yes         
+nCTS_1                 Yes    Yes         Yes         
+nDSR_1                 Yes    Yes         Yes         
+nRI_1                  Yes    Yes         Yes         
+ls_int                 Yes    Yes         Yes         
+fifo_error             No     No          No          
+last_tx_fifo_empty     Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+FSM Coverage for Module : uart_register_file
+Summary for FSM :: fsm_state
+            Total Covered Percent 
+States      3     3       100.00  
+Transitions 4     4       100.00  
+Sequences   0     0               
+
+State, Transition and Sequence Details for FSM :: fsm_state
+-------------------------------------------------------------------------------
+states Covered 
+IDLE   Covered 
+SETUP  Covered 
+ACCESS Covered 
+
+transitions   Covered 
+IDLE->SETUP   Covered 
+SETUP->IDLE   Covered 
+SETUP->ACCESS Covered 
+ACCESS->IDLE  Covered 
+
+sequences Covered 
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : uart_register_file
+         Line No. Total Covered Percent 
+Branches          82    79      96.34   
+IF       154      9     8       88.89   
+IF       198      3     3       100.00  
+IF       217      3     3       100.00  
+IF       233      5     5       100.00  
+IF       258      3     3       100.00  
+IF       271      3     3       100.00  
+IF       289      3     3       100.00  
+IF       302      3     3       100.00  
+CASE     317      10    9       90.00   
+IF       339      4     4       100.00  
+IF       354      4     4       100.00  
+IF       379      6     5       83.33   
+IF       407      3     3       100.00  
+IF       419      3     3       100.00  
+IF       441      3     3       100.00  
+IF       462      2     2       100.00  
+CASE     472      5     5       100.00  
+IF       485      10    10      100.00  
+
+
+154            if (PRESETn == 0)
+               -1-  
+155              begin
+156                we = 0;
+                   ==>
+157                re = 0;
+158                PREADY = 0;
+159                fsm_state = IDLE;
+160              end
+161            else
+162              case (fsm_state)
+                 -2-  
+163                IDLE: begin
+164                        we <= 0;
+165                        re <= 0;
+166                        PREADY <= 0;
+167                        if (PSEL)
+                           -3-  
+168                          fsm_state <= SETUP;
+                             ==>
+                             MISSING_ELSE
+                             ==>
+169                      end
+170                SETUP: begin
+171                         re <= 0;
+172                         if (PSEL && PENABLE)
+                            -4-  
+173                           begin
+174                             fsm_state <= ACCESS;
+175                             if (PWRITE)
+                                -5-  
+176                               we <= 1;
+                                  ==>
+                                  MISSING_ELSE
+                                  ==>
+177                           end
+178                         else
+179                           fsm_state <= IDLE;
+                              ==>
+180                       end
+181                ACCESS: begin
+182                          PREADY <= 1;
+183                          we <= 0;
+184                          if(PWRITE == 0)
+                             -6-  
+185                            re <= 1;
+                               ==>
+                               MISSING_ELSE
+                               ==>
+186                          fsm_state <= IDLE;
+187                        end
+188                default: fsm_state <= IDLE;
+                   ==>
+
+Branches:
+
+-1- -2-     -3- -4- -5- -6- Status      
+1   -       -   -   -   -   Covered     
+0   IDLE    1   -   -   -   Covered     
+0   IDLE    0   -   -   -   Covered     
+0   SETUP   -   1   1   -   Covered     
+0   SETUP   -   1   0   -   Covered     
+0   SETUP   -   0   -   -   Covered     
+0   ACCESS  -   -   -   1   Covered     
+0   ACCESS  -   -   -   0   Covered     
+0   default -   -   -   -   Not Covered 
+
+
+198            if(PRESETn == 0) begin
+               -1-  
+199              irq <= 0;
+                 ==>
+200            end
+201            else if((re == 1) && (PADDR == `IIR)) begin
+                    -2-  
+202              irq <= 0;
+                 ==>
+203            end
+204            else begin
+205              irq <= (IER[0] & rx_int) | (IER[1] & tx_int) | (IER[2] & ls_int) | (IER[3] & ms_int);
+                 ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+217            if(PRESETn == 0) begin
+               -1-  
+218              tx_fifo_we <= 0;
+                 ==>
+219            end
+220            else begin
+221              if((we == 1) && (PADDR == `DR)) begin
+                 -2-  
+222                tx_fifo_we <= 1;
+                   ==>
+223              end
+224              else begin
+225                tx_fifo_we <= 0;
+                   ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+233            if(PRESETn == 0) begin
+               -1-  
+234              DIVISOR <= 0;
+                 ==>
+235              start_dlc <= 0;
+236            end
+237            else begin
+238              if(we == 1) begin
+                 -2-  
+239                case(PADDR)
+                   -3-  
+240                  `DIV1: begin
+241                           DIVISOR[7:0] <= PWDATA[7:0];
+                              ==>
+242                           start_dlc <= 1;
+243                         end
+244                  `DIV2: begin
+245                           DIVISOR[15:8] <= PWDATA[7:0];
+                              ==>
+246                         end
+                            MISSING_DEFAULT
+                            ==>
+247                endcase
+248              end
+249              else begin
+250                start_dlc <= 0;
+                   ==>
+
+Branches:
+
+-1- -2- -3-             Status  
+1   -   -               Covered 
+0   1   5'h07           Covered 
+0   1   5'h08           Covered 
+0   1   MISSING_DEFAULT Covered 
+0   0   -               Covered 
+
+
+258            if(PRESETn == 0) begin
+               -1-  
+259              LCR <= 0;
+                 ==>
+260            end
+261            else begin
+262              if((we == 1) && (PADDR == `LCR)) begin
+                 -2-  
+263                LCR <= PWDATA[7:0];
+                   ==>
+264              end
+                 MISSING_ELSE
+                 ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+271            if(PRESETn == 0) begin
+               -1-  
+272              MCR <= 0;
+                 ==>
+273            end
+274            else begin
+275              if((we == 1) && (PADDR == `MCR)) begin
+                 -2-  
+276                MCR <= PWDATA[4:0];
+                   ==>
+277              end
+                 MISSING_ELSE
+                 ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+289            if(PRESETn == 0) begin
+               -1-  
+290              FCR <= 8'hc0;
+                 ==>
+291            end
+292            else begin
+293              if((we == 1) && (PADDR == `FCR)) begin
+                 -2-  
+294                FCR <= PWDATA[7:0];
+                   ==>
+295              end
+                 MISSING_ELSE
+                 ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+302            if(PRESETn == 0) begin
+               -1-  
+303              IER <= 0;
+                 ==>
+304            end
+305            else begin
+306              if((we == 1) && (PADDR == `IER)) begin
+                 -2-  
+307                IER <= PWDATA[3:0];
+                   ==>
+308              end
+                 MISSING_ELSE
+                 ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+317            case(PADDR)
+               -1-  
+318              `DR: PRDATA = {24'h0, rx_data_out[7:0]};
+                 ==>
+319              `IER: PRDATA = {28'h0, IER};
+                 ==>
+320              `IIR: PRDATA = {28'hc, IIR};
+                 ==>
+321              `LCR: PRDATA = {24'h0, LCR};
+                 ==>
+322              `MCR: PRDATA = {28'h0, MCR};
+                 ==>
+323        //parker      `LSR: PRDATA = {24'h0, fifo_error, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
+324              `LSR: PRDATA = {24'h0, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
+                 ==>
+325        
+326              `MSR: PRDATA = {24'h0, MSR};
+                 ==>
+327              `DIV1: PRDATA = {24'h0, DIVISOR[7:0]};
+                 ==>
+328              `DIV2: PRDATA = {24'h0, DIVISOR[15:8]};
+                 ==>
+329              default: begin
+330                         PRDATA = 32'h0;
+                            ==>
+
+Branches:
+
+-1-     Status      
+5'h00   Covered     
+5'h01   Covered     
+5'h02   Covered     
+5'h03   Covered     
+5'h04   Covered     
+5'h05   Covered     
+5'h06   Covered     
+5'h07   Covered     
+5'h08   Covered     
+default Not Covered 
+
+
+339          if (PRESETn == 0)
+             -1-  
+340            rx_fifo_re <= 0;
+               ==>
+341          else
+342          if (rx_fifo_re) // restore the signal to 0 after one clock cycle
+             -2-        
+343            rx_fifo_re <= 0;
+               ==>
+344          else
+345          if ((re) && (PADDR == `DR))
+             -3-  
+346            rx_fifo_re <= 1; // advance read pointer
+               ==>
+               MISSING_ELSE
+               ==>
+
+Branches:
+
+-1- -2- -3- Status  
+1   -   -   Covered 
+0   1   -   Covered 
+0   0   1   Covered 
+0   0   0   Covered 
+
+
+354          if(PRESETn == 0) begin
+             -1-  
+355            ls_int <= 0;
+               ==>
+356            LSR <= 0;
+357          end
+358          else begin
+359            if((PADDR == `LSR) && (re == 1)) begin
+               -2-  
+360              LSR <= 0;
+                 ==>
+361              ls_int <= 0;
+362            end
+363            else if(rx_fifo_re == 1) begin
+                    -3-       
+364              LSR <= {rx_data_out[10], rx_data_out[8], rx_data_out[9], rx_overrun};
+                 ==>
+365              ls_int <= |{rx_data_out[10:8], rx_fifo_over_threshold};
+366            end
+367            else begin
+368              ls_int <= |LSR;
+                 ==>
+
+Branches:
+
+-1- -2- -3- Status  
+1   -   -   Covered 
+0   1   -   Covered 
+0   0   1   Covered 
+0   0   0   Covered 
+
+
+379          if(PRESETn == 0) begin
+             -1-  
+380            IIR <= 4'h1;
+               ==>
+381          end
+382          else begin
+383            if((ls_int == 1) && (IER[2] == 1)) begin
+               -2-  
+384              IIR <= 4'h6;
+                 ==>
+385            end
+386            else if((rx_int == 1) && (IER[0] == 1)) begin
+                    -3-  
+387              IIR <= 4'h4;
+                 ==>
+388            end
+389            else if((tx_int == 1) && (IER[1] == 1)) begin
+                    -4-  
+390              IIR <= 4'h2;
+                 ==>
+391            end
+392            else if((ms_int == 1) && (IER[3] == 1)) begin
+                    -5-  
+393              IIR <= 4'h0;
+                 ==>
+394            end
+395            else begin
+396              IIR <= 4'h1;
+                 ==>
+
+Branches:
+
+-1- -2- -3- -4- -5- Status      
+1   -   -   -   -   Covered     
+0   1   -   -   -   Not Covered 
+0   0   1   -   -   Covered     
+0   0   0   1   -   Covered     
+0   0   0   0   1   Covered     
+0   0   0   0   0   Covered     
+
+
+407          if (PRESETn == 0)
+             -1-  
+408            dlc <= #1 0;
+               ==>
+409          else
+410            if (start_dlc | ~ (|dlc))
+               -2-  
+411                dlc <= DIVISOR - 1;               // preset counter
+                   ==>
+412            else
+413              dlc <= dlc - 1;              // decrement counter
+                 ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+419          if (PRESETn == 0)
+             -1-  
+420            enable <= 1'b0;
+               ==>
+421          else
+422            if (|DIVISOR & ~(|dlc))     // dl>0 & dlc==0
+               -2-  
+423              enable <= 1'b1;
+                 ==>
+424            else
+425              enable <= 1'b0;
+                 ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+441            if(PRESETn == 0) begin
+               -1-  
+442              tx_int <= 0;
+                 ==>
+443              last_tx_fifo_empty <= 0;
+444            end
+445            else begin
+446              last_tx_fifo_empty <= tx_fifo_empty;
+447              if((re == 1) && (PADDR == `IIR) && (PRDATA[3:0] == 4'h2)) begin
+                 -2-  
+448                tx_int <= 0;
+                   ==>
+449              end
+450              else begin
+451                tx_int <= (tx_fifo_empty & ~last_tx_fifo_empty) | tx_int;
+                   ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+462            if(PRESETn == 0) begin
+               -1-  
+463              rx_int <= 0;
+                 ==>
+464            end
+465            else begin
+466              rx_int <= rx_fifo_over_threshold;
+                 ==>
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+472          case(FCR[7:6])
+             -1-  
+473            2'h0: rx_fifo_over_threshold = (rx_fifo_count >= 1);
+               ==>
+474            2'h1: rx_fifo_over_threshold = (rx_fifo_count >= 4);
+               ==>
+475            2'h2: rx_fifo_over_threshold = (rx_fifo_count >= 8);
+               ==>
+476            2'h3: rx_fifo_over_threshold = (rx_fifo_count >= 14);
+               ==>
+477            default: rx_fifo_over_threshold = 0;
+               ==>
+
+Branches:
+
+-1-     Status  
+2'h0    Covered 
+2'h1    Covered 
+2'h2    Covered 
+2'h3    Covered 
+default Covered 
+
+
+485            if(PRESETn == 0) begin
+               -1-  
+486              ms_int <= 0;
+                 ==>
+487              nCTS_1 <= 0;
+488              nDSR_1 <= 0;
+489              nRI_1 <= 0;
+490              nDCD_1 <= 0;
+491              MSR[7:0] <= 0;
+492            end
+493            else begin
+494              if((re == 1) && (PADDR == `MSR)) begin
+                 -2-  
+495                ms_int <= 0;
+                   ==>
+496                MSR[3:0] <= 0;
+497              end
+498              else begin
+499                ms_int <= ms_int | ((nCTS_1 ^ ctsn) | (nDSR_1 ^ dsrn) | (nDCD_1 ^ dcdn) | (~rin & nRI_1));
+500                MSR[0] <= (nCTS_1 ^ ctsn) | MSR[0];
+501                MSR[1] <= (nDSR_1 ^ dsrn) | MSR[1];
+502                MSR[2] <= (~rin & nRI_1) | MSR[2];
+503                MSR[3] <= (nDCD_1 ^ dcdn) | MSR[3];
+504                nCTS_1 <= ctsn;
+505                nDSR_1 <= dsrn;
+506                nRI_1 <= rin;
+507                nDCD_1 <= dcdn;
+508                MSR[4] <= loopback ? MCR[1]: ~ctsn;
+                                      -3-  
+                                      ==>  
+                                      ==>  
+509                MSR[5] <= loopback ? MCR[0] : ~dsrn;
+                                      -4-  
+                                      ==>  
+                                      ==>  
+510                MSR[6] <= loopback ? MCR[2] : ~rin;
+                                      -5-  
+                                      ==>  
+                                      ==>  
+511                MSR[7] <= loopback ? MCR[3] : ~dcdn;
+                                      -6-  
+                                      ==>  
+                                      ==>  
+
+Branches:
+
+-1- -2- -3- -4- -5- -6- Status  
+1   -   -   -   -   -   Covered 
+0   1   -   -   -   -   Covered 
+0   0   1   -   -   -   Covered 
+0   0   0   -   -   -   Covered 
+0   0   -   1   -   -   Covered 
+0   0   -   0   -   -   Covered 
+0   0   -   -   1   -   Covered 
+0   0   -   -   0   -   Covered 
+0   0   -   -   -   1   Covered 
+0   0   -   -   -   0   Covered 
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.DUT.control
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 88.76  97.28  92.98  57.17 100.00  96.34 --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 88.76  97.28  92.98  57.17 100.00  96.34 --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME               
+ 88.76  97.28  92.98  57.17 100.00  96.34 --     uart_register_file 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME 
+ 81.69 --     100.00  45.06 --     100.00 --     DUT  
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : uart_tx
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 92.95  98.02 100.00  95.00  67.74  96.92 100.00 
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../rtl/uart/uart_tx.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                   
+ 92.95  98.02 100.00  95.00  67.74  96.92 100.00 uart_tb.DUT.tx_channel 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : uart_tx
+
+             Line No.   Total   Covered  Percent
+TOTAL                      101       99    98.02
+ALWAYS             59      101       99    98.02
+
+58                      always @(posedge PCLK) begin
+59         1/1            if(PRESETn == 0) begin
+60         1/1              tx_state <= IDLE;
+61         1/1              bit_counter <= 0;
+62         1/1              tx_buffer <= 0;
+63         1/1              TXD <= 1;
+64         1/1              pop_tx_fifo <= 0;
+65         1/1              busy <= 0;
+66                        end
+67                        else begin
+68         1/1              case(tx_state)
+69                            IDLE: begin
+70         1/1                        if((tx_fifo_empty == 0) && (enable == 1)) begin
+71         1/1                          tx_state <= START;
+72         1/1                          pop_tx_fifo <= 1;
+73         1/1                          tx_buffer <= tx_fifo_out;
+74         1/1                          busy <= 1;
+75         1/1                          bit_counter <= 0;
+76                                    end
+77                                    else begin
+78         1/1                          busy <= 0;
+79                                    end
+80                                  end
+81                            START: begin
+82         1/1                         pop_tx_fifo <= 0;
+83         1/1                         TXD <= 0;
+84         1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+85         1/1                           tx_state <= BIT0;
+86                                     end
+                        MISSING_ELSE
+87         1/1                         if(enable == 1) begin
+88         1/1                           bit_counter <= bit_counter + 1;
+89                                     end
+                        MISSING_ELSE
+90                                   end
+91                            BIT0: begin
+92         1/1                        TXD <= tx_buffer[0];
+93         1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+94         1/1                           tx_state <= BIT1;
+95                                     end
+                        MISSING_ELSE
+96         1/1                         if(enable == 1) begin
+97         1/1                           bit_counter <= bit_counter + 1;
+98                                     end
+                        MISSING_ELSE
+99                                   end
+100                           BIT1: begin
+101        1/1                        TXD <= tx_buffer[1];
+102        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+103        1/1                           tx_state <= BIT2;
+104                                    end
+                        MISSING_ELSE
+105        1/1                         if(enable == 1) begin
+106        1/1                           bit_counter <= bit_counter + 1;
+107                                    end
+                        MISSING_ELSE
+108                                  end
+109                           BIT2: begin
+110        1/1                        TXD <= tx_buffer[2];
+111        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+112        1/1                           tx_state <= BIT3;
+113                                    end
+                        MISSING_ELSE
+114        1/1                         if(enable == 1) begin
+115        1/1                           bit_counter <= bit_counter + 1;
+116                                    end
+                        MISSING_ELSE
+117                                  end
+118                           BIT3: begin
+119        1/1                        TXD <= tx_buffer[3];
+120        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+121        1/1                           tx_state <= BIT4;
+122                                    end
+                        MISSING_ELSE
+123        1/1                         if(enable == 1) begin
+124        1/1                           bit_counter <= bit_counter + 1;
+125                                    end
+                        MISSING_ELSE
+126                                  end
+127                           BIT4: begin
+128        1/1                        TXD <= tx_buffer[4];
+129        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+130        1/1                           if(LCR[1:0] != 0) begin
+131        1/1                             tx_state <= BIT5;
+132                                      end
+133                                      else begin
+134        1/1                             if(LCR[3] == 1) begin
+135        1/1                               tx_buffer[7:5] = 0;
+136        1/1                               tx_state <= PARITY;
+137                                        end
+138                                        else begin
+139        1/1                               tx_state <= STOP1;
+140                                        end
+141                                      end
+142                                    end
+                        MISSING_ELSE
+143        1/1                         if(enable == 1) begin
+144        1/1                           bit_counter <= bit_counter + 1;
+145                                    end
+                        MISSING_ELSE
+146                                  end
+147                           BIT5: begin
+148        1/1                        TXD <= tx_buffer[5];
+149        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+150        1/1                           if(LCR[1:0] > 2'b01) begin
+151        1/1                             tx_state <= BIT6;
+152                                      end
+153                                      else begin
+154        1/1                             if(LCR[3] == 1) begin
+155        1/1                               tx_buffer[7:6] = 0;
+156        1/1                               tx_state <= PARITY;
+157                                        end
+158                                        else begin
+159        1/1                               tx_state <= STOP1;
+160                                        end
+161                                      end
+162                                    end
+                        MISSING_ELSE
+163        1/1                         if(enable == 1) begin
+164        1/1                           bit_counter <= bit_counter + 1;
+165                                    end
+                        MISSING_ELSE
+166                                  end
+167                           BIT6: begin
+168        1/1                        TXD <= tx_buffer[6];
+169        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+170        1/1                           if(LCR[1:0] == 2'b11) begin
+171        1/1                             tx_state <= BIT7;
+172                                      end
+173                                      else begin
+174        1/1                             if(LCR[3] == 1) begin
+175        1/1                               tx_buffer[7] = 0;
+176        1/1                               tx_state <= PARITY;
+177                                        end
+178                                        else begin
+179        1/1                               tx_state <= STOP1;
+180                                        end
+181                                      end
+182                                    end
+                        MISSING_ELSE
+183        1/1                         if(enable == 1) begin
+184        1/1                           bit_counter <= bit_counter + 1;
+185                                    end
+                        MISSING_ELSE
+186                                  end
+187                           BIT7: begin
+188        1/1                        TXD <= tx_buffer[7];
+189        1/1                         if((enable == 1) && (bit_counter == 4'hf)) begin
+190        1/1                           if(LCR[3] == 1) begin
+191        1/1                             tx_state <= PARITY;
+192                                      end
+193                                      else begin
+194        1/1                             tx_state <= STOP1;
+195                                      end
+196                                    end
+                        MISSING_ELSE
+197        1/1                         if(enable == 1) begin
+198        1/1                           bit_counter <= bit_counter + 1;
+199                                    end
+                        MISSING_ELSE
+200                                  end
+201                           PARITY: begin
+202        1/1                          case(LCR[5:3])
+203        1/1                            3'b001: TXD <= ~(^tx_buffer);
+204        1/1                            3'b011: TXD <= ^tx_buffer;
+205        1/1                            3'b101: TXD <= 1;
+206        1/1                            3'b111: TXD <= 0;
+207        0/1     ==>                    default: TXD <= 0;
+208                                     endcase
+209        1/1                          if((enable == 1) && (bit_counter == 4'hf)) begin
+210        1/1                            tx_state <= STOP1;
+211                                     end
+                        MISSING_ELSE
+212        1/1                          if(enable == 1) begin
+213        1/1                            bit_counter <= bit_counter + 1;
+214                                     end
+                        MISSING_ELSE
+215                                   end
+216                            STOP1: begin
+217        1/1                          TXD <=1;
+218        1/1                          if((enable == 1) && (bit_counter == 4'hf)) begin
+219        1/1                            if(LCR[2] == 1) begin
+220        1/1                              tx_state <= STOP2;
+221                                       end
+222                                       else begin
+223        1/1                                tx_state <= IDLE;
+224                                       end
+225                                     end
+                        MISSING_ELSE
+226        1/1                          if(enable == 1) begin
+227        1/1                            bit_counter <= bit_counter + 1;
+228                                     end
+                        MISSING_ELSE
+229                                   end
+230                            STOP2: begin
+231        1/1                          TXD <= 1;
+232        1/1                          if((enable == 1) && (bit_counter == 4'hf)) begin
+233        1/1                              tx_state <= IDLE;
+234                                     end
+                        MISSING_ELSE
+235        1/1                          if(enable == 1) begin
+236        1/1                            bit_counter <= bit_counter + 1;
+237                                     end
+                        MISSING_ELSE
+238                                   end
+239        0/1     ==>         default: tx_state <= IDLE;
+
+-------------------------------------------------------------------------------
+Cond Coverage for Module : uart_tx
+
+               Total   Covered  Percent
+Conditions         39       39   100.00
+Logical            39       39   100.00
+Non-Logical         0        0
+Event               0        0
+
+ LINE       70
+ EXPRESSION ((tx_fifo_empty == 1'b0) && (enable == 1'b1))
+             -----------1-----------    --------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       84
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       93
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       102
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       111
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       120
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       129
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       149
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       169
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       189
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       209
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       218
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       232
+ EXPRESSION ((enable == 1'b1) && (bit_counter == 4'hf))
+             --------1-------    ----------2----------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : uart_tx
+                Total Covered Percent 
+Totals          15    13      86.67   
+Total Bits      100   95      95.00   
+Total Bits 0->1 50    49      98.00   
+Total Bits 1->0 50    46      92.00   
+
+                            
+Ports          11 9  81.82  
+Port Bits      58 53 91.38  
+Port Bits 0->1 29 28 96.55  
+Port Bits 1->0 29 25 86.21  
+
+                              
+Signals          4  4  100.00 
+Signal Bits      42 42 100.00 
+Signal Bits 0->1 21 21 100.00 
+Signal Bits 1->0 21 21 100.00 
+
+Port Details
+                   Toggle Toggle 1->0 Toggle 0->1 Direction 
+PCLK               Yes    Yes         Yes         INPUT     
+PRESETn            No     No          Yes         INPUT     
+PWDATA[7:0]        Yes    Yes         Yes         INPUT     
+tx_fifo_push       Yes    Yes         Yes         INPUT     
+LCR[4:0]           Yes    Yes         Yes         INPUT     
+LCR[5]             No     No          Yes         INPUT     
+LCR[6]             No     No          No          INPUT     
+LCR[7]             No     No          Yes         INPUT     
+enable             Yes    Yes         Yes         INPUT     
+tx_fifo_empty      Yes    Yes         Yes         OUTPUT    
+tx_fifo_full       Yes    Yes         Yes         OUTPUT    
+tx_fifo_count[4:0] Yes    Yes         Yes         OUTPUT    
+busy               Yes    Yes         Yes         OUTPUT    
+TXD                Yes    Yes         Yes         OUTPUT    
+
+Signal Details
+                 Toggle Toggle 1->0 Toggle 0->1 
+bit_counter[3:0] Yes    Yes         Yes         
+tx_buffer[7:0]   Yes    Yes         Yes         
+tx_fifo_out[7:0] Yes    Yes         Yes         
+pop_tx_fifo      Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+FSM Coverage for Module : uart_tx
+Summary for FSM :: tx_state
+            Total Covered Percent 
+States      13    13      100.00  
+Transitions 31    21      67.74   
+Sequences   0     0               
+
+State, Transition and Sequence Details for FSM :: tx_state
+-------------------------------------------------------------------------------
+states Covered 
+IDLE   Covered 
+START  Covered 
+BIT0   Covered 
+BIT1   Covered 
+BIT2   Covered 
+BIT3   Covered 
+BIT4   Covered 
+BIT5   Covered 
+BIT6   Covered 
+BIT7   Covered 
+PARITY Covered 
+STOP1  Covered 
+STOP2  Covered 
+
+transitions   Covered     
+IDLE->START   Covered     
+START->IDLE   Not Covered 
+START->BIT0   Covered     
+BIT0->IDLE    Not Covered 
+BIT0->BIT1    Covered     
+BIT1->IDLE    Not Covered 
+BIT1->BIT2    Covered     
+BIT2->IDLE    Not Covered 
+BIT2->BIT3    Covered     
+BIT3->IDLE    Not Covered 
+BIT3->BIT4    Covered     
+BIT4->IDLE    Not Covered 
+BIT4->BIT5    Covered     
+BIT4->PARITY  Covered     
+BIT4->STOP1   Covered     
+BIT5->IDLE    Not Covered 
+BIT5->BIT6    Covered     
+BIT5->PARITY  Covered     
+BIT5->STOP1   Covered     
+BIT6->IDLE    Not Covered 
+BIT6->BIT7    Covered     
+BIT6->PARITY  Covered     
+BIT6->STOP1   Covered     
+BIT7->IDLE    Not Covered 
+BIT7->PARITY  Covered     
+BIT7->STOP1   Covered     
+PARITY->IDLE  Not Covered 
+PARITY->STOP1 Covered     
+STOP1->IDLE   Covered     
+STOP1->STOP2  Covered     
+STOP2->IDLE   Covered     
+
+sequences Covered 
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : uart_tx
+         Line No. Total Covered Percent 
+Branches          65    63      96.92   
+IF       59       65    63      96.92   
+
+
+59           if(PRESETn == 0) begin
+             -1-  
+60             tx_state <= IDLE;
+               ==>
+61             bit_counter <= 0;
+62             tx_buffer <= 0;
+63             TXD <= 1;
+64             pop_tx_fifo <= 0;
+65             busy <= 0;
+66           end
+67           else begin
+68             case(tx_state)
+               -2-  
+69               IDLE: begin
+70                       if((tx_fifo_empty == 0) && (enable == 1)) begin
+                         -3-        
+71                         tx_state <= START;
+                           ==>
+72                         pop_tx_fifo <= 1;
+73                         tx_buffer <= tx_fifo_out;
+74                         busy <= 1;
+75                         bit_counter <= 0;
+76                       end
+77                       else begin
+78                         busy <= 0;
+                           ==>
+79                       end
+80                     end
+81               START: begin
+82                        pop_tx_fifo <= 0;
+83                        TXD <= 0;
+84                        if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -4-  
+85                          tx_state <= BIT0;
+                            ==>
+86                        end
+                          MISSING_ELSE
+                          ==>
+87                        if(enable == 1) begin
+                          -5-  
+88                          bit_counter <= bit_counter + 1;
+                            ==>
+89                        end
+                          MISSING_ELSE
+                          ==>
+90                      end
+91               BIT0: begin
+92                       TXD <= tx_buffer[0];
+93                        if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -6-  
+94                          tx_state <= BIT1;
+                            ==>
+95                        end
+                          MISSING_ELSE
+                          ==>
+96                        if(enable == 1) begin
+                          -7-  
+97                          bit_counter <= bit_counter + 1;
+                            ==>
+98                        end
+                          MISSING_ELSE
+                          ==>
+99                      end
+100              BIT1: begin
+101                      TXD <= tx_buffer[1];
+102                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -8-  
+103                         tx_state <= BIT2;
+                            ==>
+104                       end
+                          MISSING_ELSE
+                          ==>
+105                       if(enable == 1) begin
+                          -9-  
+106                         bit_counter <= bit_counter + 1;
+                            ==>
+107                       end
+                          MISSING_ELSE
+                          ==>
+108                     end
+109              BIT2: begin
+110                      TXD <= tx_buffer[2];
+111                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -10-  
+112                         tx_state <= BIT3;
+                            ==>
+113                       end
+                          MISSING_ELSE
+                          ==>
+114                       if(enable == 1) begin
+                          -11-  
+115                         bit_counter <= bit_counter + 1;
+                            ==>
+116                       end
+                          MISSING_ELSE
+                          ==>
+117                     end
+118              BIT3: begin
+119                      TXD <= tx_buffer[3];
+120                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -12-  
+121                         tx_state <= BIT4;
+                            ==>
+122                       end
+                          MISSING_ELSE
+                          ==>
+123                       if(enable == 1) begin
+                          -13-  
+124                         bit_counter <= bit_counter + 1;
+                            ==>
+125                       end
+                          MISSING_ELSE
+                          ==>
+126                     end
+127              BIT4: begin
+128                      TXD <= tx_buffer[4];
+129                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -14-  
+130                         if(LCR[1:0] != 0) begin
+                            -15-  
+131                           tx_state <= BIT5;
+                              ==>
+132                         end
+133                         else begin
+134                           if(LCR[3] == 1) begin
+                              -16-  
+135                             tx_buffer[7:5] = 0;
+                                ==>
+136                             tx_state <= PARITY;
+137                           end
+138                           else begin
+139                             tx_state <= STOP1;
+                                ==>
+140                           end
+141                         end
+142                       end
+                          MISSING_ELSE
+                          ==>
+143                       if(enable == 1) begin
+                          -17-  
+144                         bit_counter <= bit_counter + 1;
+                            ==>
+145                       end
+                          MISSING_ELSE
+                          ==>
+146                     end
+147              BIT5: begin
+148                      TXD <= tx_buffer[5];
+149                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -18-  
+150                         if(LCR[1:0] > 2'b01) begin
+                            -19-  
+151                           tx_state <= BIT6;
+                              ==>
+152                         end
+153                         else begin
+154                           if(LCR[3] == 1) begin
+                              -20-  
+155                             tx_buffer[7:6] = 0;
+                                ==>
+156                             tx_state <= PARITY;
+157                           end
+158                           else begin
+159                             tx_state <= STOP1;
+                                ==>
+160                           end
+161                         end
+162                       end
+                          MISSING_ELSE
+                          ==>
+163                       if(enable == 1) begin
+                          -21-  
+164                         bit_counter <= bit_counter + 1;
+                            ==>
+165                       end
+                          MISSING_ELSE
+                          ==>
+166                     end
+167              BIT6: begin
+168                      TXD <= tx_buffer[6];
+169                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -22-  
+170                         if(LCR[1:0] == 2'b11) begin
+                            -23-  
+171                           tx_state <= BIT7;
+                              ==>
+172                         end
+173                         else begin
+174                           if(LCR[3] == 1) begin
+                              -24-  
+175                             tx_buffer[7] = 0;
+                                ==>
+176                             tx_state <= PARITY;
+177                           end
+178                           else begin
+179                             tx_state <= STOP1;
+                                ==>
+180                           end
+181                         end
+182                       end
+                          MISSING_ELSE
+                          ==>
+183                       if(enable == 1) begin
+                          -25-  
+184                         bit_counter <= bit_counter + 1;
+                            ==>
+185                       end
+                          MISSING_ELSE
+                          ==>
+186                     end
+187              BIT7: begin
+188                      TXD <= tx_buffer[7];
+189                       if((enable == 1) && (bit_counter == 4'hf)) begin
+                          -26-  
+190                         if(LCR[3] == 1) begin
+                            -27-  
+191                           tx_state <= PARITY;
+                              ==>
+192                         end
+193                         else begin
+194                           tx_state <= STOP1;
+                              ==>
+195                         end
+196                       end
+                          MISSING_ELSE
+                          ==>
+197                       if(enable == 1) begin
+                          -28-  
+198                         bit_counter <= bit_counter + 1;
+                            ==>
+199                       end
+                          MISSING_ELSE
+                          ==>
+200                     end
+201              PARITY: begin
+202                        case(LCR[5:3])
+                           -29-  
+203                          3'b001: TXD <= ~(^tx_buffer);
+                             ==>
+204                          3'b011: TXD <= ^tx_buffer;
+                             ==>
+205                          3'b101: TXD <= 1;
+                             ==>
+206                          3'b111: TXD <= 0;
+                             ==>
+207                          default: TXD <= 0;
+                             ==>
+208                        endcase
+209                        if((enable == 1) && (bit_counter == 4'hf)) begin
+                           -30-  
+210                          tx_state <= STOP1;
+                             ==>
+211                        end
+                           MISSING_ELSE
+                           ==>
+212                        if(enable == 1) begin
+                           -31-  
+213                          bit_counter <= bit_counter + 1;
+                             ==>
+214                        end
+                           MISSING_ELSE
+                           ==>
+215                      end
+216               STOP1: begin
+217                        TXD <=1;
+218                        if((enable == 1) && (bit_counter == 4'hf)) begin
+                           -32-  
+219                          if(LCR[2] == 1) begin
+                             -33-  
+220                            tx_state <= STOP2;
+                               ==>
+221                          end
+222                          else begin
+223                              tx_state <= IDLE;
+                                 ==>
+224                          end
+225                        end
+                           MISSING_ELSE
+                           ==>
+226                        if(enable == 1) begin
+                           -34-  
+227                          bit_counter <= bit_counter + 1;
+                             ==>
+228                        end
+                           MISSING_ELSE
+                           ==>
+229                      end
+230               STOP2: begin
+231                        TXD <= 1;
+232                        if((enable == 1) && (bit_counter == 4'hf)) begin
+                           -35-  
+233                            tx_state <= IDLE;
+                               ==>
+234                        end
+                           MISSING_ELSE
+                           ==>
+235                        if(enable == 1) begin
+                           -36-  
+236                          bit_counter <= bit_counter + 1;
+                             ==>
+237                        end
+                           MISSING_ELSE
+                           ==>
+238                      end
+239               default: tx_state <= IDLE;
+                  ==>
+
+Branches:
+
+-1- -2-     -3- -4- -5- -6- -7- -8- -9- -10- -11- -12- -13- -14- -15- -16- -17- -18- -19- -20- -21- -22- -23- -24- -25- -26- -27- -28- -29-    -30- -31- -32- -33- -34- -35- -36- Status      
+1   -       -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   IDLE    1   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   IDLE    0   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   START   -   1   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   START   -   0   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   START   -   -   1   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   START   -   -   0   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT0    -   -   -   1   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT0    -   -   -   0   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT0    -   -   -   -   1   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT0    -   -   -   -   0   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT1    -   -   -   -   -   1   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT1    -   -   -   -   -   0   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT1    -   -   -   -   -   -   1   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT1    -   -   -   -   -   -   0   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT2    -   -   -   -   -   -   -   1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT2    -   -   -   -   -   -   -   0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT2    -   -   -   -   -   -   -   -    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT2    -   -   -   -   -   -   -   -    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT3    -   -   -   -   -   -   -   -    -    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT3    -   -   -   -   -   -   -   -    -    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT3    -   -   -   -   -   -   -   -    -    -    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT3    -   -   -   -   -   -   -   -    -    -    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    1    1    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    1    0    1    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    1    0    0    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    0    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    -    -    -    1    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT4    -   -   -   -   -   -   -   -    -    -    -    -    -    -    0    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    1    1    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    1    0    1    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    1    0    0    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    0    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    1    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT5    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    0    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    1    1    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    1    0    1    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    1    0    0    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    0    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT6    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    0    -    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    1    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    0    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    0    -    -    -       -    -    -    -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    1    -       -    -    -    -    -    -    -    Covered     
+0   BIT7    -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    0    -       -    -    -    -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    3'b001  -    -    -    -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    3'b011  -    -    -    -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    3'b101  -    -    -    -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    3'b111  -    -    -    -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    default -    -    -    -    -    -    -    Not Covered 
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       1    -    -    -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       0    -    -    -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    1    -    -    -    -    -    Covered     
+0   PARITY  -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    0    -    -    -    -    -    Covered     
+0   STOP1   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    1    1    -    -    -    Covered     
+0   STOP1   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    1    0    -    -    -    Covered     
+0   STOP1   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    0    -    -    -    -    Covered     
+0   STOP1   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    1    -    -    Covered     
+0   STOP1   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    0    -    -    Covered     
+0   STOP2   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    1    -    Covered     
+0   STOP2   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    0    -    Covered     
+0   STOP2   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    1    Covered     
+0   STOP2   -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    0    Covered     
+0   default -   -   -   -   -   -   -   -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -    -       -    -    -    -    -    -    -    Not Covered 
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : uart_tx
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       1     1         100.00  1                 100.00  
+Cover properties 0     0                 0                         
+Cover sequences  0     0                 0                         
+Total            1     1         100.00  1                 100.00  
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name        Attempts Real Successes Failures Incomplete 
+TX_BUSY_CHK 11074018 749            0        6          
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.DUT.tx_channel
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 92.95  98.02 100.00  95.00  67.74  96.92 100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 92.53  95.80 100.00  98.59  67.74  93.06 100.00 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 92.95  98.02 100.00  95.00  67.74  96.92 100.00 uart_tx 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME 
+ 81.69 --     100.00  45.06 --     100.00 --     DUT  
+
+
+Subtrees :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 85.04  83.33 --      99.69 --      57.14 100.00 tx_fifo 
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : serial_if
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+100.00 --     --     100.00 --     --     --     
+
+Source File(s) : 
+
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../agents/uart_agent/serial_if.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME            
+ 50.00 --     --      50.00 --     --     --     uart_tb.RX_UART 
+100.00 --     --     100.00 --     --     --     uart_tb.TX_UART 
+
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : serial_if
+                Total Covered Percent 
+Totals          2     2       100.00  
+Total Bits      4     4       100.00  
+Total Bits 0->1 2     2       100.00  
+Total Bits 1->0 2     2       100.00  
+
+                            
+Signals          2 2 100.00 
+Signal Bits      4 4 100.00 
+Signal Bits 0->1 2 2 100.00 
+Signal Bits 1->0 2 2 100.00 
+
+Signal Details
+      Toggle Toggle 1->0 Toggle 0->1 
+sdata Yes    Yes         Yes         
+clk   Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.RX_UART
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 50.00 --     --      50.00 --     --     --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 50.00 --     --      50.00 --     --     --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME      
+100.00 --     --     100.00 --     --     --     serial_if 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 87.50 100.00 --      75.00 --     --     --     uart_tb 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Instance : uart_tb.RX_UART
+                Total Covered Percent 
+Totals          2     1       50.00   
+Total Bits      4     2       50.00   
+Total Bits 0->1 2     1       50.00   
+Total Bits 1->0 2     1       50.00   
+
+                            
+Signals          2 1 50.00  
+Signal Bits      4 2 50.00  
+Signal Bits 0->1 2 1 50.00  
+Signal Bits 1->0 2 1 50.00  
+
+Signal Details
+      Toggle Toggle 1->0 Toggle 0->1 
+sdata No     No          No          
+clk   Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uart_tb.TX_UART
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+100.00 --     --     100.00 --     --     --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+100.00 --     --     100.00 --     --     --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME      
+100.00 --     --     100.00 --     --     --     serial_if 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 87.50 100.00 --      75.00 --     --     --     uart_tb 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Instance : uart_tb.TX_UART
+                Total Covered Percent 
+Totals          2     2       100.00  
+Total Bits      4     4       100.00  
+Total Bits 0->1 2     2       100.00  
+Total Bits 1->0 2     2       100.00  
+
+                            
+Signals          2 2 100.00 
+Signal Bits      4 4 100.00 
+Signal Bits 0->1 2 2 100.00 
+Signal Bits 1->0 2 2 100.00 
+
+Signal Details
+      Toggle Toggle 1->0 Toggle 0->1 
+sdata Yes    Yes         Yes         
+clk   Yes    Yes         Yes         
+
+

@@ -1,0 +1,6 @@
+QWarning: QString::arg(): Argument missing: .22.22.6.9.%, 0
+QWarning: QString::arg(): Argument missing: .23.23.6.9.%, 0
+QWarning: QString::arg(): Argument missing: .24.24.6.14.%, 0
+QWarning: dve.exe: Fatal IO error: client killed
+QFatal: QPaintDevice: Must construct a QApplication before a QPaintDevice
+QWarning: dve.exe: Fatal IO error: client killed

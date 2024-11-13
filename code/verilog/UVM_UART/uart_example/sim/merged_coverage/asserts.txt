@@ -1,0 +1,127 @@
+Assertions
+
+
+Assertions by Category
+           ASSERT PROPERTIES SEQUENCES
+Total          36          1         1
+Category 0     36          1         1
+
+-------------------------------------------------------------------------------
+
+Assertions by Severity
+           ASSERT PROPERTIES SEQUENCES
+Total          36          1         1
+Severity 0     36          1         1
+
+-------------------------------------------------------------------------------
+
+Summary for Assertions
+                        NUMBER PERCENT
+Total Number                36  100.00
+Not Covered                 12   33.33
+At Least 1 Real Success     24   66.67
+At Least 1 Failure           0    0.00
+At Least 1 Incomplete        1    2.78
+Without Attempts            10   27.78
+
+-------------------------------------------------------------------------------
+
+Summary for Cover Sequences
+              NUMBER PERCENT
+Total Number       1  100.00
+Not Covered        0    0.00
+All Matches        1  100.00
+First Matches      1  100.00
+
+-------------------------------------------------------------------------------
+
+Summary for Cover Properties
+             NUMBER PERCENT
+Total Number      1  100.00
+Not Covered       0    0.00
+Matches           1  100.00
+
+-------------------------------------------------------------------------------
+
+Detail Report for Assertions
+
+Assertions Not Covered:
+                            ASSERTIONS                            CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+uart_tb.DUT.rx_channel.RX_BE_CHK                                         0        0 11074018              0        0          0
+uart_tb.DUT.rx_channel.RX_OE_CHK                                         0        0 11074018              0        0          0
+uvm_pkg.\uvm_reg_map::do_read .unnamed$$_0.unnamed$$_1                   0        0        0              0        0          0
+uvm_pkg.\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1                  0        0        0              0        0          0
+vcs_paramclassrepository.\baud_rate_test_seq::body .unnamed$$_1          0        0        0              0        0          0
+vcs_paramclassrepository.\modem_basic_sequence::body .unnamed$$_1        0        0        0              0        0          0
+vcs_paramclassrepository.\rx_errors_int_vseq::body .unnamed$$_1          0        0        0              0        0          0
+vcs_paramclassrepository.\rx_errors_int_vseq::body .unnamed$$_3          0        0        0              0        0          0
+vcs_paramclassrepository.\uart_host_mcr_seq::body .unnamed$$_0           0        0        0              0        0          0
+vcs_paramclassrepository.\uart_rx_seq::body .unnamed$$_1                 0        0        0              0        0          0
+vcs_paramclassrepository.\word_format_int_vseq::body .unnamed$$_1        0        0        0              0        0          0
+vcs_paramclassrepository.\word_format_int_vseq::body .unnamed$$_3        0        0        0              0        0          0
+
+Assertions At Least 1 Real Success:
+                                  ASSERTIONS                                   CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+uart_tb.APB.CHK_PSEL                                                                  0        0    15313          15313        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PADDR_STABLE                                             0        0    15313              1        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PADDR_VALID                                              0        0    15313            309        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PENABLE_DEASSERT                                         0        0    15313             62        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PENABLE_VALID                                            0        0    15313            309        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PREADY_VALID                                             0        0    15313             62        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PSEL_2_PENABLE                                           0        0    15313              1        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PSEL_ONLY_ONE                                            0        0    15313          15313        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PSEL_STABLE                                              0        0    15313              1        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PSEL_VALID                                               0        0    15313          15313        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PSLVERR_VALID                                            0        0    15313             62        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PWDATA_STABLE                                            0        0    15313              1        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PWDATA_VALID                                             0        0    15313             59        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PWRITE_STABLE                                            0        0    15313              1        0          0
+uart_tb.APB_PROTOCOL_MONITOR.PWRITE_VALID                                             0        0    15313            309        0          0
+uart_tb.APB_PROTOCOL_MONITOR.RESET_VALID                                              0        0    15313          15313        0          0
+uart_tb.DUT.rx_channel.RX_FE_CHK                                                      0        0 11074018            685        0          0
+uart_tb.DUT.rx_channel.RX_PE_CHK                                                      0        0 11074018            685        0          0
+uart_tb.DUT.tx_channel.TX_BUSY_CHK                                                    0        0 11074018            749        0          6
+uart_tb.DUT.tx_channel.tx_fifo.TX_FIFO_EMPTY_CHK                                      0        0 11074018       10865246        0          0
+uart_tb.DUT.tx_channel.tx_fifo.TX_FIFO_FULL_CHK                                       0        0 11074018           3830        0          0
+uart_tb.DUT.tx_channel.tx_fifo.TX_FIFO_OK_CHK                                         0        0 11074018         204936        0          0
+vcs_paramclassrepository.\uvm_component_name_check_visitor::visit .unnamed$$_0        0        0      138            138        0          0
+vcs_paramclassrepository.\word_format_poll_vseq::body .unnamed$$_1                    0        0        2              2        0          0
+
+Assertions At Least 1 Incomplete:
+            ASSERTIONS             CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+uart_tb.DUT.tx_channel.TX_BUSY_CHK        0        0 11074018            749        0          6
+
+Assertions Without Attempts:
+                            ASSERTIONS                            CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+uvm_pkg.\uvm_reg_map::do_read .unnamed$$_0.unnamed$$_1                   0        0        0              0        0          0
+uvm_pkg.\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1                  0        0        0              0        0          0
+vcs_paramclassrepository.\baud_rate_test_seq::body .unnamed$$_1          0        0        0              0        0          0
+vcs_paramclassrepository.\modem_basic_sequence::body .unnamed$$_1        0        0        0              0        0          0
+vcs_paramclassrepository.\rx_errors_int_vseq::body .unnamed$$_1          0        0        0              0        0          0
+vcs_paramclassrepository.\rx_errors_int_vseq::body .unnamed$$_3          0        0        0              0        0          0
+vcs_paramclassrepository.\uart_host_mcr_seq::body .unnamed$$_0           0        0        0              0        0          0
+vcs_paramclassrepository.\uart_rx_seq::body .unnamed$$_1                 0        0        0              0        0          0
+vcs_paramclassrepository.\word_format_int_vseq::body .unnamed$$_1        0        0        0              0        0          0
+vcs_paramclassrepository.\word_format_int_vseq::body .unnamed$$_3        0        0        0              0        0          0
+
+-------------------------------------------------------------------------------
+
+Detail Report for Cover Sequences
+
+Cover Sequences All Matches:
+             COVER SEQUENCES             CATEGORY SEVERITY ATTEMPTS ALL MATCHES FIRST MATCHES INCOMPLETE
+uart_tb.APB_PROTOCOL_MONITOR.unnamed$$_7        0        0    15313          62            62          0
+
+Cover Sequences First Matches:
+             COVER SEQUENCES             CATEGORY SEVERITY ATTEMPTS ALL MATCHES FIRST MATCHES INCOMPLETE
+uart_tb.APB_PROTOCOL_MONITOR.unnamed$$_7        0        0    15313          62            62          0
+
+-------------------------------------------------------------------------------
+
+Detail Report for Cover Properties
+
+Cover Properties Matches:
+   COVER PROPERTIES    CATEGORY SEVERITY ATTEMPTS MATCHES INCOMPLETE
+uart_tb.APB.COVER_PSEL        0        0    15313   15313          0
+
+

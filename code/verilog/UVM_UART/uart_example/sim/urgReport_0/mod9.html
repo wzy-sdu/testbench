@@ -1,0 +1,2494 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: uart_register_file</title>
+<link type="text/css" rel="stylesheet" href=".urg.css">
+<script type="text/javascript" src=".sortable.js"></script></head>
+<body><center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></center>
+<br>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="modlist.html#tag_uart_register_file" >uart_register_file</a></span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s6 cl rt"> 66.34</td>
+<td class="s8 cl rt"><a href="mod9.html#Line" > 85.03</a></td>
+<td class="s5 cl rt"><a href="mod9.html#Cond" > 50.88</a></td>
+<td class="s2 cl rt"><a href="mod9.html#Toggle" > 23.84</a></td>
+<td class="s10 cl rt"><a href="mod9.html#FSM" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod9.html#Branch" > 71.95</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="file:///dataA/ftk-yt/parkershe/UVM/uart_example/sim/../rtl/uart/uart_register_file.sv" >/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../rtl/uart/uart_register_file.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s6 cl rt"> 66.34</td>
+<td class="s8 cl rt"><a href="mod9.html#Line" > 85.03</a></td>
+<td class="s5 cl rt"><a href="mod9.html#Cond" > 50.88</a></td>
+<td class="s2 cl rt"><a href="mod9.html#Toggle" > 23.84</a></td>
+<td class="s10 cl rt"><a href="mod9.html#FSM" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod9.html#Branch" > 71.95</a></td>
+<td class="wht cl rt"></td>
+<td><a href="mod9.html#inst_tag_8" >uart_tb.DUT.control</a></td>
+</tr></table></div>
+<br clear=all>
+<hr>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod9.html" >uart_register_file</a><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s8"><td class="lf">TOTAL<td><td>147<td>125<td>85.03
+<tr class="s9"><td class="lf">ALWAYS<td>154<td>23<td>22<td>95.65
+<tr class="s7"><td class="lf">ALWAYS<td>198<td>5<td>4<td>80.00
+<tr class="s10"><td class="lf">ALWAYS<td>217<td>5<td>5<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>233<td>9<td>9<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>258<td>4<td>4<td>100.00
+<tr class="s7"><td class="lf">ALWAYS<td>271<td>4<td>3<td>75.00
+<tr class="s10"><td class="lf">ALWAYS<td>289<td>4<td>4<td>100.00
+<tr class="s7"><td class="lf">ALWAYS<td>302<td>4<td>3<td>75.00
+<tr class="s6"><td class="lf">ALWAYS<td>316<td>13<td>8<td>61.54
+<tr class="s6"><td class="lf">ALWAYS<td>339<td>6<td>4<td>66.67
+<tr class="s7"><td class="lf">ALWAYS<td>354<td>10<td>8<td>80.00
+<tr class="s6"><td class="lf">ALWAYS<td>379<td>11<td>7<td>63.64
+<tr class="s10"><td class="lf">ALWAYS<td>407<td>5<td>5<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>419<td>5<td>5<td>100.00
+<tr class="s8"><td class="lf">ALWAYS<td>441<td>7<td>6<td>85.71
+<tr class="s10"><td class="lf">ALWAYS<td>462<td>3<td>3<td>100.00
+<tr class="s6"><td class="lf">ALWAYS<td>472<td>6<td>4<td>66.67
+<tr class="s9"><td class="lf">ALWAYS<td>485<td>23<td>21<td>91.30
+</table>
+<pre class="code"><br clear=all>
+153                       begin
+154        1/1              if (PRESETn == 0)
+155                           begin
+156        1/1                  we = 0;
+157        1/1                  re = 0;
+158        1/1                  PREADY = 0;
+159        1/1                  fsm_state = IDLE;
+160                           end
+161                         else
+162        1/1                case (fsm_state)
+163                             IDLE: begin
+164        1/1                          we &lt;= 0;
+165        1/1                          re &lt;= 0;
+166        1/1                          PREADY &lt;= 0;
+167        1/1                          if (PSEL)
+168        1/1                            fsm_state &lt;= SETUP;
+                        MISSING_ELSE
+169                                   end
+170                             SETUP: begin
+171        1/1                           re &lt;= 0;
+172        1/1                           if (PSEL &amp;&amp; PENABLE)
+173                                        begin
+174        1/1                               fsm_state &lt;= ACCESS;
+175        1/1                               if (PWRITE)
+176        1/1                                 we &lt;= 1;
+                        MISSING_ELSE
+177                                        end
+178                                      else
+179        1/1                             fsm_state &lt;= IDLE;
+180                                    end
+181                             ACCESS: begin
+182        1/1                            PREADY &lt;= 1;
+183        1/1                            we &lt;= 0;
+184        1/1                            if(PWRITE == 0)
+185        1/1                              re &lt;= 1;
+                        MISSING_ELSE
+186        1/1                            fsm_state &lt;= IDLE;
+187                                     end
+188        <font color = "red">0/1     ==>          default: fsm_state &lt;= IDLE;</font>
+189                           endcase
+190                       end
+191                     
+192                     // One clock pulse per enable
+193                     assign baud_o = ~PCLK &amp;&amp; enable;
+194                     
+195                     // Interrupt line
+196                     always @(posedge PCLK)
+197                       begin
+198        1/1              if(PRESETn == 0) begin
+199        1/1                irq &lt;= 0;
+200                         end
+201        1/1              else if((re == 1) &amp;&amp; (PADDR == `IIR)) begin
+202        <font color = "red">0/1     ==>        irq &lt;= 0;</font>
+203                         end
+204                         else begin
+205        1/1                irq &lt;= (IER[0] &amp; rx_int) | (IER[1] &amp; tx_int) | (IER[2] &amp; ls_int) | (IER[3] &amp; ms_int);
+206                         end
+207                       end
+208                     
+209                     // Loopback:
+210                     assign loopback = MCR[4];
+211                     
+212                     // The register implementations:
+213                     
+214                     // TX Data register strobe
+215                     always @(posedge PCLK)
+216                       begin
+217        1/1              if(PRESETn == 0) begin
+218        1/1                tx_fifo_we &lt;= 0;
+219                         end
+220                         else begin
+221        1/1                if((we == 1) &amp;&amp; (PADDR == `DR)) begin
+222        1/1                  tx_fifo_we &lt;= 1;
+223                           end
+224                           else begin
+225        1/1                  tx_fifo_we &lt;= 0;
+226                           end
+227                         end
+228                       end
+229                     
+230                     // DIVISOR - baud rate divider
+231                     always @(posedge PCLK)
+232                       begin
+233        1/1              if(PRESETn == 0) begin
+234        1/1                DIVISOR &lt;= 0;
+235        1/1                start_dlc &lt;= 0;
+236                         end
+237                         else begin
+238        1/1                if(we == 1) begin
+239        1/1                  case(PADDR)
+240                               `DIV1: begin
+241        1/1                             DIVISOR[7:0] &lt;= PWDATA[7:0];
+242        1/1                             start_dlc &lt;= 1;
+243                                      end
+244                               `DIV2: begin
+245        1/1                             DIVISOR[15:8] &lt;= PWDATA[7:0];
+246                                      end
+                        MISSING_DEFAULT
+247                             endcase
+248                           end
+249                           else begin
+250        1/1                  start_dlc &lt;= 0;
+251                           end
+252                         end
+253                       end
+254                     
+255                     // LCR - Line control register
+256                     always @(posedge PCLK)
+257                       begin
+258        1/1              if(PRESETn == 0) begin
+259        1/1                LCR &lt;= 0;
+260                         end
+261                         else begin
+262        1/1                if((we == 1) &amp;&amp; (PADDR == `LCR)) begin
+263        1/1                  LCR &lt;= PWDATA[7:0];
+264                           end
+                        MISSING_ELSE
+265                         end
+266                       end
+267                     
+268                     // MCR - Control register
+269                     always @(posedge PCLK)
+270                       begin
+271        1/1              if(PRESETn == 0) begin
+272        1/1                MCR &lt;= 0;
+273                         end
+274                         else begin
+275        1/1                if((we == 1) &amp;&amp; (PADDR == `MCR)) begin
+276        <font color = "red">0/1     ==>          MCR &lt;= PWDATA[4:0];</font>
+277                           end
+                        MISSING_ELSE
+278                         end
+279                       end
+280                     
+281                     assign out1n = MCR[2];
+282                     assign out2n = MCR[3];
+283                     assign dtrn = ~MCR[0];
+284                     assign rtsn = ~MCR[1];
+285                     
+286                     // FCR - FIFO Control Register:
+287                     always @(posedge PCLK)
+288                       begin
+289        1/1              if(PRESETn == 0) begin
+290        1/1                FCR &lt;= 8'hc0;
+291                         end
+292                         else begin
+293        1/1                if((we == 1) &amp;&amp; (PADDR == `FCR)) begin
+294        1/1                  FCR &lt;= PWDATA[7:0];
+295                           end
+                        MISSING_ELSE
+296                         end
+297                       end
+298                     
+299                     // IER - Interrupt Masks:
+300                     always @(posedge PCLK)
+301                       begin
+302        1/1              if(PRESETn == 0) begin
+303        1/1                IER &lt;= 0;
+304                         end
+305                         else begin
+306        1/1                if((we == 1) &amp;&amp; (PADDR == `IER)) begin
+307        <font color = "red">0/1     ==>          IER &lt;= PWDATA[3:0];</font>
+308                           end
+                        MISSING_ELSE
+309                         end
+310                       end
+311                     
+312                     //
+313                     // Read back path:
+314                     //
+315                     always_comb begin
+316        1/1              PSLVERR = 0;
+317        1/1              case(PADDR)
+318        1/1                `DR: PRDATA = {24'h0, rx_data_out[7:0]};
+319        <font color = "red">0/1     ==>        `IER: PRDATA = {28'h0, IER};</font>
+320        1/1                `IIR: PRDATA = {28'hc, IIR};
+321        1/1                `LCR: PRDATA = {24'h0, LCR};
+322        <font color = "red">0/1     ==>        `MCR: PRDATA = {28'h0, MCR};</font>
+323                     //parker      `LSR: PRDATA = {24'h0, fifo_error, (tx_fifo_empty &amp; ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
+324        1/1                `LSR: PRDATA = {24'h0, (tx_fifo_empty &amp; ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
+325                     
+326        <font color = "red">0/1     ==>        `MSR: PRDATA = {24'h0, MSR};</font>
+327        1/1                `DIV1: PRDATA = {24'h0, DIVISOR[7:0]};
+328        1/1                `DIV2: PRDATA = {24'h0, DIVISOR[15:8]};
+329                           default: begin
+330        <font color = "red">0/1     ==>                   PRDATA = 32'h0;</font>
+331        <font color = "red">0/1     ==>                   PSLVERR = 1;</font>
+332                                    end
+333                         endcase
+334                     end
+335                     
+336                     // Read pulse to pop the Rx Data FIFO
+337                     always @(posedge PCLK)
+338                     begin
+339        1/1            if (PRESETn == 0)
+340        1/1              rx_fifo_re &lt;= 0;
+341                       else
+342        1/1            if (rx_fifo_re) // restore the signal to 0 after one clock cycle
+343        <font color = "red">0/1     ==>      rx_fifo_re &lt;= 0;</font>
+344                       else
+345        1/1            if ((re) &amp;&amp; (PADDR == `DR))
+346        <font color = "red">0/1     ==>      rx_fifo_re &lt;= 1; // advance read pointer</font>
+                        MISSING_ELSE
+347                     end
+348                     
+349                     //
+350                     // LSR RX error bits
+351                     //
+352                     always @(posedge PCLK)
+353                     begin
+354        1/1            if(PRESETn == 0) begin
+355        1/1              ls_int &lt;= 0;
+356        1/1              LSR &lt;= 0;
+357                       end
+358                       else begin
+359        1/1              if((PADDR == `LSR) &amp;&amp; (re == 1)) begin
+360        1/1                LSR &lt;= 0;
+361        1/1                ls_int &lt;= 0;
+362                         end
+363        1/1              else if(rx_fifo_re == 1) begin
+364        <font color = "red">0/1     ==>        LSR &lt;= {rx_data_out[10], rx_data_out[8], rx_data_out[9], rx_overrun};</font>
+365        <font color = "red">0/1     ==>        ls_int &lt;= |{rx_data_out[10:8], rx_fifo_over_threshold};</font>
+366                         end
+367                         else begin
+368        1/1                ls_int &lt;= |LSR;
+369                         end
+370                       end
+371                     end
+372                     
+373                     
+374                     
+375                     
+376                     // Interrupt Identification register
+377                     always @(posedge PCLK)
+378                     begin
+379        1/1            if(PRESETn == 0) begin
+380        1/1              IIR &lt;= 4'h1;
+381                       end
+382                       else begin
+383        1/1              if((ls_int == 1) &amp;&amp; (IER[2] == 1)) begin
+384        <font color = "red">0/1     ==>        IIR &lt;= 4'h6;</font>
+385                         end
+386        1/1              else if((rx_int == 1) &amp;&amp; (IER[0] == 1)) begin
+387        <font color = "red">0/1     ==>        IIR &lt;= 4'h4;</font>
+388                         end
+389        1/1              else if((tx_int == 1) &amp;&amp; (IER[1] == 1)) begin
+390        <font color = "red">0/1     ==>        IIR &lt;= 4'h2;</font>
+391                         end
+392        1/1              else if((ms_int == 1) &amp;&amp; (IER[3] == 1)) begin
+393        <font color = "red">0/1     ==>        IIR &lt;= 4'h0;</font>
+394                         end
+395                         else begin
+396        1/1                IIR &lt;= 4'h1;
+397                         end
+398                       end
+399                     end
+400                     
+401                     //
+402                     // Baud rate generator:
+403                     //
+404                     // Frequency divider
+405                     always @(posedge PCLK)
+406                     begin
+407        1/1            if (PRESETn == 0)
+408        1/1              dlc &lt;= #1 0;
+409                       else
+410        1/1              if (start_dlc | ~ (|dlc))
+411        1/1                  dlc &lt;= DIVISOR - 1;               // preset counter
+412                         else
+413        1/1                dlc &lt;= dlc - 1;              // decrement counter
+414                     end
+415                     
+416                     // Enable signal generation logic
+417                     always @(posedge PCLK)
+418                     begin
+419        1/1            if (PRESETn == 0)
+420        1/1              enable &lt;= 1'b0;
+421                       else
+422        1/1              if (|DIVISOR &amp; ~(|dlc))     // dl&gt;0 &amp; dlc==0
+423        1/1                enable &lt;= 1'b1;
+424                         else
+425        1/1                enable &lt;= 1'b0;
+426                     end
+427                     
+428                     assign tx_enable = enable;
+429                     
+430                     assign rx_enable = enable;
+431                     
+432                     
+433                     //
+434                     // Interrupts
+435                     //
+436                     // TX Interrupt - Triggered when TX FIFO contents below threshold
+437                     //                Cleared by a write to the interrupt clear bit
+438                     //
+439                     always @(posedge PCLK)
+440                       begin
+441        1/1              if(PRESETn == 0) begin
+442        1/1                tx_int &lt;= 0;
+443        1/1                last_tx_fifo_empty &lt;= 0;
+444                         end
+445                         else begin
+446        1/1                last_tx_fifo_empty &lt;= tx_fifo_empty;
+447        1/1                if((re == 1) &amp;&amp; (PADDR == `IIR) &amp;&amp; (PRDATA[3:0] == 4'h2)) begin
+448        <font color = "red">0/1     ==>          tx_int &lt;= 0;</font>
+449                           end
+450                           else begin
+451        1/1                  tx_int &lt;= (tx_fifo_empty &amp; ~last_tx_fifo_empty) | tx_int;
+452                           end
+453                         end
+454                       end
+455                     
+456                     //
+457                     // RX Interrupt - Triggered when RX FIFO contents above threshold
+458                     //                Cleared by a write to the interrupt clear bit
+459                     //
+460                     always @(posedge PCLK)
+461                       begin
+462        1/1              if(PRESETn == 0) begin
+463        1/1                rx_int &lt;= 0;
+464                         end
+465                         else begin
+466        1/1                rx_int &lt;= rx_fifo_over_threshold;
+467                         end
+468                       end
+469                     
+470                     // RX FIFO over its threshold
+471                     always_comb
+472        1/1            case(FCR[7:6])
+473        1/1              2'h0: rx_fifo_over_threshold = (rx_fifo_count &gt;= 1);
+474        <font color = "red">0/1     ==>      2'h1: rx_fifo_over_threshold = (rx_fifo_count &gt;= 4);</font>
+475        <font color = "red">0/1     ==>      2'h2: rx_fifo_over_threshold = (rx_fifo_count &gt;= 8);</font>
+476        1/1              2'h3: rx_fifo_over_threshold = (rx_fifo_count &gt;= 14);
+477        1/1              default: rx_fifo_over_threshold = 0;
+478                       endcase
+479                     
+480                     //
+481                     // Modem Status register and interrupt:
+482                     //
+483                     always @(posedge PCLK)
+484                       begin
+485        1/1              if(PRESETn == 0) begin
+486        1/1                ms_int &lt;= 0;
+487        1/1                nCTS_1 &lt;= 0;
+488        1/1                nDSR_1 &lt;= 0;
+489        1/1                nRI_1 &lt;= 0;
+490        1/1                nDCD_1 &lt;= 0;
+491        1/1                MSR[7:0] &lt;= 0;
+492                         end
+493                         else begin
+494        1/1                if((re == 1) &amp;&amp; (PADDR == `MSR)) begin
+495        <font color = "red">0/1     ==>          ms_int &lt;= 0;</font>
+496        <font color = "red">0/1     ==>          MSR[3:0] &lt;= 0;</font>
+497                           end
+498                           else begin
+499        1/1                  ms_int &lt;= ms_int | ((nCTS_1 ^ ctsn) | (nDSR_1 ^ dsrn) | (nDCD_1 ^ dcdn) | (~rin &amp; nRI_1));
+500        1/1                  MSR[0] &lt;= (nCTS_1 ^ ctsn) | MSR[0];
+501        1/1                  MSR[1] &lt;= (nDSR_1 ^ dsrn) | MSR[1];
+502        1/1                  MSR[2] &lt;= (~rin &amp; nRI_1) | MSR[2];
+503        1/1                  MSR[3] &lt;= (nDCD_1 ^ dcdn) | MSR[3];
+504        1/1                  nCTS_1 &lt;= ctsn;
+505        1/1                  nDSR_1 &lt;= dsrn;
+506        1/1                  nRI_1 &lt;= rin;
+507        1/1                  nDCD_1 &lt;= dcdn;
+508        1/1                  MSR[4] &lt;= loopback ? MCR[1]: ~ctsn;
+509        1/1                  MSR[5] &lt;= loopback ? MCR[0] : ~dsrn;
+510        1/1                  MSR[6] &lt;= loopback ? MCR[2] : ~rin;
+511        1/1                  MSR[7] &lt;= loopback ? MCR[3] : ~dcdn;
+</pre>
+<br clear=all>
+Go to <a href="mod9.html" >top</a>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod9.html" >uart_register_file</a><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="3" width="82">
+<tr><th><th>Total<th>Covered<th>Percent
+<tr class="s5"><td class="lf">Conditions<td>57<td>29<td>50.88
+<tr class="s5"><td class="lf">Logical<td>57<td>29<td>50.88
+<tr class="wht"><td class="lf">Non-Logical<td>0<td>0<td>
+<tr class="wht"><td class="lf">Event<td>0<td>0<td>
+</table>
+<br clear=all>
+<pre class="code"> LINE       172
+ EXPRESSION (PSEL &amp;&amp; PENABLE)
+             --1-    ---2---
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uRed"><td>0<td>1<td class="lf">Not Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uGreen"><td>1<td>1<td class="lf">Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       193
+ EXPRESSION (((~PCLK)) &amp;&amp; enable)
+             ----1----    ---2--
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uGreen"><td>0<td>1<td class="lf">Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uGreen"><td>1<td>1<td class="lf">Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       201
+ EXPRESSION ((re == 1'b1) &amp;&amp; (PADDR == 5'h02))
+             ------1-----    --------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uGreen"><td>0<td>1<td class="lf">Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       221
+ EXPRESSION ((we == 1'b1) &amp;&amp; (PADDR == 5'b0))
+             ------1-----    -------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uGreen"><td>0<td>1<td class="lf">Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uGreen"><td>1<td>1<td class="lf">Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       262
+ EXPRESSION ((we == 1'b1) &amp;&amp; (PADDR == 5'h03))
+             ------1-----    --------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uGreen"><td>0<td>1<td class="lf">Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uGreen"><td>1<td>1<td class="lf">Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       275
+ EXPRESSION ((we == 1'b1) &amp;&amp; (PADDR == 5'h04))
+             ------1-----    --------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uRed"><td>0<td>1<td class="lf">Not Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       293
+ EXPRESSION ((we == 1'b1) &amp;&amp; (PADDR == 5'h02))
+             ------1-----    --------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uGreen"><td>0<td>1<td class="lf">Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uGreen"><td>1<td>1<td class="lf">Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       306
+ EXPRESSION ((we == 1'b1) &amp;&amp; (PADDR == 5'b1))
+             ------1-----    -------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uRed"><td>0<td>1<td class="lf">Not Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       345
+ EXPRESSION (re &amp;&amp; (PADDR == 5'b0))
+             -1    -------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uGreen"><td>0<td>1<td class="lf">Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       359
+ EXPRESSION ((PADDR == 5'h05) &amp;&amp; (re == 1'b1))
+             --------1-------    ------2-----
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uGreen"><td>0<td>1<td class="lf">Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uGreen"><td>1<td>1<td class="lf">Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       383
+ EXPRESSION ((ls_int == 1'b1) &amp;&amp; (IER[2] == 1'b1))
+             --------1-------    --------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uRed"><td>0<td>1<td class="lf">Not Covered
+<tr class="uRed"><td>1<td>0<td class="lf">Not Covered
+<tr class="uRed"><td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       386
+ EXPRESSION ((rx_int == 1'b1) &amp;&amp; (IER[0] == 1'b1))
+             --------1-------    --------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uRed"><td>0<td>1<td class="lf">Not Covered
+<tr class="uRed"><td>1<td>0<td class="lf">Not Covered
+<tr class="uRed"><td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       389
+ EXPRESSION ((tx_int == 1'b1) &amp;&amp; (IER[1] == 1'b1))
+             --------1-------    --------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uRed"><td>0<td>1<td class="lf">Not Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       392
+ EXPRESSION ((ms_int == 1'b1) &amp;&amp; (IER[3] == 1'b1))
+             --------1-------    --------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uRed"><td>0<td>1<td class="lf">Not Covered
+<tr class="uRed"><td>1<td>0<td class="lf">Not Covered
+<tr class="uRed"><td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       447
+ EXPRESSION ((re == 1'b1) &amp;&amp; (PADDR == 5'h02) &amp;&amp; (PRDATA[3:0] == 4'h2))
+             ------1-----    --------2-------    ----------3----------
+</pre>
+<table class="ct">
+<col span="3" width="40">
+<tr><th>-1-<th>-2-<th>-3-<th>Status
+<tr class="uRed"><td>0<td>1<td>1<td class="lf">Not Covered
+<tr class="uRed"><td>1<td>0<td>1<td class="lf">Not Covered
+<tr class="uRed"><td>1<td>1<td>0<td class="lf">Not Covered
+<tr class="uRed"><td>1<td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       494
+ EXPRESSION ((re == 1'b1) &amp;&amp; (PADDR == 5'h06))
+             ------1-----    --------2-------
+</pre>
+<table class="ct">
+<col span="2" width="40">
+<tr><th>-1-<th>-2-<th>Status
+<tr class="uRed"><td>0<td>1<td class="lf">Not Covered
+<tr class="uGreen"><td>1<td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       508
+ EXPRESSION (loopback ? MCR[1] : ((~ctsn)))
+             ----1---
+</pre>
+<table class="ct">
+<col width="40">
+<tr><th>-1-<th>Status
+<tr class="uGreen"><td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       509
+ EXPRESSION (loopback ? MCR[0] : ((~dsrn)))
+             ----1---
+</pre>
+<table class="ct">
+<col width="40">
+<tr><th>-1-<th>Status
+<tr class="uGreen"><td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       510
+ EXPRESSION (loopback ? MCR[2] : ((~rin)))
+             ----1---
+</pre>
+<table class="ct">
+<col width="40">
+<tr><th>-1-<th>Status
+<tr class="uGreen"><td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+<pre class="code"> LINE       511
+ EXPRESSION (loopback ? MCR[3] : ((~dcdn)))
+             ----1---
+</pre>
+<table class="ct">
+<col width="40">
+<tr><th>-1-<th>Status
+<tr class="uGreen"><td>0<td class="lf">Covered
+<tr class="uRed"><td>1<td class="lf">Not Covered
+</table>
+<br clear=all>
+Go to <a href="mod9.html" >top</a>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod9.html" >uart_register_file</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s2">
+<td>Totals</td>
+<td class="rt">84</td>
+<td class="rt">17</td>
+<td class="rt">20.24 </td>
+</tr><tr class="s2">
+<td>Total Bits</td>
+<td class="rt">474</td>
+<td class="rt">113</td>
+<td class="rt">23.84 </td>
+</tr><tr class="s2">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">237</td>
+<td class="rt">61</td>
+<td class="rt">25.74 </td>
+</tr><tr class="s2">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">237</td>
+<td class="rt">52</td>
+<td class="rt">21.94 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s2">
+<td>Ports</td>
+<td class="rt">40</td>
+<td class="rt">11</td>
+<td class="rt">27.50 </td>
+</tr><tr class="s2">
+<td>Port Bits</td>
+<td class="rt">262</td>
+<td class="rt">61</td>
+<td class="rt">23.28 </td>
+</tr><tr class="s2">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">131</td>
+<td class="rt">32</td>
+<td class="rt">24.43 </td>
+</tr><tr class="s2">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">131</td>
+<td class="rt">29</td>
+<td class="rt">22.14 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Signals</td>
+<td class="rt">44</td>
+<td class="rt">6</td>
+<td class="rt">13.64 </td>
+</tr><tr class="s2">
+<td>Signal Bits</td>
+<td class="rt">212</td>
+<td class="rt">52</td>
+<td class="rt">24.53 </td>
+</tr><tr class="s2">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">106</td>
+<td class="rt">29</td>
+<td class="rt">27.36 </td>
+</tr><tr class="s2">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">106</td>
+<td class="rt">23</td>
+<td class="rt">21.70 </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>PCLK</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRESETn</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PSEL</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWRITE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PENABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PADDR[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PADDR[4]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWDATA[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWDATA[3]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWDATA[7:4]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWDATA[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRDATA[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>PRDATA[4:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>PRDATA[7:5]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>PRDATA[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>PREADY</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>PSLVERR</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>LCR[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>LCR[7:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>tx_fifo_we</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>tx_enable</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>tx_fifo_count[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tx_fifo_count[4:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tx_fifo_empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tx_fifo_full</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tx_busy</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rx_data_out[10:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rx_idle</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rx_overrun</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>parity_error</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>framing_error</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>break_error</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rx_fifo_count[4:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rx_fifo_empty</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rx_fifo_full</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>push_rx_fifo</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rx_enable</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rx_fifo_re</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>loopback</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ctsn</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>dsrn</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>dcdn</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rin</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rtsn</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>dtrn</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>out1n</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>out2n</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>irq</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>baud_o</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>tx_state[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rx_state[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>we</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>re</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rx_fifo_over_threshold</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>IER[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>IIR[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>FCR[5:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>FCR[7:6]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>MCR[4:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>MSR[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>MSR[7:4]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>LSR[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>DIVISOR[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>DIVISOR[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>DIVISOR[15:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>dlc[15:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>enable</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>start_dlc</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rx_enabled</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tx_enabled</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rx_overrun_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>reset_overrun</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tx_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rx_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rx_parity_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rx_framing_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rx_break_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>cts_0</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>cts_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>cts_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>dcd_0</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>dcd_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>dcd_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>dsr_0</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>dsr_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>dsr_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>ri_0</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>ri_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>ri_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>ms_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nDCD_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nCTS_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nDSR_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nRI_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>ls_int</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>fifo_error</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>last_tx_fifo_empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod9.html" >top</a>
+<hr>
+<a name="FSM"></a>
+FSM Coverage for Module : <a href="mod9.html" >uart_register_file</a><br clear=all>
+<table align=left>
+<caption><b>Summary for FSM :: fsm_state</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>States</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Transitions</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="wht">
+<td>Sequences</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+<b>State, Transition and Sequence Details for FSM :: fsm_state</b><hr>
+<table align=left>
+<tr>
+<th>states</th><th nowrap width=80>Covered</th></tr><tr class="uGreen">
+<td nowrap>IDLE</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>SETUP</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>ACCESS</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th>transitions</th><th nowrap width=80>Covered</th></tr><tr class="uGreen">
+<td nowrap>IDLE->SETUP</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>SETUP->IDLE</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>SETUP->ACCESS</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>ACCESS->IDLE</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<table align=left class="sml">
+<tr>
+<th>sequences</th><th nowrap width=80>Covered</th></tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod9.html" >top</a>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod9.html" >uart_register_file</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">82</td>
+<td class="rt">59</td>
+<td class="rt">71.95 </td>
+</tr><tr class="s8">
+<td>IF</td>
+<td class="rt">154</td>
+<td class="rt">9</td>
+<td class="rt">8</td>
+<td class="rt">88.89 </td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">198</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">217</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">233</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">258</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">271</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">289</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">302</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>CASE</td>
+<td class="rt">317</td>
+<td class="rt">10</td>
+<td class="rt">6</td>
+<td class="rt">60.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">339</td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s7">
+<td>IF</td>
+<td class="rt">354</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s3">
+<td>IF</td>
+<td class="rt">379</td>
+<td class="rt">6</td>
+<td class="rt">2</td>
+<td class="rt">33.33 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">407</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">419</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">441</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">462</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>CASE</td>
+<td class="rt">472</td>
+<td class="rt">5</td>
+<td class="rt">3</td>
+<td class="rt">60.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">485</td>
+<td class="rt">10</td>
+<td class="rt">5</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+154            if (PRESETn == 0)
+               <font color = "green">-1-</font>  
+155              begin
+156                we = 0;
+           <font color = "green">        ==></font>
+157                re = 0;
+158                PREADY = 0;
+159                fsm_state = IDLE;
+160              end
+161            else
+162              case (fsm_state)
+                 <font color = "red">-2-</font>  
+163                IDLE: begin
+164                        we <= 0;
+165                        re <= 0;
+166                        PREADY <= 0;
+167                        if (PSEL)
+                           <font color = "green">-3-</font>  
+168                          fsm_state <= SETUP;
+           <font color = "green">                  ==></font>
+                             MISSING_ELSE
+           <font color = "green">                  ==></font>
+169                      end
+170                SETUP: begin
+171                         re <= 0;
+172                         if (PSEL && PENABLE)
+                            <font color = "green">-4-</font>  
+173                           begin
+174                             fsm_state <= ACCESS;
+175                             if (PWRITE)
+                                <font color = "green">-5-</font>  
+176                               we <= 1;
+           <font color = "green">                       ==></font>
+                                  MISSING_ELSE
+           <font color = "green">                       ==></font>
+177                           end
+178                         else
+179                           fsm_state <= IDLE;
+           <font color = "green">                   ==></font>
+180                       end
+181                ACCESS: begin
+182                          PREADY <= 1;
+183                          we <= 0;
+184                          if(PWRITE == 0)
+                             <font color = "green">-6-</font>  
+185                            re <= 1;
+           <font color = "green">                    ==></font>
+                               MISSING_ELSE
+           <font color = "green">                    ==></font>
+186                          fsm_state <= IDLE;
+187                        end
+188                default: fsm_state <= IDLE;
+           <font color = "red">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>IDLE </td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>IDLE </td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>SETUP </td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>SETUP </td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>SETUP </td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>ACCESS </td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>ACCESS </td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>default</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+198            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+199              irq <= 0;
+           <font color = "green">      ==></font>
+200            end
+201            else if((re == 1) && (PADDR == `IIR)) begin
+                    <font color = "red">-2-</font>  
+202              irq <= 0;
+           <font color = "red">      ==></font>
+203            end
+204            else begin
+205              irq <= (IER[0] & rx_int) | (IER[1] & tx_int) | (IER[2] & ls_int) | (IER[3] & ms_int);
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+217            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+218              tx_fifo_we <= 0;
+           <font color = "green">      ==></font>
+219            end
+220            else begin
+221              if((we == 1) && (PADDR == `DR)) begin
+                 <font color = "green">-2-</font>  
+222                tx_fifo_we <= 1;
+           <font color = "green">        ==></font>
+223              end
+224              else begin
+225                tx_fifo_we <= 0;
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+233            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+234              DIVISOR <= 0;
+           <font color = "green">      ==></font>
+235              start_dlc <= 0;
+236            end
+237            else begin
+238              if(we == 1) begin
+                 <font color = "green">-2-</font>  
+239                case(PADDR)
+                   <font color = "green">-3-</font>  
+240                  `DIV1: begin
+241                           DIVISOR[7:0] <= PWDATA[7:0];
+           <font color = "green">                   ==></font>
+242                           start_dlc <= 1;
+243                         end
+244                  `DIV2: begin
+245                           DIVISOR[15:8] <= PWDATA[7:0];
+           <font color = "green">                   ==></font>
+246                         end
+                            MISSING_DEFAULT
+           <font color = "green">                 ==></font>
+247                endcase
+248              end
+249              else begin
+250                start_dlc <= 0;
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>5'h07 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>5'h08 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>MISSING_DEFAULT</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+258            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+259              LCR <= 0;
+           <font color = "green">      ==></font>
+260            end
+261            else begin
+262              if((we == 1) && (PADDR == `LCR)) begin
+                 <font color = "green">-2-</font>  
+263                LCR <= PWDATA[7:0];
+           <font color = "green">        ==></font>
+264              end
+                 MISSING_ELSE
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+271            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+272              MCR <= 0;
+           <font color = "green">      ==></font>
+273            end
+274            else begin
+275              if((we == 1) && (PADDR == `MCR)) begin
+                 <font color = "red">-2-</font>  
+276                MCR <= PWDATA[4:0];
+           <font color = "red">        ==></font>
+277              end
+                 MISSING_ELSE
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+289            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+290              FCR <= 8'hc0;
+           <font color = "green">      ==></font>
+291            end
+292            else begin
+293              if((we == 1) && (PADDR == `FCR)) begin
+                 <font color = "green">-2-</font>  
+294                FCR <= PWDATA[7:0];
+           <font color = "green">        ==></font>
+295              end
+                 MISSING_ELSE
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+302            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+303              IER <= 0;
+           <font color = "green">      ==></font>
+304            end
+305            else begin
+306              if((we == 1) && (PADDR == `IER)) begin
+                 <font color = "red">-2-</font>  
+307                IER <= PWDATA[3:0];
+           <font color = "red">        ==></font>
+308              end
+                 MISSING_ELSE
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+317            case(PADDR)
+               <font color = "red">-1-</font>  
+318              `DR: PRDATA = {24'h0, rx_data_out[7:0]};
+           <font color = "green">      ==></font>
+319              `IER: PRDATA = {28'h0, IER};
+           <font color = "red">      ==></font>
+320              `IIR: PRDATA = {28'hc, IIR};
+           <font color = "green">      ==></font>
+321              `LCR: PRDATA = {24'h0, LCR};
+           <font color = "green">      ==></font>
+322              `MCR: PRDATA = {28'h0, MCR};
+           <font color = "red">      ==></font>
+323        //parker      `LSR: PRDATA = {24'h0, fifo_error, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
+324              `LSR: PRDATA = {24'h0, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
+           <font color = "green">      ==></font>
+325        
+326              `MSR: PRDATA = {24'h0, MSR};
+           <font color = "red">      ==></font>
+327              `DIV1: PRDATA = {24'h0, DIVISOR[7:0]};
+           <font color = "green">      ==></font>
+328              `DIV2: PRDATA = {24'h0, DIVISOR[15:8]};
+           <font color = "green">      ==></font>
+329              default: begin
+330                         PRDATA = 32'h0;
+           <font color = "red">                 ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>5'h00 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>5'h01 </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'h02 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'h03 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>5'h04 </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'h05 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>5'h06 </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'h07 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'h08 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>default</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+339          if (PRESETn == 0)
+             <font color = "green">-1-</font>  
+340            rx_fifo_re <= 0;
+           <font color = "green">    ==></font>
+341          else
+342          if (rx_fifo_re) // restore the signal to 0 after one clock cycle
+             <font color = "red">-2-</font>        
+343            rx_fifo_re <= 0;
+           <font color = "red">    ==></font>
+344          else
+345          if ((re) && (PADDR == `DR))
+             <font color = "red">-3-</font>  
+346            rx_fifo_re <= 1; // advance read pointer
+           <font color = "red">    ==></font>
+               MISSING_ELSE
+           <font color = "green">    ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+354          if(PRESETn == 0) begin
+             <font color = "green">-1-</font>  
+355            ls_int <= 0;
+           <font color = "green">    ==></font>
+356            LSR <= 0;
+357          end
+358          else begin
+359            if((PADDR == `LSR) && (re == 1)) begin
+               <font color = "green">-2-</font>  
+360              LSR <= 0;
+           <font color = "green">      ==></font>
+361              ls_int <= 0;
+362            end
+363            else if(rx_fifo_re == 1) begin
+                    <font color = "red">-3-</font>       
+364              LSR <= {rx_data_out[10], rx_data_out[8], rx_data_out[9], rx_overrun};
+           <font color = "red">      ==></font>
+365              ls_int <= |{rx_data_out[10:8], rx_fifo_over_threshold};
+366            end
+367            else begin
+368              ls_int <= |LSR;
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+379          if(PRESETn == 0) begin
+             <font color = "green">-1-</font>  
+380            IIR <= 4'h1;
+           <font color = "green">    ==></font>
+381          end
+382          else begin
+383            if((ls_int == 1) && (IER[2] == 1)) begin
+               <font color = "red">-2-</font>  
+384              IIR <= 4'h6;
+           <font color = "red">      ==></font>
+385            end
+386            else if((rx_int == 1) && (IER[0] == 1)) begin
+                    <font color = "red">-3-</font>  
+387              IIR <= 4'h4;
+           <font color = "red">      ==></font>
+388            end
+389            else if((tx_int == 1) && (IER[1] == 1)) begin
+                    <font color = "red">-4-</font>  
+390              IIR <= 4'h2;
+           <font color = "red">      ==></font>
+391            end
+392            else if((ms_int == 1) && (IER[3] == 1)) begin
+                    <font color = "red">-5-</font>  
+393              IIR <= 4'h0;
+           <font color = "red">      ==></font>
+394            end
+395            else begin
+396              IIR <= 4'h1;
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+407          if (PRESETn == 0)
+             <font color = "green">-1-</font>  
+408            dlc <= #1 0;
+           <font color = "green">    ==></font>
+409          else
+410            if (start_dlc | ~ (|dlc))
+               <font color = "green">-2-</font>  
+411                dlc <= DIVISOR - 1;               // preset counter
+           <font color = "green">        ==></font>
+412            else
+413              dlc <= dlc - 1;              // decrement counter
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+419          if (PRESETn == 0)
+             <font color = "green">-1-</font>  
+420            enable <= 1'b0;
+           <font color = "green">    ==></font>
+421          else
+422            if (|DIVISOR & ~(|dlc))     // dl>0 & dlc==0
+               <font color = "green">-2-</font>  
+423              enable <= 1'b1;
+           <font color = "green">      ==></font>
+424            else
+425              enable <= 1'b0;
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+441            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+442              tx_int <= 0;
+           <font color = "green">      ==></font>
+443              last_tx_fifo_empty <= 0;
+444            end
+445            else begin
+446              last_tx_fifo_empty <= tx_fifo_empty;
+447              if((re == 1) && (PADDR == `IIR) && (PRDATA[3:0] == 4'h2)) begin
+                 <font color = "red">-2-</font>  
+448                tx_int <= 0;
+           <font color = "red">        ==></font>
+449              end
+450              else begin
+451                tx_int <= (tx_fifo_empty & ~last_tx_fifo_empty) | tx_int;
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+462            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+463              rx_int <= 0;
+           <font color = "green">      ==></font>
+464            end
+465            else begin
+466              rx_int <= rx_fifo_over_threshold;
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+472          case(FCR[7:6])
+             <font color = "red">-1-</font>  
+473            2'h0: rx_fifo_over_threshold = (rx_fifo_count >= 1);
+           <font color = "green">    ==></font>
+474            2'h1: rx_fifo_over_threshold = (rx_fifo_count >= 4);
+           <font color = "red">    ==></font>
+475            2'h2: rx_fifo_over_threshold = (rx_fifo_count >= 8);
+           <font color = "red">    ==></font>
+476            2'h3: rx_fifo_over_threshold = (rx_fifo_count >= 14);
+           <font color = "green">    ==></font>
+477            default: rx_fifo_over_threshold = 0;
+           <font color = "green">    ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>2'h0 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>2'h1 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>2'h2 </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>2'h3 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>default</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+485            if(PRESETn == 0) begin
+               <font color = "green">-1-</font>  
+486              ms_int <= 0;
+           <font color = "green">      ==></font>
+487              nCTS_1 <= 0;
+488              nDSR_1 <= 0;
+489              nRI_1 <= 0;
+490              nDCD_1 <= 0;
+491              MSR[7:0] <= 0;
+492            end
+493            else begin
+494              if((re == 1) && (PADDR == `MSR)) begin
+                 <font color = "red">-2-</font>  
+495                ms_int <= 0;
+           <font color = "red">        ==></font>
+496                MSR[3:0] <= 0;
+497              end
+498              else begin
+499                ms_int <= ms_int | ((nCTS_1 ^ ctsn) | (nDSR_1 ^ dsrn) | (nDCD_1 ^ dcdn) | (~rin & nRI_1));
+500                MSR[0] <= (nCTS_1 ^ ctsn) | MSR[0];
+501                MSR[1] <= (nDSR_1 ^ dsrn) | MSR[1];
+502                MSR[2] <= (~rin & nRI_1) | MSR[2];
+503                MSR[3] <= (nDCD_1 ^ dcdn) | MSR[3];
+504                nCTS_1 <= ctsn;
+505                nDSR_1 <= dsrn;
+506                nRI_1 <= rin;
+507                nDCD_1 <= dcdn;
+508                MSR[4] <= loopback ? MCR[1]: ~ctsn;
+                                      <font color = "red">-3-</font>  
+                                      <font color = "red">==></font>  
+                                      <font color = "green">==></font>  
+509                MSR[5] <= loopback ? MCR[0] : ~dsrn;
+                                      <font color = "red">-4-</font>  
+                                      <font color = "red">==></font>  
+                                      <font color = "green">==></font>  
+510                MSR[6] <= loopback ? MCR[2] : ~rin;
+                                      <font color = "red">-5-</font>  
+                                      <font color = "red">==></font>  
+                                      <font color = "green">==></font>  
+511                MSR[7] <= loopback ? MCR[3] : ~dcdn;
+                                      <font color = "red">-6-</font>  
+                                      <font color = "red">==></font>  
+                                      <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod9.html" >top</a>
+<hr>
+<a name="inst_tag_8"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_8" >uart_tb.DUT.control</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s6 cl rt"> 66.34</td>
+<td class="s8 cl rt"><a href="mod9.html#Line" > 85.03</a></td>
+<td class="s5 cl rt"><a href="mod9.html#Cond" > 50.88</a></td>
+<td class="s2 cl rt"><a href="mod9.html#Toggle" > 23.84</a></td>
+<td class="s10 cl rt"><a href="mod9.html#FSM" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod9.html#Branch" > 71.95</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s6 cl rt"> 66.34</td>
+<td class="s8 cl rt"> 85.03</td>
+<td class="s5 cl rt"> 50.88</td>
+<td class="s2 cl rt"> 23.84</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s7 cl rt"> 71.95</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s6 cl rt"> 66.34</td>
+<td class="s8 cl rt"> 85.03</td>
+<td class="s5 cl rt"> 50.88</td>
+<td class="s2 cl rt"> 23.84</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s7 cl rt"> 71.95</td>
+<td class="wht cl rt"></td>
+<td><a href="mod9.html" >uart_register_file</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 40.02</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="s2 cl rt"> 20.06</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod1.html#inst_tag_0" >DUT</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.<br clear=all>
+<hr>
+<center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></center>
+<br>
+<br clear=all>
+<br clear=all>
+<table align=center><tr><td class="s0 cl">0%
+<td class="s1 cl">10%
+<td class="s2 cl">20%
+<td class="s3 cl">30%
+<td class="s4 cl">40%
+<td class="s5 cl">50%
+<td class="s6 cl">60%
+<td class="s7 cl">70%
+<td class="s8 cl">80%
+<td class="s9 cl">90%
+<td class="s10 cl">100%</table></body>
+</html>

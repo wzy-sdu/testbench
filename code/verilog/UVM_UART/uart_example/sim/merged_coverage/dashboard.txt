@@ -1,0 +1,25 @@
+Dashboard
+
+Date: Wed May 20 16:43:36 2020
+
+User: parkershe
+
+Version: I-2014.03-SP1-7
+Command line: urg -dir ./merge_cov/word_format_poll.vdb ./merge_cov/modem_poll_test.vdb ./merge_cov/word_format_int_test.vdb ./merge_cov/modem_int_test.vdb ./merge_cov/baud_rate_test.vdb ./merge_cov/rx_errors_int_test.vdb ./merge_cov/uart_test.vdb -map uart_16550 -format text -log cov.log -dbname merge_simv.vdb -report merged_coverage 
+
+
+-------------------------------------------------------------------------------
+Total Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT GROUP  
+ 82.88  95.76  96.24  59.79  68.18  93.25  92.31  74.62 
+
+
+-------------------------------------------------------------------------------
+Hierarchical coverage data for top-level instances 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME    
+ 84.26  95.76  96.24  59.79  68.18  93.25  92.31 uart_tb 
+
+
+-------------------------------------------------------------------------------
+Ignored covdb dirs: 
+merge_cov/rx_errors_int_test.vdb 

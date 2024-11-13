@@ -1,0 +1,10 @@
+#!/bin/csh
+setenv BLOCK_TB     ../../../block_level_tbs
+setenv RTL          ../../../rtl
+setenv AGENTS       ../../../agents
+setenv UTILS        ../../../utils
+setenv TAR_PATH     ../../../../
+setenv UVM_HOME     /dataA/ftk-yt/parkershe/1542A/uvm_1.2
+#setenv UVM_HOME     /dataC/projectA/p1542B/user/yt0004p1542B/P1542A/2017_UVM
+#setenv UVM_HOME     /data6/tool/synopsys/vcs/N-2017.12-SP1-1/etc/uvm-1.2
+#setenv UVM_HOME     /dataA/ftk-yt/parkershe/gcc/uvm_1.2

@@ -1,0 +1,75 @@
+The design 'merge_simv.vdb' was loaded successfully.
+---------------------------------------------
+
+The tool has just exited abnormally:
+
+
+Release = 'I-2014.03-SP1-7'  Architecture = 'linux'  Program = 'DVE'
+
+'162021321 162048494 162050813 4394566 171635054 8347206 8352553 8269570 171750421 172075912 146339547 143611833 4304540'
+
+---------------------------------------------
+=======================DVE Context and Call Stack=========================
+Command line: /dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/gui/dve/linux/bin/dve.exe -covdir merge_simv.vdb
+
+--- Stack trace follows:
+[Thread debugging using libthread_db enabled]
+[New Thread 0xf5994b90 (LWP 28503)]
+[New Thread 0xf6395b90 (LWP 28500)]
+[New Thread 0xf6da6b90 (LWP 28496)]
+0xffffe410 in __kernel_vsyscall ()
+
+Thread 4 (Thread 0xf6da6b90 (LWP 28496)):
+#0  0xffffe410 in __kernel_vsyscall ()
+#1  0x00569bc5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib/libpthread.so.0
+#2  0x08a398f4 in ?? ()
+#3  0x00565832 in start_thread () from /lib/libpthread.so.0
+#4  0x004d746e in clone () from /lib/libc.so.6
+Backtrace stopped: Not enough registers or memory available to unwind further
+
+Thread 3 (Thread 0xf6395b90 (LWP 28500)):
+#0  0xffffe410 in __kernel_vsyscall ()
+#1  0x00569ef2 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib/libpthread.so.0
+#2  0x0a403261 in ?? ()
+#3  0x0a403714 in QThread::msleep(unsigned long) ()
+#4  0x08b8e57a in ag::dveXThread::run() ()
+#5  0x0a403433 in QThreadInstance::start(void*) ()
+#6  0x00565832 in start_thread () from /lib/libpthread.so.0
+#7  0x004d746e in clone () from /lib/libc.so.6
+Backtrace stopped: Not enough registers or memory available to unwind further
+
+Thread 2 (Thread 0xf5994b90 (LWP 28503)):
+#0  0xffffe410 in __kernel_vsyscall ()
+#1  0x00569bc5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib/libpthread.so.0
+#2  0xf784c364 in SNPSle_108e0bd44901fe542e292606fa1ae91ca3cd036ffc7b66b67eb68470c8c8dc1fc9d9f22ed54700c6c50b6ca0c3a58991d261ff0501830e10 () from /dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/linux/lib/libucapi.so
+#3  0x00565832 in start_thread () from /lib/libpthread.so.0
+#4  0x004d746e in clone () from /lib/libc.so.6
+Backtrace stopped: Not enough registers or memory available to unwind further
+
+Thread 1 (Thread 0xf6dbe720 (LWP 28445)):
+#0  0xffffe410 in __kernel_vsyscall ()
+#1  0x0049685b in waitpid () from /lib/libc.so.6
+#2  0x0043b19b in do_system () from /lib/libc.so.6
+#3  0x0043b532 in system () from /lib/libc.so.6
+#4  0x0056defd in system () from /lib/libpthread.so.0
+#5  0xf7da594b in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e639d2928478c79b3f673f99203bcf8be64600612100082236bffb2007f1e0ef9 () from /dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/linux/lib/liberrorinf.so
+#6  0xf7da5f79 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e81c34e9ac4c8988ef4a6e067b3aa9271e9f15440f9e8f69ebc77e2fd65860faa () from /dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/linux/lib/liberrorinf.so
+#7  0xf7da6c07 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313efba706aab251478fa49e66610e453774633a6c152e7ef778f2202cda681f3d4e () from /dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/linux/lib/liberrorinf.so
+#8  0xf7da00fc in SNPSle_d35ca1ff70d465c2b9b1a72eee90a506bd67bc4db6f8ee504d9c037848a86308 () from /dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/linux/lib/liberrorinf.so
+#9  0x09a8a992 in ag::logErrorMessage(ag::errorType, QString const&, bool) ()
+#10 0x09a8b2fd in ?? ()
+#11 0x00430e46 in exit () from /lib/libc.so.6
+#12 0x0a3af16e in ?? ()
+#13 0x007f4fbd in _XIOError () from /usr/lib/libX11.so.6
+#14 0x007f5e46 in _XRead () from /usr/lib/libX11.so.6
+#15 0x007f7329 in _XEventsQueued () from /usr/lib/libX11.so.6
+#16 0x007e2f02 in XPending () from /usr/lib/libX11.so.6
+#17 0x0a3cb415 in QEventLoop::processEvents(unsigned int) ()
+#18 0x08bd3e15 in ag::ovaEventLoop::processEvents(unsigned int) ()
+#19 0x0a41ab88 in QEventLoop::enterLoop() ()
+#20 0x0a41ab14 in QEventLoop::exec() ()
+#21 0x08bd37be in run_cci_event_loop ()
+#22 0x08b8f6db in ag::ovaAppInst::enterEventLoop(int, char**) ()
+#23 0x088f57b9 in main ()
+No context available
+==========================================================================

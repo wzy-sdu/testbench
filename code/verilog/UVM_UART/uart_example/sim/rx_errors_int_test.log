@@ -1,0 +1,199 @@
+Command: ./simv +UVM_VERBOSITY=UVM_LOW +UVM_TESTNAME=rx_errors_int_test -cm line+tgl+cond+fsm+assert+branch -l rx_errors_int_test.log
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-SP1-7; Runtime version I-2014.03-SP1-7;  May 20 16:42 2020
+*Verdi3* Loading libsscore_vcs201403.so
+*Verdi3* : Enable Parallel Dumping.
+UVM_INFO /dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+parker check root code ....................
+UVM_INFO @ 0: reporter [RNTST] Running test rx_errors_int_test...
+FSDB Dumper for VCS, Release Verdi3_J-2014.12, Linux, 11/13/2014
+(C) 1996 - 2014 by Synopsys, Inc.
+*Verdi3* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi3* : Create FSDB file 'uart.fsdb'
+*Verdi3* : Begin traversing the scope (uart_tb), layer (0).
+*Verdi3* : Enable +all dumping.
+*Verdi3* : End of traversing.
+*Verdi3* : fsdbDumpon - All FSDB files at 00 ps.
+UVM_INFO /dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/base/uvm_root.svh(578) @ 0: reporter [UVMTOP] UVM testbench topology:
+-------------------------------------------------------------------------
+Name                       Type                               Size  Value
+-------------------------------------------------------------------------
+uvm_test_top               rx_errors_int_test                 -     @361 
+  m_env                    uart_env                           -     @466 
+    br_sb                  baud_rate_checker                  -     @656 
+      apb                  uvm_tlm_analysis_fifo #(T)         -     @684 
+        analysis_export    uvm_analysis_imp                   -     @733 
+        get_ap             uvm_analysis_port                  -     @723 
+        get_peek_export    uvm_get_peek_imp                   -     @703 
+        put_ap             uvm_analysis_port                  -     @713 
+        put_export         uvm_put_imp                        -     @693 
+    int_cov                uart_interrupt_coverage_monitor    -     @628 
+      apb_fifo             uvm_tlm_analysis_fifo #(T)         -     @743 
+        analysis_export    uvm_analysis_imp                   -     @792 
+        get_ap             uvm_analysis_port                  -     @782 
+        get_peek_export    uvm_get_peek_imp                   -     @762 
+        put_ap             uvm_analysis_port                  -     @772 
+        put_export         uvm_put_imp                        -     @752 
+    m_apb_agent            apb_agent                          -     @480 
+      ap                   uvm_analysis_port                  -     @978 
+      m_driver             apb_driver                         -     @812 
+        rsp_port           uvm_analysis_port                  -     @831 
+        seq_item_port      uvm_seq_item_pull_port             -     @821 
+      m_monitor            apb_monitor                        -     @803 
+        ap                 uvm_analysis_port                  -     @989 
+      m_sequencer          uvm_sequencer                      -     @841 
+        rsp_export         uvm_analysis_export                -     @850 
+        seq_item_export    uvm_seq_item_pull_imp              -     @968 
+        arbitration_queue  array                              0     -    
+        lock_queue         array                              0     -    
+        num_last_reqs      integral                           32    'd1  
+        num_last_rsps      integral                           32    'd1  
+    m_modem_agent          modem_agent                        -     @516 
+      drv                  modem_driver                       -     @1025
+        rsp_port           uvm_analysis_port                  -     @1044
+        seq_item_port      uvm_seq_item_pull_port             -     @1034
+      m_cov                modem_coverage_monitor             -     @1191
+        analysis_imp       uvm_analysis_imp                   -     @1200
+      modem_agent_ap       uvm_analysis_port                  -     @1005
+      monitor              modem_monitor                      -     @1015
+        analysis_port      uvm_analysis_port                  -     @1210
+      sequencer            uvm_sequencer                      -     @1054
+        rsp_export         uvm_analysis_export                -     @1063
+        seq_item_export    uvm_seq_item_pull_imp              -     @1181
+        arbitration_queue  array                              0     -    
+        lock_queue         array                              0     -    
+        num_last_reqs      integral                           32    'd1  
+        num_last_rsps      integral                           32    'd1  
+    m_rx_uart_agent        uart_agent                         -     @506 
+      APB Monitor          uvm_analysis_port                  -     @1225
+      m_uart_driver        uart_driver                        -     @1245
+        rsp_port           uvm_analysis_port                  -     @1264
+        seq_item_port      uvm_seq_item_pull_port             -     @1254
+      m_uart_monitor       uart_monitor                       -     @1235
+        uart_ap            uvm_analysis_port                  -     @1411
+      m_uart_sequencer     uvm_sequencer                      -     @1274
+        rsp_export         uvm_analysis_export                -     @1283
+        seq_item_export    uvm_seq_item_pull_imp              -     @1401
+        arbitration_queue  array                              0     -    
+        lock_queue         array                              0     -    
+        num_last_reqs      integral                           32    'd1  
+        num_last_rsps      integral                           32    'd1  
+    m_tx_uart_agent        uart_agent                         -     @493 
+      APB Monitor          uvm_analysis_port                  -     @1431
+      m_uart_monitor       uart_monitor                       -     @1441
+        uart_ap            uvm_analysis_port                  -     @1451
+    modem_cov              uart_modem_coverage_monitor        -     @637 
+      analysis_imp         uvm_analysis_imp                   -     @646 
+    modem_sb               uart_modem_scoreboard              -     @581 
+      apb_fifo             uvm_tlm_analysis_fifo #(T)         -     @1466
+        analysis_export    uvm_analysis_imp                   -     @1515
+        get_ap             uvm_analysis_port                  -     @1505
+        get_peek_export    uvm_get_peek_imp                   -     @1485
+        put_ap             uvm_analysis_port                  -     @1495
+        put_export         uvm_put_imp                        -     @1475
+      modem_fifo           uvm_tlm_analysis_fifo #(T)         -     @1525
+        analysis_export    uvm_analysis_imp                   -     @1574
+        get_ap             uvm_analysis_port                  -     @1564
+        get_peek_export    uvm_get_peek_imp                   -     @1544
+        put_ap             uvm_analysis_port                  -     @1554
+        put_export         uvm_put_imp                        -     @1534
+    reg_cov                uart_reg_access_coverage_monitor   -     @665 
+      analysis_imp         uvm_analysis_imp                   -     @674 
+    reg_predictor          uvm_reg_predictor #(apb_seq_item)  -     @529 
+      bus_in               uvm_analysis_imp                   -     @542 
+      reg_ap               uvm_analysis_port                  -     @552 
+    rx_cov                 uart_rx_coverage_monitor           -     @609 
+      analysis_imp         uvm_analysis_imp                   -     @618 
+    rx_sb                  uart_rx_scoreboard                 -     @572 
+      ap                   uvm_analysis_port                  -     @1702
+      apb_fifo             uvm_tlm_analysis_fifo #(T)         -     @1584
+        analysis_export    uvm_analysis_imp                   -     @1633
+        get_ap             uvm_analysis_port                  -     @1623
+        get_peek_export    uvm_get_peek_imp                   -     @1603
+        put_ap             uvm_analysis_port                  -     @1613
+        put_export         uvm_put_imp                        -     @1593
+      uart_fifo            uvm_tlm_analysis_fifo #(T)         -     @1643
+        analysis_export    uvm_analysis_imp                   -     @1692
+        get_ap             uvm_analysis_port                  -     @1682
+        get_peek_export    uvm_get_peek_imp                   -     @1662
+        put_ap             uvm_analysis_port                  -     @1672
+        put_export         uvm_put_imp                        -     @1652
+    tx_cov                 uart_tx_coverage_monitor           -     @590 
+      analysis_imp         uvm_analysis_imp                   -     @599 
+    tx_sb                  uart_tx_scoreboard                 -     @563 
+      ap                   uvm_analysis_port                  -     @1830
+      apb_fifo             uvm_tlm_analysis_fifo #(T)         -     @1712
+        analysis_export    uvm_analysis_imp                   -     @1761
+        get_ap             uvm_analysis_port                  -     @1751
+        get_peek_export    uvm_get_peek_imp                   -     @1731
+        put_ap             uvm_analysis_port                  -     @1741
+        put_export         uvm_put_imp                        -     @1721
+      uart_fifo            uvm_tlm_analysis_fifo #(T)         -     @1771
+        analysis_export    uvm_analysis_imp                   -     @1820
+        get_ap             uvm_analysis_port                  -     @1810
+        get_peek_export    uvm_get_peek_imp                   -     @1790
+        put_ap             uvm_analysis_port                  -     @1800
+        put_export         uvm_put_imp                        -     @1780
+-------------------------------------------------------------------------
+
+no_rx_chars:5 rx_fifo_threshold:1 no_tx_chars:0
+UVM_INFO ../uvm_tb/env/uart_rx_scoreboard.svh(91) @ 57900: uvm_test_top.m_env.rx_sb [monitor_uart] RX Data error detected: PE:0 FE:1 LCR:0
+no_rx_chars:4 rx_fifo_threshold:1 no_tx_chars:0
+UVM_WARNING ../agents/uart_agent/uart_monitor.svh(101) @ 58400: uvm_test_top.m_env.m_rx_uart_agent.m_uart_monitor [startBitErrorDetect] False start bit detected
+
+Warning-[FCIELIE] Internal error in coverage processing
+../uvm_tb/env/uart_env_pkg.sv, 20
+  Null instance handle passed to coverage execute function.
+
+
+Error-[FCIBH] Illegal bin hit
+/dataA/ftk-yt/parkershe/UVM/uart_example/sim/../uvm_tb/env/uart_reg_access_coverage_monitor.svh, 94
+uart_env_pkg, "uart_env_pkg::uart_reg_access_coverage_monitor::lsr_read_cg"
+  VERIFICATION ERROR (FUNCTIONAL COVERAGE) : At time 599000 ps, Illegal bin 
+  missing_fifo_error of cross FIFO_ERROR_STATUS in covergroup 
+  uart_env_pkg::uart_reg_access_coverage_monitor::lsr_read_cg got hit with 
+  sample values  PE=0x0 FE=0x1 BI=0x0 FIFOERR=0x0
+  Covergroup Instance: lsr_read_cg 
+  Design hierarchy: uart_env_pkg
+
+#0 in \uart_reg_access_coverage_monitor::write  at ../uvm_tb/env/uart_reg_access_coverage_monitor.svh:113
+#1 in \uvm_analysis_imp#(apb_agent_pkg::apb_seq_item,uvm_pkg::uvm_subscriber#(apb_agent_pkg::apb_seq_item))::write  at /dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/tlm1/uvm_analysis_port.svh:114
+#2 in \uvm_analysis_port#(apb_agent_pkg::apb_seq_item)::write  at /dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/tlm1/uvm_analysis_port.svh:76
+#3 in \apb_monitor::run_phase  at ../agents/apb_agent/apb_monitor.svh:86
+#4 in \uvm_run_phase::exec_task  at /dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/base/uvm_common_phases.svh:269
+#5 in \uvm_task_phase::execute  at /dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/base/uvm_task_phase.svh:152
+#6 in \uvm_phase::execute_phase  at /dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/base/uvm_phase.svh:1408
+#7 in \uvm_phase::m_run_phases  at /dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/base/uvm_phase.svh:2213
+#8 in \uvm_root::run_test  at /dataA/ftk-yt/parkershe/1542A/uvm_1.2/src/base/uvm_root.svh:503
+"../protocol_monitor/apb_monitor.sv", 155: uart_tb.APB_PROTOCOL_MONITOR.unnamed$$_7, 299 attempts, 16 total match, 16 first match
+"../agents/apb_agent/apb_if.sv", 39: uart_tb.APB.COVER_PSEL, 299 attempts, 299 match
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 599000 ps
+CPU Time:      0.640 seconds;       Data structure size:   0.4Mb
+Wed May 20 16:42:28 2020

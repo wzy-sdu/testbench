@@ -1,0 +1,73 @@
+<session version="1.1" release="I-2014.03-SP1-7" timestp="2020-05-20 08:29:27 GMT">
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="FSM" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Branch" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Assert" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Group" type="percent" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="407/425" />
+    <metric name="Cond" value="128/133" />
+    <metric name="Toggle" value="1344/2248" />
+    <metric name="FSM" value="45/66" />
+    <metric name="Branch" value="221/237" />
+    <metric name="Assert" value="24/26" />
+    <metric name="Group" value="74.6187%" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="uart_env_pkg::uart_interrupt_coverage_monitor::lsr_int_src_cg">
+      <metric name="Group" value="0%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_interrupt_coverage_monitor::int_enable_cg">
+      <metric name="Group" value="20%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_interrupt_coverage_monitor::int_enable_src_cg">
+      <metric name="Group" value="29.1667%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_reg_access_coverage_monitor::lsr_read_cg">
+      <metric name="Group" value="54.1667%" />
+    </scope>
+    <scope type="group" name="uart_tb.APB_PROTOCOL_MONITOR::APB_accesses_cg">
+      <metric name="Group" value="66.6667%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_interrupt_coverage_monitor::modem_int_src_cg">
+      <metric name="Group" value="66.6667%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_interrupt_coverage_monitor::rx_word_format_int_cg">
+      <metric name="Group" value="86.5%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_modem_coverage_monitor::msr_inputs_cg">
+      <metric name="Group" value="96.1133%" />
+    </scope>
+    <scope type="group" name="modem_agent_pkg::modem_coverage_monitor::modem_lines_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_interrupt_coverage_monitor::tx_word_format_int_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_rx_coverage_monitor::rx_word_format_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_reg_access_coverage_monitor::reg_access_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_tx_coverage_monitor::tx_word_format_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::baud_rate_checker::baud_rate_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="uart_env_pkg::uart_modem_coverage_monitor::mcr_settings_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+  </scope>
+  </old_coverage>
+</session>

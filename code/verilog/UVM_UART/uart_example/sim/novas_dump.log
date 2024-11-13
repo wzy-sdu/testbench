@@ -1,0 +1,182 @@
+ANF: vcsd_is_low_power_assertion_checker
+ANF: vcsd_get_power_scope_name
+ANF: vcsd_dump_network
+ANF: vcsd_register_openSignatureData
+ANF: vcsd_flush_SignatureData
+ANF: vcsd_close_SignatureData
+ANF: vcsd_node_check_initial_force
+ANF: vcsd_node_check_callback
+ANF: vcsd_node_register_callback
+ANF: vcsd_node_remove_callback
+ANF: vcsd_node_varInfo
+ANF: vcsd_node_Ei_Cn_Fn
+ANF: vcsd_node_value_pointer
+ANF: vcsd_free_value_pointer
+ANF: vcsd_value_pointer_to_fhdb_value
+ANF: vcsd_remove_all_callback
+ANF: vcsd_check_secondary_initDeposit
+ANF: vcsd_register_forceVcsBoundary
+ANF: vcsd_register_forceSecondary
+ANF: vcsd_register_dumpRoot
+ANF: vcsd_register_addNewMaster
+ANF: vcsd_register_assignSlaveToNewMaster
+ANF: vcsd_register_1st_rfn_cbk
+ANF: vcsd_register_2nd_rfn_cbk
+ANF: vcsd_is_boundary
+ANF: vcsd_register_1st_non_network
+ANF: vcsd_register_1st_primary_master
+ANF: vcsd_register_1st_primary_slave
+ANF: vcsd_register_1st_secondary_master_confirm
+ANF: vcsd_register_1st_secondary_master_defer
+ANF: vcsd_register_1st_secondary_slave_masterConfirmedSecondary
+ANF: vcsd_register_1st_secondary_slave_masterDeferredSecondary
+ANF: vcsd_dump_var_vpdg
+ANF: vcsd_register_2nd_secondary_master_remainSecondary
+ANF: vcsd_register_2nd_secondary_master_becomePrimary
+ANF: vcsd_second_traverse
+ANF: vcsd_begin_no_value_var_info
+ANF: vcsd_end_no_value_var_info
+ANF: vcsd_get_value_ptr
+ANF: vcsd_get_value_type_from_value_ptr
+ANF: vcsd_mem_value_pointer_to_fhdb_value
+Chronologic Simulation VCS Release I-2014.03-SP1-7
+Linux 2.6.18-274.el5 #1 SMP Fri Jul 8 17:36:59 EDT 2011 x86_64
+CPU cores: 40
+Limit information:
+======================================
+cputime			unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		10240 kbytes
+coredumpsize	0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		1024
+memorylocked	32 kbytes
+maxproc			3153919
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+LANG=en_US.UTF-8
+USER=parkershe
+LOGNAME=parkershe
+HOME=/dataA/ftk-yt/parkershe
+PATH=/bin:/sbin:/usr/sbin:/usr/bin:/usr/ucb:/usr/openwin/bin:/usr/local/bin:/etc:.:/dataA/ftk-yt/parkershe/work/scripts:/usr/local/bin:/usr/ccs/bin:/dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/bin:/dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/amd64/bin:/dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/bin
+MAIL=/var/spool/mail/parkershe
+SHELL=/bin/csh
+SSH_CLIENT=10.193.203.121 51102 22
+SSH_CONNECTION=10.193.203.121 51102 10.193.203.122 22
+SSH_TTY=/dev/pts/5
+TERM=xterm
+DISPLAY=localhost:11.0
+HOSTTYPE=x86_64-linux
+VENDOR=unknown
+OSTYPE=linux
+MACHTYPE=x86_64
+SHLVL=1
+PWD=/dataA/ftk-yt/parkershe/UVM/uart_example/sim
+GROUP=parkershe
+HOST=ftk-yt02
+REMOTEHOST=ftk-yt01
+HOSTNAME=ftk-yt02
+INPUTRC=/etc/inputrc
+LS_COLORS=no=00:fi=00:di=00;34:ln=00;36:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;32:*.cmd=00;32:*.exe=00;32:*.com=00;32:*.btm=00;32:*.bat=00;32:*.sh=00;32:*.csh=00;32:*.tar=00;31:*.tgz=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.zip=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.bz=00;31:*.tz=00;31:*.rpm=00;31:*.cpio=00;31:*.jpg=00;35:*.gif=00;35:*.bmp=00;35:*.xbm=00;35:*.xpm=00;35:*.png=00;35:*.tif=00;35:
+G_BROKEN_FILENAMES=1
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+KDE_IS_PRELINKED=1
+KDEDIR=/usr
+LESSOPEN=|/usr/bin/lesspipe.sh %s
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+QTLIB=/usr/lib64/qt-3.3/lib
+ARCH=amd64
+VERSION_VCS=vcs_vI-2014.03-SP1-7
+VERSION_verdi=verdi_vJ-2014.12
+VCS_MX_COM=/dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/amd64/bin/vcs1
+VCS_HOME=/dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7
+NOVAS_HOME=/dataA/tool/synopsys/Verdi/verdi_vJ-2014.12
+LD_LIBRARY_PATH=/usr/lib:/dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/share/PLI/VCS/LINUX64:/dataA/ftk-yt/haoquanzhao/bin/systemc/lib-linux64
+UVM_HOME=/dataA/ftk-yt/parkershe/1542A/uvm_1.2
+VCS_CC=gcc
+NOVAS_LIBS=tsmc773_u tsmc733_l
+NOVAS_LIBPATHS=/dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/share/symlib/64
+NOVAS_MDT_LIBPATHS=/dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/share/mdtlib
+NOVAS_MDT_LIBS=ART_RF_SP ART_SRAM_SP
+LM_LICENSE_FILE=27000@ftk-yt02:/dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/flexlm//license.dat
+BLOCK_TB=../../../block_level_tbs
+RTL=../../../rtl
+AGENTS=../../../agents
+UTILS=../../../utils
+TAR_PATH=../../../../
+VCS_PATHMAP_PRELOAD_DONE=1
+LC_ALL=C
+DVE=/dataA/tool/synopsys/VCS/vcs_vI-2014.03-SP1-7/gui/dve
+TCLLIBPATH=/tmp/auxx/tcllib/lib/tcl8.4
+SPECMAN_OUTPUT_TO_TTY=1
+Runtime command line arguments:
+argv[0]=./simv
+argv[1]=+UVM_VERBOSITY=UVM_LOW
+argv[2]=+UVM_TESTNAME=rx_errors_int_test
+argv[3]=-cm
+argv[4]=line+tgl+cond+fsm+assert+branch
+argv[5]=-l
+argv[6]=rx_errors_int_test.log
+124 profile - 100
+          CPU/Mem usage: 0.090 sys,  0.500 user,  159.20M sys,  0.00M vm
+125 VC callback profile - scalar:0 vector:0
+126 Wed May 20 16:42:28 2020
+127 pliAppInit
+128 *Verdi3* : Enable Parallel Dumping.
+129 pliAppMiscSet: New Sim Round
+130 pliEntryInit
+131 LIBSSCORE=found /dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/share/PLI/lib/LINUX/libsscore_vcs201403.so through $NOVAS_HOME setting.
+132 argv[0]: uart.fsdb
+133 argv[0]: 0
+134 argv[1]: +all
+135 argv[2]: (handle)0xb754740 uart_tb
+136 FSDB Dumper for VCS, Release Verdi3_J-2014.12, Linux, 11/13/2014
+137 (C) 1996 - 2014 by Synopsys, Inc.
+138 sps_call_fsdbDumpfile at 0 : ../uvm_tb/tb/uart_tb.sv(116)
+139 argv[0]: uart.fsdb
+140 *Verdi3* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+141 *Verdi3* : Create FSDB file 'uart.fsdb'
+142 sps_call_fsdbDumpvars at 0 : ../uvm_tb/tb/uart_tb.sv(117)
+143 argv[0]: 0
+144 argv[1]: +all
+145 argv[2]: (handle)0xb754730 uart_tb
+146 *Verdi3* : Begin traversing the scope (uart_tb), layer (0).
+147 *Verdi3* : Enable +all dumping.
+148 *Verdi3* : End of traversing.
+149 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.100 sys,  0.550 user,  317.51M sys,  0.00M vm
+                   incr: 0.000 sys,  0.010 user,  3.88M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  3.88M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.010 user,  3.88M sys,  0.00M vm
+
+          Count usage: 258 var,  209 idcode,  179 callback
+                 incr: 258 var,  209 idcode,  179 callback
+                 accu: 258 var,  209 idcode,  179 callback
+            accu incr: 258 var,  209 idcode,  179 callback
+150 VC callback profile - scalar:0 vector:0
+151 Wed May 20 16:42:28 2020
+152 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.100 sys,  0.550 user,  318.57M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  4.94M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
+
+          Count usage: 258 var,  209 idcode,  179 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 258 var,  209 idcode,  179 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+153 VC callback profile - scalar:170 vector:88
+154 Wed May 20 16:42:28 2020
+155 sps_call_fsdbDumpon at 0 : ../uvm_tb/tb/uart_tb.sv(118)
+156 *Verdi3* : fsdbDumpon - All FSDB files at 00 ps.
+157 End of simulation at 59900
+158 VC callback profile - scalar:7090 vector:1099
+159 Wed May 20 16:42:28 2020
+160 Parallel profile    -  Flush:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
+161 SimExit
+162 Sim process exit

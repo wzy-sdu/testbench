@@ -1,0 +1,26 @@
+<session version="1.1" release="I-2014.03-SP1-7" timestp="2020-05-20 07:36:43 GMT">
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="FSM" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Branch" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Assert" type="ratio" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="253/425" />
+    <metric name="Cond" value="58/133" />
+    <metric name="Toggle" value="410/2248" />
+    <metric name="FSM" value="13/66" />
+    <metric name="Branch" value="108/237" />
+    <metric name="Assert" value="21/26" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+  </scope>
+  </old_coverage>
+</session>

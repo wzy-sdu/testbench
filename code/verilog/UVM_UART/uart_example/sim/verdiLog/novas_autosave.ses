@@ -1,0 +1,67 @@
+@verdi rc file Version 1.0
+[General]
+VerdiVersion = Verdi3_J-2014.12
+[KeyNote]
+Line1 = Automatic Backup 0
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+[hb]
+postSimFile = /dataA/ftk-yt/parkershe/UVM/uart_example/sim/uart.fsdb
+syncTime = 0
+viewport = 563 135 900 726 294 445 177 898
+activeNode = "uart_tb"
+activeScope = "uart_tb"
+activeFile = "../uvm_tb/tb/uart_tb.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 19
+baMode = False
+srcLineNum = True
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "uart_tb"
+multipleSelection = 1 19 2 0 0
+sdfCheckUndef = FALSE
+[hb.sourceTab.1]
+scope = uart_tb
+File = /dataA/ftk-yt/parkershe/UVM/uart_example/uvm_tb/tb/uart_tb.sv
+Line = 20
+[imp.design1]
+dbEnum =  oh
+invokeDir = /dataA/ftk-yt/parkershe/UVM/uart_example/sim
+design = DebussyLib
+hostCommand = hostCommand -sv -f filelist.f
+[nMemoryManager]
+FsdbFile = /dataA/ftk-yt/parkershe/UVM/uart_example/sim/uart.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 30 900 86 100 65
+SessionFile = /dataA/ftk-yt/parkershe/UVM/uart_example/sim/verdiLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSync = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE

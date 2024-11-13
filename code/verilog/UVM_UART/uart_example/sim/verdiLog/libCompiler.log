@@ -1,0 +1,8 @@
+Importing symbol library...
+
+The "tsmc773_u" library was imported from /dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/share/symlib/64/tsmc773_u.lib++. -- Total: (0) warning(s) / (0) error(s)
+
+
+Failed to import the "tsmc733_l" library because the library files cannot be found in the library paths.
+
+

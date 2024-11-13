@@ -1,0 +1,2 @@
+Command Line: /dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/platform/LINUXAMD64/bin/Novas -sv -f filelist.f -ssf uart.fsdb
+uname(Linux ftk-yt02 2.6.18-274.el5 #1 SMP Fri Jul 8 17:36:59 EDT 2011 x86_64)

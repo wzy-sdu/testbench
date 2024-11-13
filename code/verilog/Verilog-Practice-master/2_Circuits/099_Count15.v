@@ -1,0 +1,27 @@
+module top_module (
+    input clk,
+    input reset,      // Synchronous active-high reset
+    output [3:0] q);
+    
+    always @(posedge clk) begin
+        if(reset) begin
+            q <= 0;
+        end
+        else begin
+            if(q == 15) begin
+                q <= 0;
+            end
+            else begin
+                q <= q + 1;
+            end
+        end
+    end
+
+endmodule
+/*always @(posedge clk ) begin
+        if(reset)
+            q = 0;
+        else
+            q = q + 1;
+    end
+啊这*/

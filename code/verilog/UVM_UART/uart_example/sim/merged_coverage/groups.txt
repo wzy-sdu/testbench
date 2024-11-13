@@ -1,0 +1,26 @@
+Testbench Group List
+
+Total Groups Coverage Summary 
+SCORE  INST SCORE WEIGHT 
+ 74.62  74.62     1      
+
+
+Total groups in report: 15
+-------------------------------------------------------------------------------
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                                                 
+  0.00   0.00    1      100    1        0            64           64                    uart_env_pkg::uart_interrupt_coverage_monitor::lsr_int_src_cg        
+ 20.00  20.00    1      100    1        0            64           64                    uart_env_pkg::uart_interrupt_coverage_monitor::int_enable_cg         
+ 29.17  29.17    1      100    1        0            64           64                    uart_env_pkg::uart_interrupt_coverage_monitor::int_enable_src_cg     
+ 54.17  54.17    1      100    1        0            64           64                    uart_env_pkg::uart_reg_access_coverage_monitor::lsr_read_cg          
+ 66.67  66.67    1      100    1        0            64           64                    uart_tb.APB_PROTOCOL_MONITOR::APB_accesses_cg                        
+ 66.67  66.67    1      100    1        0            64           64                    uart_env_pkg::uart_interrupt_coverage_monitor::modem_int_src_cg      
+ 86.50  86.50    1      100    1        0            64           64                    uart_env_pkg::uart_interrupt_coverage_monitor::rx_word_format_int_cg 
+ 96.11  96.11    1      100    1        0            64           64                    uart_env_pkg::uart_modem_coverage_monitor::msr_inputs_cg             
+100.00 --        1      100    1        0            64           64                    modem_agent_pkg::modem_coverage_monitor::modem_lines_cg              
+100.00 100.00    1      100    1        0            64           64                    uart_env_pkg::uart_interrupt_coverage_monitor::tx_word_format_int_cg 
+100.00 100.00    1      100    1        0            64           64                    uart_env_pkg::uart_rx_coverage_monitor::rx_word_format_cg            
+100.00 100.00    1      100    1        0            64           64                    uart_env_pkg::uart_reg_access_coverage_monitor::reg_access_cg        
+100.00 100.00    1      100    1        0            64           64                    uart_env_pkg::uart_tx_coverage_monitor::tx_word_format_cg            
+100.00 --        1      100    1        0            64           64                    uart_env_pkg::baud_rate_checker::baud_rate_cg                        
+100.00 100.00    1      100    1        0            64           64                    uart_env_pkg::uart_modem_coverage_monitor::mcr_settings_cg           
+

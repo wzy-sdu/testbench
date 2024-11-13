@@ -1,0 +1,22 @@
+Verdi Release Verdi3_J-2014.12 (RH Linux x86_64/64bit) 11/13/2014
+(C) 1999 - 2014 by Synopsys, Inc.
+All Rights Reserved.
+www.synopsys.com
+
+This program is proprietary and confidential information of Synopsys, Inc. and 
+may be used and disclosed only as authorized in a license agreement controlling 
+such use and disclosure.
+
+Licensed Products communicate with Synopsys servers for the purpose of providing
+software updates, detecting software piracy and verifying that customers are 
+using Licensed Products in conformity with the applicable License Key for such 
+Licensed Products. Synopsys will use information gathered in connection with 
+this process to deliver software updates and pursue software pirates and 
+infringers.
+
+
+Load MDT file: /dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/share/mdtlib/ART_RF_SP.mdt.
+Info: memory mapping : ART_RF_SP -> spr[0-9]*bx[0-9]*
+No module name matches memory definition 'spr[0-9]*bx[0-9]*' Load MDT file: /dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/share/mdtlib/ART_SRAM_SP.mdt.
+Info: memory mapping : ART_SRAM_SP -> spm[0-9]*bx[0-9]*
+No module name matches memory definition 'spm[0-9]*bx[0-9]*' 

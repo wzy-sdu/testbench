@@ -1,0 +1,2 @@
+Novas ENV MDT_LIBPATHS /dataA/tool/synopsys/Verdi/verdi_vJ-2014.12/share/mdtlib
+Novas ENV MDT_LIBS ART_RF_SP ART_SRAM_SP

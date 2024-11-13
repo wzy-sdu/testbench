@@ -1,0 +1,25 @@
+Design Module List
+
+Total Module Definition Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 80.28  95.76  96.24  59.80  68.18  93.25  68.42 
+
+
+Total modules in report: 14
+-------------------------------------------------------------------------------
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                     
+  0.00 --     --     --     --     --       0.00 uvm_pkg                  
+ 11.11 --     --      11.11 --     --     --     modem_if                 
+ 20.00 --     --     --     --     --      20.00 vcs_paramclassrepository 
+ 59.32 --     --      18.64 --     --     100.00 apb_if                   
+ 66.67 --     --      66.67 --     --     --     interrupt_if             
+ 73.79 100.00 --      21.36 --     --     100.00 apb_monitor              
+ 76.80  85.00 --      73.96 --      71.43 --     uart_rx_fifo             
+ 78.70  94.96  96.97  74.11  64.52  91.67  50.00 uart_rx                  
+ 81.69 --     100.00  45.06 --     100.00 --     uart_16550               
+ 85.04  83.33 --      99.69 --      57.14 100.00 uart_tx_fifo             
+ 87.50 100.00 --      75.00 --     --     --     uart_tb                  
+ 88.76  97.28  92.98  57.17 100.00  96.34 --     uart_register_file       
+ 92.95  98.02 100.00  95.00  67.74  96.92 100.00 uart_tx                  
+100.00 --     --     100.00 --     --     --     serial_if                
+
