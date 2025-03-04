@@ -22,14 +22,16 @@ package modem_agent_pkg;
 import uvm_pkg::*;
 `include "uvm_macros.svh"
 
-`include "modem_config.svh"
-`include "modem_seq_item.svh"
-`include "modem_driver.svh"
-typedef uvm_sequencer #(modem_seq_item) modem_sequencer;
-`include "modem_basic_sequence.svh"
-`include "modem_monitor.svh"
-`include "modem_coverage_monitor.svh"
+
 `include "modem_agent.svh"
+`include "modem_basic_sequence.svh"
+`include "modem_config.svh"
+`include "modem_coverage_monitor.svh"
+`include "modem_driver.svh"
+
+`include "modem_monitor.svh"
+`include "modem_seq_item.svh"
+typedef uvm_sequencer #(modem_seq_item) modem_sequencer;
 
 
 endpackage: modem_agent_pkg

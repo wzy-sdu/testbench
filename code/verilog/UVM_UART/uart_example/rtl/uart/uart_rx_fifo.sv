@@ -33,7 +33,7 @@ module uart_rx_fifo(
   output logic[10:0] data_out);
 
 logic[3:0] ip_count;
-logic[3:0] op_count;
+logic[3:0] op_count;//队列指针位置?
 typedef logic[10:0] fifo_t;
 
 fifo_t data_fifo[15:0];

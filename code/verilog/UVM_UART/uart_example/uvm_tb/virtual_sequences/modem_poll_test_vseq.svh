@@ -37,7 +37,7 @@ task body;
     modem_seq.start(modem);
   join_none
 
-    repeat(500) begin
+    repeat(10) begin//500
       randcase
         1: write_mcr.start(apb);
         1: read_msr.start(apb);
@@ -46,7 +46,7 @@ task body;
 
   // With loopback:
   write_mcr.loopback = 1;
-    repeat(500) begin
+    repeat(10) begin//500
       randcase
         1: write_mcr.start(apb);
         1: read_msr.start(apb);

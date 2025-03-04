@@ -15,7 +15,7 @@
 //   CONDITIONS OF ANY KIND, either express or implied.  See
 //   the License for the specific language governing
 //   permissions and limitations under the License.
-//----------------------------------------------------------------------
+//----------------------------------------------------------------------                                                                                               
 
 class uart_host_tx_seq extends host_if_base_seq;
 
@@ -36,6 +36,7 @@ task body;
   i = 0;
   while(i < no_tx_chars) begin
     rm.LSR.read(status, data, .parent(this));
+
     // Wait for Tx FIFO to empty
     while(!data[5]) begin
       rm.LSR.read(status, data, .parent(this));

@@ -30,14 +30,16 @@ modem_agent m_modem_agent;
 uart_tx_scoreboard tx_sb;
 uart_rx_scoreboard rx_sb;
 uart_modem_scoreboard modem_sb;
+
 uart_tx_coverage_monitor tx_cov;
 uart_rx_coverage_monitor rx_cov;
 uart_interrupt_coverage_monitor int_cov;
 uart_modem_coverage_monitor modem_cov;
-baud_rate_checker br_sb;
 uart_reg_access_coverage_monitor reg_cov;
 
+baud_rate_checker br_sb;
 reg2apb_adapter reg_adapter;
+
 uvm_reg_predictor #(apb_seq_item) reg_predictor;
 
 extern function new(string name = "uart_env", uvm_component parent = null);

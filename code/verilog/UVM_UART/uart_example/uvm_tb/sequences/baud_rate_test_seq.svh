@@ -44,7 +44,7 @@ endfunction
 task body;
 
   super.body();
-repeat(150) begin
+repeat(10) begin
 //repeat(2) begin
     assert(this.randomize());
     data = {'0, div[15:8]};

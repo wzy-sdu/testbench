@@ -14,6 +14,7 @@ $UVM_HOME/src/uvm_pkg.sv
 ../rtl/uart/uart_rx.sv  
 ../rtl/uart/uart_tx_fifo.sv  
 ../rtl/uart/uart_tx.sv
+
 ../agents/apb_agent/apb_if.sv
 ../agents/apb_agent/apb_agent_pkg.sv
 ../agents/uart_agent/serial_if.sv
@@ -26,6 +27,7 @@ $UVM_HOME/src/uvm_pkg.sv
 ../uvm_tb/sequences/uart_seq_pkg.sv
 ../uvm_tb/virtual_sequences/uart_vseq_pkg.sv
 ../uvm_tb/tests/uart_test_pkg.sv
+
 ../uvm_tb/tb/interrupt_if.sv
 ../protocol_monitor/apb_monitor.sv
 ../uvm_tb/tb/uart_tb.sv

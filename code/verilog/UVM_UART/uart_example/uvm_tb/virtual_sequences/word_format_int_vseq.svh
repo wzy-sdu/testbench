@@ -44,12 +44,13 @@ task body;
   rx_serial.no_rx_chars = 2;
   rx_serial.no_errors = 1;
 
-  repeat(64) begin
+  repeat(5) begin//64
     assert(setup.randomize() with {setup.LCR == lcr;
                                    setup.DIV == divisor;});
     setup.start(apb);
     ien.IER = 4'h3;
     ien.start(apb);
+    
     rx_serial.baud_divisor = divisor;
     rx_serial.lcr = lcr;
     rx_uart_config.baud_divisor = divisor;

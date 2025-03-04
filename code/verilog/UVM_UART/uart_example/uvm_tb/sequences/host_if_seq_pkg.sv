@@ -35,7 +35,7 @@ uart_reg_block rm;
 
 // Register model variables:
 uvm_status_e status;
-rand uvm_reg_data_t data;
+rand uvm_reg_data_t data;//默认数据类型
 
 function new(string name = "host_if_base_seq");
   super.new(name);
@@ -72,7 +72,7 @@ task body;
   rm.DIV2.read(status, data, .parent(this));
 
   // write to all the registers
-  data = 32'haa;
+  data = 32'haa;//0000 0000 0000 0000 0000 0000 1010 1010//
   rm.TXD.write(status, data, .parent(this));
   rm.IER.write(status, data, .parent(this));
   rm.FCR.write(status, data, .parent(this));

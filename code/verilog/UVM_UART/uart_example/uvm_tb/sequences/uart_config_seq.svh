@@ -31,6 +31,9 @@ endfunction
 
 task body;
   super.body();
+  $display("LCR = %b", LCR);
+  $display("DIV = %b", LCR);
+  $display("FCR = %b", LCR);
 
   rm.LCR.write(status, {'0, LCR}, .parent(this));
   rm.LCR.read(status, data, .parent(this));

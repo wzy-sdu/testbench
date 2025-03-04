@@ -25,7 +25,7 @@ uart_agent_config m_tx_uart_agent_cfg;
 uart_agent_config m_rx_uart_agent_cfg;
 modem_config m_modem_agent_cfg;
 
-uart_reg_block rm;
+uart_reg_block rm; //uart_reg_pkg.sv::uart_reg_block extends uvm_reg_block
 
 virtual interrupt_if IRQ;
 

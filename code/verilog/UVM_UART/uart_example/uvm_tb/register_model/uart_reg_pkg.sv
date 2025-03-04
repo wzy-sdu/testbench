@@ -22,6 +22,82 @@ package uart_reg_pkg;
 import uvm_pkg::*;
 `include "uvm_macros.svh"
 
+class uart_reg_block extends uvm_reg_block;
+  `uvm_object_utils(uart_reg_block)
+
+  rand txd_reg TXD;
+  rand rxd_reg RXD;
+  rand ier_reg IER;
+  iid_reg IID;
+  rand fcr_reg FCR;
+  rand lcr_reg LCR;
+  rand mcr_reg MCR;
+  lsr_reg LSR;
+  msr_reg MSR;
+  rand div_reg DIV1;
+  rand div_reg DIV2;
+
+  uvm_reg_map map;
+
+  function new(string name = "uart_reg_block");
+    super.new(name, UVM_NO_COVERAGE);
+  endfunction
+
+  function void build();
+    TXD = txd_reg::type_id::create("TXD");
+    TXD.build();
+    TXD.configure(this);
+    RXD = rxd_reg::type_id::create("RXD");
+    RXD.build();
+    RXD.configure(this);
+    IER = ier_reg::type_id::create("IER");
+    IER.build();
+    IER.configure(this);
+    IID = iid_reg::type_id::create("IID");
+    IID.build();
+    IID.configure(this);
+    FCR = fcr_reg::type_id::create("FCR");
+    FCR.build();
+    FCR.configure(this);
+    LCR = lcr_reg::type_id::create("LCR");
+    LCR.build();
+    LCR.configure(this);
+    MCR = mcr_reg::type_id::create("MCR");
+    MCR.build();
+    MCR.configure(this);
+    LSR = lsr_reg::type_id::create("LSR");
+    LSR.build();
+    LSR.configure(this);
+    MSR = msr_reg::type_id::create("MSR");
+    MSR.build();
+    MSR.configure(this);
+    DIV1 = div_reg::type_id::create("DIV1");
+    DIV1.build();
+    DIV1.configure(this);
+    DIV2 = div_reg::type_id::create("DIV2");
+    DIV2.build();
+    DIV2.configure(this);
+
+    map = create_map("map", 'h0, 4, UVM_LITTLE_ENDIAN);
+
+    map.add_reg(TXD, 32'h0, "WO");
+    map.add_reg(RXD, 32'h0, "RO");
+    map.add_reg(IER, 32'h4, "RW");
+    map.add_reg(IID, 32'h8, "RO");
+    map.add_reg(FCR, 32'h8, "WO");
+    map.add_reg(LCR, 32'hc, "RW");
+    map.add_reg(MCR, 32'h10, "RW");
+    map.add_reg(LSR, 32'h14, "RO");
+    map.add_reg(MSR, 32'h18, "RO");
+    map.add_reg(DIV1, 32'h1c, "RW");
+    map.add_reg(DIV2, 32'h20, "RW");
+
+    lock_model();
+  endfunction
+
+endclass: uart_reg_block
+
+//-----------------------------------------------------------------------------------------------------------
 class txd_reg extends uvm_reg;
   `uvm_object_utils(txd_reg)
 
@@ -267,79 +343,6 @@ class div_reg extends uvm_reg;
 
 endclass: div_reg
 
-class uart_reg_block extends uvm_reg_block;
-  `uvm_object_utils(uart_reg_block)
 
-  rand txd_reg TXD;
-  rand rxd_reg RXD;
-  rand ier_reg IER;
-  iid_reg IID;
-  rand fcr_reg FCR;
-  rand lcr_reg LCR;
-  rand mcr_reg MCR;
-  lsr_reg LSR;
-  msr_reg MSR;
-  rand div_reg DIV1;
-  rand div_reg DIV2;
-
-  uvm_reg_map map;
-
-  function new(string name = "uart_reg_block");
-    super.new(name, UVM_NO_COVERAGE);
-  endfunction
-
-  function void build();
-    TXD = txd_reg::type_id::create("TXD");
-    TXD.build();
-    TXD.configure(this);
-    RXD = rxd_reg::type_id::create("RXD");
-    RXD.build();
-    RXD.configure(this);
-    IER = ier_reg::type_id::create("IER");
-    IER.build();
-    IER.configure(this);
-    IID = iid_reg::type_id::create("IID");
-    IID.build();
-    IID.configure(this);
-    FCR = fcr_reg::type_id::create("FCR");
-    FCR.build();
-    FCR.configure(this);
-    LCR = lcr_reg::type_id::create("LCR");
-    LCR.build();
-    LCR.configure(this);
-    MCR = mcr_reg::type_id::create("MCR");
-    MCR.build();
-    MCR.configure(this);
-    LSR = lsr_reg::type_id::create("LSR");
-    LSR.build();
-    LSR.configure(this);
-    MSR = msr_reg::type_id::create("MSR");
-    MSR.build();
-    MSR.configure(this);
-    DIV1 = div_reg::type_id::create("DIV1");
-    DIV1.build();
-    DIV1.configure(this);
-    DIV2 = div_reg::type_id::create("DIV2");
-    DIV2.build();
-    DIV2.configure(this);
-
-    map = create_map("map", 'h0, 4, UVM_LITTLE_ENDIAN);
-
-    map.add_reg(TXD, 32'h0, "WO");
-    map.add_reg(RXD, 32'h0, "RO");
-    map.add_reg(IER, 32'h4, "RW");
-    map.add_reg(IID, 32'h8, "RO");
-    map.add_reg(FCR, 32'h8, "WO");
-    map.add_reg(LCR, 32'hc, "RW");
-    map.add_reg(MCR, 32'h10, "RW");
-    map.add_reg(LSR, 32'h14, "RO");
-    map.add_reg(MSR, 32'h18, "RO");
-    map.add_reg(DIV1, 32'h1c, "RW");
-    map.add_reg(DIV2, 32'h20, "RW");
-
-    lock_model();
-  endfunction
-
-endclass: uart_reg_block
 
 endpackage: uart_reg_pkg

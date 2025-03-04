@@ -1,0 +1,3 @@
+class wzy_callback_test_vseq extends uart_vseq_base
+
+endclass

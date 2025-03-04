@@ -43,7 +43,7 @@ always @(posedge clk)
     if(rstn == 0) begin
       count <= 0;
       ip_count <= 0;
-      op_count <= 0;
+      op_count <= 0;  
     end
     else begin
       case({push, pop})

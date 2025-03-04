@@ -28,7 +28,7 @@ function new(string name = "uart_host_mcr_seq");
 endfunction
 
 task body;
-  super.body();
+  super.body(); 
   assert(this.randomize() with {data[4] == loopback;});
   rm.MCR.write(status, data, .parent(this));
 endtask: body

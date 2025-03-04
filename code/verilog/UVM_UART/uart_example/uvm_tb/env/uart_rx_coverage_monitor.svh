@@ -27,10 +27,10 @@ covergroup rx_word_format_cg with function sample(bit[5:0] lcr);
   option.per_instance = 1;
 
   WORD_LENGTH: coverpoint lcr[1:0] {
-    bins bits_5 = {0};
-    bins bits_6 = {1};
-    bins bits_7 = {2};
-    bins bits_8 = {3};
+    bins bits_5 = {0};//5 data bits per character
+    bins bits_6 = {1};//6
+    bins bits_7 = {2};//7
+    bins bits_8 = {3};//8
   }
 
   STOP_BITS: coverpoint lcr[2] {

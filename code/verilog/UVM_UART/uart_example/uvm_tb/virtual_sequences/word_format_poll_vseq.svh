@@ -42,22 +42,22 @@ task body;
   rx_serial.no_errors = 1;
 
 //  repeat(64) begin
-repeat(2) begin
+repeat(10) begin//2
 
-    assert(setup.randomize() with {setup.LCR == lcr;
-                                   setup.DIV == divisor;});
+    assert(setup.randomize() with {setup.LCR == lcr;//[6:0]==[7:0]
+                                   setup.DIV == divisor;});//[15:0]==[15:0]
     setup.start(apb);
-    rx_serial.baud_divisor = divisor;
-    rx_serial.lcr = lcr;
-    rx_uart_config.baud_divisor = divisor;
-    rx_uart_config.lcr = lcr;
-    tx_uart_config.baud_divisor = divisor;
-    tx_uart_config.lcr = lcr;
+    rx_serial.baud_divisor = divisor;//16==16
+    rx_serial.lcr = lcr;//[8:0]==[8:0]
+    rx_uart_config.baud_divisor = divisor;//=16'h0004 ????
+    rx_uart_config.lcr = lcr;//lcr++
+    tx_uart_config.baud_divisor = divisor;//=16'h0004 ????
+    tx_uart_config.lcr = lcr;//lcr++
 
     fork
-//      host_rx.start(apb);
+      host_rx.start(apb);
       host_tx.start(apb);
-//      rx_serial.start(uart);
+      rx_serial.start(uart);
     join
     lcr++;
   end

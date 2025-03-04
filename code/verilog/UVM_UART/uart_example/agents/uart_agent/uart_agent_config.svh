@@ -22,10 +22,10 @@ class uart_agent_config extends uvm_object;
 `uvm_object_utils(uart_agent_config)
 
 bit ACTIVE = 1;
-logic[7:0] lcr = 8'h3f;
-logic[15:0] baud_divisor = 16'h0004;
+logic[7:0] lcr = 8'h3f;  //0011 1111
+logic[15:0] baud_divisor = 16'h0004; //0000 0000 0000 0100
 
-virtual serial_if sline;
+virtual serial_if sline; //接口
 
 function new(string name = "uart_agent_config");
   super.new(name);

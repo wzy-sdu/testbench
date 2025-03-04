@@ -59,7 +59,7 @@ endclass: apb_coverage_monitor
 
 function apb_coverage_monitor::new(string name = "apb_coverage_monitor", uvm_component parent = null);
   super.new(name, parent);
-  apb_cov = new();
+  apb_cov = new();  
 endfunction
 
 function void apb_coverage_monitor::write(T t);
