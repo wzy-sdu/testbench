@@ -39,5 +39,6 @@ import uart_seq_pkg::*;
 `include "modem_int_test_vseq.svh"
 `include "rx_errors_int_vseq.svh"
 `include "parker_try_vseq.svh"
+`include "wzy_reg_reset_vseq.svh"
 
 endpackage: uart_vseq_pkg

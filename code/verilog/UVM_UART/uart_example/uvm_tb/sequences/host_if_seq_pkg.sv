@@ -62,37 +62,64 @@ task body;
   super.body();
   // read from all the registers
   rm.RXD.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.IER.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.IID.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.LCR.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.MCR.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.LSR.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.MSR.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.DIV1.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.DIV2.read(status, data, .parent(this));
+  $display("data = %0h", data);
 
   // write to all the registers
   data = 32'haa;//0000 0000 0000 0000 0000 0000 1010 1010//
   rm.TXD.write(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.IER.write(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.FCR.write(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.LCR.write(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.MCR.write(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.LSR.write(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.MSR.write(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.DIV1.write(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.DIV2.write(status, data, .parent(this));
+  $display("data = %0h", data);
 
   // read back again
   rm.RXD.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.IER.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.IID.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.LCR.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.MCR.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.LSR.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.MSR.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.DIV1.read(status, data, .parent(this));
+  $display("data = %0h", data);
   rm.DIV2.read(status, data, .parent(this));
+  $display("data = %0h", data);
 
 endtask
 
@@ -109,5 +136,6 @@ endclass: quick_reg_access_seq
 `include "uart_wait_empty_seq.svh"
 `include "modem_isr_seq.svh"
 `include "baud_rate_test_seq.svh"
+`include "wzy_reg_reset_seq.svh"
 
 endpackage: host_if_seq_pkg

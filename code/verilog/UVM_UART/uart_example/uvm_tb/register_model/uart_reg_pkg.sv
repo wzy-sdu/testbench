@@ -80,17 +80,17 @@ class uart_reg_block extends uvm_reg_block;
 
     map = create_map("map", 'h0, 4, UVM_LITTLE_ENDIAN);
 
-    map.add_reg(TXD, 32'h0, "WO");
-    map.add_reg(RXD, 32'h0, "RO");
-    map.add_reg(IER, 32'h4, "RW");
-    map.add_reg(IID, 32'h8, "RO");
-    map.add_reg(FCR, 32'h8, "WO");
-    map.add_reg(LCR, 32'hc, "RW");
-    map.add_reg(MCR, 32'h10, "RW");
-    map.add_reg(LSR, 32'h14, "RO");
-    map.add_reg(MSR, 32'h18, "RO");
-    map.add_reg(DIV1, 32'h1c, "RW");
-    map.add_reg(DIV2, 32'h20, "RW");
+    map.add_reg(TXD, 32'h0, "WO");//reset:00
+    map.add_reg(RXD, 32'h0, "RO");//00
+    map.add_reg(IER, 32'h4, "RW");//00
+    map.add_reg(IID, 32'h8, "RO");//c1
+    map.add_reg(FCR, 32'h8, "WO");//c0
+    map.add_reg(LCR, 32'hc, "RW");//03
+    map.add_reg(MCR, 32'h10, "RW");//00
+    map.add_reg(LSR, 32'h14, "RO");//00
+    map.add_reg(MSR, 32'h18, "RO");//00
+    map.add_reg(DIV1, 32'h1c, "RW");//00
+    map.add_reg(DIV2, 32'h20, "RW");//00
 
     lock_model();
   endfunction

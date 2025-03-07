@@ -62,6 +62,7 @@ task apb_read_seq::body;
     req.addr = addr;
     finish_item(req);
     data = req.data;
+    $display("data = %h", data);
   end
 
 endtask:body

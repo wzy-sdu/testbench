@@ -26,6 +26,7 @@ function new(string name = "basic_reg_vseq");
 endfunction
 
 task body;
+
   quick_reg_access_seq t_seq = quick_reg_access_seq::type_id::create("t_seq");
 
   t_seq.start(apb);

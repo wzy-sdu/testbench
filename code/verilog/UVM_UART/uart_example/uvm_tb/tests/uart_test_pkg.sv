@@ -40,5 +40,6 @@ import host_if_seq_pkg::*;
 `include "rx_errors_int_test.svh"
 `include "baud_rate_test.svh"
 `include "parker_try_test.svh"
+`include "wzy_reg_reset_test.sv"
 
 endpackage: uart_test_pkg

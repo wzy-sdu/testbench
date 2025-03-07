@@ -26,4 +26,5 @@ import uart_agent_pkg::*;
 
 `include "uart_rx_seq.svh"
 
+
 endpackage: uart_seq_pkg
