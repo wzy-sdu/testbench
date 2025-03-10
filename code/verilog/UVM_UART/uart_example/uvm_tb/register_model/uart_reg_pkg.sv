@@ -84,7 +84,7 @@ class uart_reg_block extends uvm_reg_block;
     map.add_reg(RXD, 32'h0, "RO");//00
     map.add_reg(IER, 32'h4, "RW");//00
     map.add_reg(IID, 32'h8, "RO");//c1
-    map.add_reg(FCR, 32'h8, "WO");//c0
+    map.add_reg(FCR, 32'h8, "WO");//c0//????
     map.add_reg(LCR, 32'hc, "RW");//03
     map.add_reg(MCR, 32'h10, "RW");//00
     map.add_reg(LSR, 32'h14, "RO");//00
@@ -127,7 +127,7 @@ class rxd_reg extends uvm_reg;
     data.configure(this, 8, 0, "RO", 0, 8'h0, 0, 0, 0);
   endfunction: build
 endclass: rxd_reg
-
+/////////////////////////////////////////////////////////////
 class ier_reg extends uvm_reg;
   `uvm_object_utils(ier_reg)
 
@@ -152,7 +152,7 @@ class ier_reg extends uvm_reg;
   endfunction: build
 
 endclass: ier_reg
-
+//////////////////////////////////////////////////////////////
 class fcr_reg extends uvm_reg;
   `uvm_object_utils(fcr_reg)
 
@@ -171,7 +171,7 @@ class fcr_reg extends uvm_reg;
   endfunction: build
 
 endclass: fcr_reg
-
+////////////////////////////////////////////////////////
 class iid_reg extends uvm_reg;
   `uvm_object_utils(iid_reg)
 
@@ -190,7 +190,7 @@ class iid_reg extends uvm_reg;
   endfunction: build
 
 endclass: iid_reg
-
+////////////////////////////////////////////////////////
 class lcr_reg extends uvm_reg;
   `uvm_object_utils(lcr_reg)
 
@@ -208,7 +208,7 @@ class lcr_reg extends uvm_reg;
 
   function void build();
     WL = uvm_reg_field::type_id::create("WL");
-    WL.configure(this, 2, 0, "RW", 0, 2'b11, 1, 1, 0);
+    WL.configure(this, 2, 0, "RW", 0, 2'b11, 1, 1, 0);//00000011
     STP = uvm_reg_field::type_id::create("STP");
     STP.configure(this, 1, 2, "RW", 0, 1'b0, 1, 1, 0);
     PE = uvm_reg_field::type_id::create("PE");
@@ -224,7 +224,7 @@ class lcr_reg extends uvm_reg;
   endfunction
 
 endclass: lcr_reg
-
+////////////////////////////////////////////////////////////
 class mcr_reg extends uvm_reg;
   `uvm_object_utils(mcr_reg)
 
@@ -252,7 +252,7 @@ class mcr_reg extends uvm_reg;
   endfunction: build
 
 endclass: mcr_reg
-
+///////////////////////////////////////////////////////////
 class lsr_reg extends uvm_reg;
   `uvm_object_utils(lsr_reg)
 
@@ -289,7 +289,7 @@ class lsr_reg extends uvm_reg;
   endfunction: build
 
 endclass: lsr_reg
-
+/////////////////////////////////////////////////////////
 class msr_reg extends uvm_reg;
   `uvm_object_utils(msr_reg)
 
@@ -326,7 +326,7 @@ class msr_reg extends uvm_reg;
   endfunction: build
 
 endclass: msr_reg
-
+////////////////////////////////////////////////////////////////
 class div_reg extends uvm_reg;
   `uvm_object_utils(div_reg)
 

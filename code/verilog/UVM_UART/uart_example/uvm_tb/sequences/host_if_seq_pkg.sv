@@ -62,64 +62,66 @@ task body;
   super.body();
   // read from all the registers
   rm.RXD.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("RXD = %0h", data);
   rm.IER.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("IER = %0h", data);
   rm.IID.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("IIR = %0h", data);
   rm.LCR.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("LCR = %0h", data);
   rm.MCR.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("MCR = %0h", data);
   rm.LSR.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("LSR = %0h", data);
   rm.MSR.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("MSR = %0h", data);
   rm.DIV1.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("DIV1 = %0h", data);
   rm.DIV2.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("DIV2 = %0h", data);
 
   // write to all the registers
-  data = 32'haa;//0000 0000 0000 0000 0000 0000 1010 1010//
+  data = 32'haaaaaaaa;//0000 0000 0000 0000 0000 0000 1010 1010//
   rm.TXD.write(status, data, .parent(this));
-  $display("data = %0h", data);
+  //$display("TXD = %0h", data);
   rm.IER.write(status, data, .parent(this));
-  $display("data = %0h", data);
+  //$display("IER = %0h", data);
   rm.FCR.write(status, data, .parent(this));
-  $display("data = %0h", data);
+  //$display("FCR = %0h", data);
   rm.LCR.write(status, data, .parent(this));
-  $display("data = %0h", data);
+  //$display("LCR = %0h", data);
   rm.MCR.write(status, data, .parent(this));
-  $display("data = %0h", data);
+  //$display("MCR = %0h", data);
   rm.LSR.write(status, data, .parent(this));
-  $display("data = %0h", data);
+ // $display("LSR = %0h", data);
   rm.MSR.write(status, data, .parent(this));
-  $display("data = %0h", data);
+  //$display("MSR = %0h", data);
   rm.DIV1.write(status, data, .parent(this));
-  $display("data = %0h", data);
+  //$display("DIV1 = %0h", data);
   rm.DIV2.write(status, data, .parent(this));
-  $display("data = %0h", data);
+  //$display("DIV2 = %0h", data);
 
+$display(" ");
   // read back again
   rm.RXD.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("RXD = %0h", data);
   rm.IER.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("IER = %0h", data);
   rm.IID.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("IIR = %0h", data);
   rm.LCR.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("LCR = %0h", data);
   rm.MCR.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("MCR = %0h", data);
   rm.LSR.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("LSR = %0h", data);
   rm.MSR.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("MSR = %0h", data);
   rm.DIV1.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("DIV1 = %0h", data);
   rm.DIV2.read(status, data, .parent(this));
-  $display("data = %0h", data);
+  $display("DIV2 = %0h", data);
+
 
 endtask
 

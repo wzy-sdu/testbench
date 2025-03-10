@@ -96,7 +96,7 @@ logic rx_fifo_over_threshold;
 // UART Registers:
 logic[3:0] IER;
 logic[3:0] IIR;
-logic[7:0] FCR;
+logic[7:0] FCR;//没有LCR? LCR是8为输出，在上面
 logic[4:0] MCR;
 logic[7:0] MSR;
 logic[3:0] LSR;
@@ -153,7 +153,7 @@ always @(posedge PCLK)
   begin
     if (PRESETn == 0)
       begin
-        we = 0;
+        we = 0;//register write enable
         re = 0;
         PREADY = 0;
         fsm_state = IDLE;
@@ -291,7 +291,7 @@ always @(posedge PCLK)
     end
     else begin
       if((we == 1) && (PADDR == `FCR)) begin
-        FCR <= PWDATA[7:0];
+        FCR <= PWDATA[7:0];//只写，读出报错
       end
     end
   end
@@ -319,31 +319,31 @@ always_comb begin
       `IER: PRDATA = {28'h0, IER};
       `IIR: PRDATA = {28'hc, IIR};
       `LCR: PRDATA = {24'h0, LCR};
-      `MCR: PRDATA = {28'h0, MCR};
+      `MCR: PRDATA = {28'h0, MCR};//MCR不是5位吗
 //parker      `LSR: PRDATA = {24'h0, fifo_error, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
-      `LSR: PRDATA = {24'h0, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
+      `LSR: PRDATA = {24'h0, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};//少一位 0110 0000 = 60
 
       `MSR: PRDATA = {24'h0, MSR};
       `DIV1: PRDATA = {24'h0, DIVISOR[7:0]};
       `DIV2: PRDATA = {24'h0, DIVISOR[15:8]};
-      default: begin
+      default: begin//FCR:
                  PRDATA = 32'h0;
                  PSLVERR = 1;
                end
     endcase
 end
 
-// Read pulse to pop the Rx Data FIFO
+// Read pulse to pop the Rx Data FIFO 读取脉冲弹出队列
 always @(posedge PCLK)
 begin
   if (PRESETn == 0)
     rx_fifo_re <= 0;
   else
-  if (rx_fifo_re) // restore the signal to 0 after one clock cycle
+  if (rx_fifo_re) // restore the signal to 0 after one clock cycle 一个时钟周期后把信号恢复为0
     rx_fifo_re <= 0;
   else
   if ((re) && (PADDR == `DR))
-    rx_fifo_re <= 1; // advance read pointer
+    rx_fifo_re <= 1; // advance read pointer 提前读取指针00000
 end
 
 //
@@ -357,7 +357,7 @@ begin
   end
   else begin
     if((PADDR == `LSR) && (re == 1)) begin
-      LSR <= 0;
+      LSR <= 0;//写为0
       ls_int <= 0;
     end
     else if(rx_fifo_re == 1) begin
@@ -401,16 +401,16 @@ end
 //
 // Baud rate generator:
 //
-// Frequency divider
+// Frequency divider 分频器
 always @(posedge PCLK)
 begin
   if (PRESETn == 0)
     dlc <= #1 0;
   else
     if (start_dlc | ~ (|dlc))
-        dlc <= DIVISOR - 1;               // preset counter
+        dlc <= DIVISOR - 1;               // preset counter 预置计数器
     else
-      dlc <= dlc - 1;              // decrement counter
+      dlc <= dlc - 1;              // decrement counter 递减计数器
 end
 
 // Enable signal generation logic
@@ -435,7 +435,7 @@ assign rx_enable = enable;
 //
 // TX Interrupt - Triggered when TX FIFO contents below threshold
 //                Cleared by a write to the interrupt clear bit
-//
+//当TX FIFO内容低于阈值时触发，通过写入中断清除位来清除
 always @(posedge PCLK)
   begin
     if(PRESETn == 0) begin
@@ -456,14 +456,14 @@ always @(posedge PCLK)
 //
 // RX Interrupt - Triggered when RX FIFO contents above threshold
 //                Cleared by a write to the interrupt clear bit
-//
+//当RX FIFO内容高于阈值时触发，通过写入中断清除位来清除
 always @(posedge PCLK)
   begin
     if(PRESETn == 0) begin
       rx_int <= 0;
     end
     else begin
-      rx_int <= rx_fifo_over_threshold;
+      rx_int <= rx_fifo_over_threshold;//队列over阈
     end
   end
 
@@ -514,3 +514,5 @@ always @(posedge PCLK)
   end
 
 endmodule: uart_register_file
+//MSR LSR第一次读取不对? MSR = f0 = 1111 0000 CTS输入的反转，或环回模式下的RTS.  rdata = 0_1_1_0000_0 = 60, LSR = 0000
+//排一下执行顺序

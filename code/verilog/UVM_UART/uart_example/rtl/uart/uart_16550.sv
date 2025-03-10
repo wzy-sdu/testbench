@@ -66,7 +66,7 @@ wire tx_fifo_empty;
 wire tx_fifo_full;
 wire tx_busy;
 // Receiver related:
-wire[10:0] rx_data_out;fk
+wire[10:0] rx_data_out;
 wire rx_idle;
 wire rx_overrun;
 wire parity_error;
