@@ -29,7 +29,6 @@ uart_monitor m_uart_monitor;
 
 uart_agent_config cfg;
 
-
 function new(string name = "uart_agent", uvm_component parent = null);
   super.new(name, parent);
 endfunction

@@ -20,13 +20,16 @@ class uart_env_config extends uvm_object;
 
 `uvm_object_utils(uart_env_config);
 
+//config主要是实例化每个里面的虚拟接口
 apb_agent_config m_apb_agent_cfg;
 uart_agent_config m_tx_uart_agent_cfg;
 uart_agent_config m_rx_uart_agent_cfg;
 modem_config m_modem_agent_cfg;
 
-uart_reg_block rm; //uart_reg_pkg.sv::uart_reg_block extends uvm_reg_block
+//寄存器model
+uart_reg_block rm; //uart_reg_block extends uvm_reg_block
 
+//中断接口
 virtual interrupt_if IRQ;
 
 function new(string name = "uart_env_config");
@@ -39,6 +42,7 @@ extern task wait_for_clock(int n = 1);
 extern task wait_for_baud_rate();
 
 endclass: uart_env_config
+
 
 task uart_env_config::wait_for_interrupt();
     @(posedge IRQ.IRQ);

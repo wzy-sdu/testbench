@@ -20,6 +20,7 @@ class uart_env extends uvm_component;
 
 `uvm_component_utils(uart_env)
 
+//一堆agent_config
 uart_env_config m_cfg;
 
 apb_agent m_apb_agent;
@@ -40,6 +41,7 @@ uart_reg_access_coverage_monitor reg_cov;
 baud_rate_checker br_sb;
 reg2apb_adapter reg_adapter;
 
+//reg前门
 uvm_reg_predictor #(apb_seq_item) reg_predictor;
 
 extern function new(string name = "uart_env", uvm_component parent = null);
@@ -48,15 +50,20 @@ extern function void connect_phase(uvm_phase phase);
 
 endclass: uart_env
 
+
 function uart_env::new(string name = "uart_env", uvm_component parent = null);
   super.new(name, parent);
 endfunction
 
+
 function void uart_env::build_phase(uvm_phase phase);
+
   if(!uvm_config_db #(uart_env_config)::get(this, "", "uart_env_config", m_cfg)) begin
     `uvm_error("build_phase", "Unable to get uart_env_config from uvm_config_db")
   end
+
   m_apb_agent = apb_agent::type_id::create("m_apb_agent", this);
+
   uvm_config_db #(apb_agent_config)::set(this, "m_apb_agent*", "apb_agent_config", m_cfg.m_apb_agent_cfg);
   m_tx_uart_agent = uart_agent::type_id::create("m_tx_uart_agent", this);
   uvm_config_db #(uart_agent_config)::set(this, "m_tx_uart_agent*", "uart_agent_config", m_cfg.m_tx_uart_agent_cfg);
@@ -64,8 +71,10 @@ function void uart_env::build_phase(uvm_phase phase);
   uvm_config_db #(uart_agent_config)::set(this, "m_rx_uart_agent*", "uart_agent_config", m_cfg.m_rx_uart_agent_cfg);
   m_modem_agent = modem_agent::type_id::create("m_modem_agent", this);
   uvm_config_db #(modem_config)::set(this, "m_modem_agent*", "modem_config", m_cfg.m_modem_agent_cfg);
+
   reg_predictor = uvm_reg_predictor #(apb_seq_item)::type_id::create("reg_predictor", this);
   reg_adapter = reg2apb_adapter::type_id::create("reg_adapter");
+
   // Analysis components:
   tx_sb = uart_tx_scoreboard::type_id::create("tx_sb", this);
   rx_sb = uart_rx_scoreboard::type_id::create("rx_sb", this);
@@ -76,7 +85,10 @@ function void uart_env::build_phase(uvm_phase phase);
   modem_cov = uart_modem_coverage_monitor::type_id::create("modem_cov", this);
   br_sb = baud_rate_checker::type_id::create("br_sb", this);
   reg_cov = uart_reg_access_coverage_monitor::type_id::create("reg_cov", this);
+
 endfunction: build_phase
+
+
 
 function void uart_env::connect_phase(uvm_phase phase);
   // Register model connections

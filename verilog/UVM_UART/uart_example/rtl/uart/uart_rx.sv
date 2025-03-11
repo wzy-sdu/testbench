@@ -45,7 +45,7 @@ rx_fsm_t rx_state;
 logic[3:0] bit_counter;
 logic[10:0] rx_buffer;
 
-logic[2:0] filter;
+logic[2:0] filter;//过滤器
 logic filtered_rxd;
 
 // RX_FIFO
@@ -72,7 +72,7 @@ always @(posedge PCLK) begin
 end
 
 always_comb
-  case(filter)
+  case(filter)//?
     3'b000: filtered_rxd = 0;
     3'b001: filtered_rxd = 0;
     3'b010: filtered_rxd = 0;

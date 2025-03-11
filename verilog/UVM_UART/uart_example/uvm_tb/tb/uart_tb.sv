@@ -20,7 +20,7 @@
 module uart_tb;
 
 import uvm_pkg::*;
-import uart_test_pkg::*;
+import uart_test_pkg::*;//全部配置
 
 logic PCLK;
 logic PRESETn;

@@ -142,7 +142,7 @@ logic nRI_1;
 logic ls_int;
 
 
-logic fifo_error;
+logic fifo_error;//没用到？
 
 logic last_tx_fifo_empty;
 
@@ -320,8 +320,9 @@ always_comb begin
       `IIR: PRDATA = {28'hc, IIR};
       `LCR: PRDATA = {24'h0, LCR};
       `MCR: PRDATA = {28'h0, MCR};//MCR不是5位吗
-//parker      `LSR: PRDATA = {24'h0, fifo_error, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};
-      `LSR: PRDATA = {24'h0, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};//少一位 0110 0000 = 60
+//parker      
+      `LSR: PRDATA = {24'h0, fifo_error, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};//改正？
+      //`LSR: PRDATA = {24'h0, (tx_fifo_empty & ~tx_busy), tx_fifo_empty, LSR, ~rx_fifo_empty};//少一位 0110 0000 = 60
 
       `MSR: PRDATA = {24'h0, MSR};
       `DIV1: PRDATA = {24'h0, DIVISOR[7:0]};
