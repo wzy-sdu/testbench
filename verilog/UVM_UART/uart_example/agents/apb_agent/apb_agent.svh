@@ -56,7 +56,7 @@ endfunction
 
 function void apb_agent::build_phase(uvm_phase phase);
 
-  if(!uvm_config_db #(apb_agent_config)::get(this, "", "apb_agent_config", m_cfg)) begin
+  if(!uvm_config_db #(apb_agent_config)::get(this, "", "apb_agent_config", m_cfg)) begin//get配置，主要是APB接口
     `uvm_error("build_phase", "APB agent config not found")
   end
 
@@ -72,22 +72,34 @@ function void apb_agent::build_phase(uvm_phase phase);
     m_fcov_monitor = apb_coverage_monitor::type_id::create("m_fcov_monitor", this);
   end
 
+//实例化uvm_analysis_port
   ap = new("ap", this);
 
 endfunction: build_phase
 
 function void apb_agent::connect_phase(uvm_phase phase);
-  m_monitor.APB = m_cfg.APB;
+//agent, driver, monitor, apb_agent_config 都有APB接口
+  m_monitor.APB = m_cfg.APB;//apb_monitor连接APB
   m_monitor.apb_index = m_cfg.apb_index;
-  m_monitor.ap.connect(ap);
+  m_monitor.ap.connect(ap);//apb_seq_item接口相连
 
   // Only connect the driver and the sequencer if active
   if(m_cfg.active == UVM_ACTIVE) begin
-    m_driver.seq_item_port.connect(m_sequencer.seq_item_export);
-    m_driver.APB = m_cfg.APB;
+    m_driver.seq_item_port.connect(m_sequencer.seq_item_export);//uvm_driver.seq_item_port连接uvm_sequencer.seq_item_export
+    m_driver.APB = m_cfg.APB;//driver连接APB
   end
   if(m_cfg.has_functional_coverage) begin
-    m_monitor.ap.connect(m_fcov_monitor.analysis_export);
+    m_monitor.ap.connect(m_fcov_monitor.analysis_export);//apb_monitor连接apb_coverage_monitor
   end
 
 endfunction: connect_phase
+/*
+active = 1, has_coverage = 1:
+apb_monitor -> (config)APB
+            -> (apb_seq_item) uvm_analysis_port
+            -> apb_coverage_monitor
+apb_driver  -> (config)APB
+            -> apb_sequencer
+apb_sequencer
+apb_coverage_monitor
+*/

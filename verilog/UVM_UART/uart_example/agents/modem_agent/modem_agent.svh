@@ -34,7 +34,7 @@ class modem_agent extends uvm_agent;
 
 
   function void build_phase(uvm_phase phase);
-    super.build_phase(phase);
+    super.build_phase(phase);//其他没有super?
   ap = new("modem_agent_ap", this);
   m_monitor = modem_monitor::type_id::create("monitor", this);
 
