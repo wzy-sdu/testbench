@@ -58,6 +58,7 @@ endfunction
 
 function void uart_env::build_phase(uvm_phase phase);
 
+//还没set呢???
   if(!uvm_config_db #(uart_env_config)::get(this, "", "uart_env_config", m_cfg)) begin
     `uvm_error("build_phase", "Unable to get uart_env_config from uvm_config_db")
   end
@@ -91,29 +92,38 @@ endfunction: build_phase
 
 
 function void uart_env::connect_phase(uvm_phase phase);
+
   // Register model connections
   m_cfg.rm.map.set_sequencer(m_apb_agent.m_sequencer, reg_adapter);
   reg_predictor.map = m_cfg.rm.map;
   reg_predictor.adapter = reg_adapter;
   m_apb_agent.ap.connect(reg_predictor.bus_in);
+
   // Analysis component connections:
+  //tx
   m_apb_agent.ap.connect(tx_sb.apb_fifo.analysis_export);
   m_tx_uart_agent.ap.connect(tx_sb.uart_fifo.analysis_export);
   tx_sb.rm = m_cfg.rm;
+  //rx
   m_apb_agent.ap.connect(rx_sb.apb_fifo.analysis_export);
   m_rx_uart_agent.ap.connect(rx_sb.uart_fifo.analysis_export);
   rx_sb.rm = m_cfg.rm;
+  //modem//rx不用吗??
   m_apb_agent.ap.connect(modem_sb.apb_fifo.analysis_export);
   m_modem_agent.ap.connect(modem_sb.modem_fifo.analysis_export);
   tx_sb.ap.connect(tx_cov.analysis_export);
+  //中断、cov
   m_apb_agent.ap.connect(int_cov.apb_fifo.analysis_export);
   int_cov.cfg = m_cfg;
   int_cov.rm = m_cfg.rm;
   modem_cov.rm = m_cfg.rm;
+  
   m_apb_agent.ap.connect(modem_cov.analysis_export);
   rx_sb.ap.connect(rx_cov.analysis_export);
   br_sb.rm = m_cfg.rm;
   br_sb.IRQ = m_cfg.IRQ;
+
   m_apb_agent.ap.connect(br_sb.apb_fifo.analysis_export);
   m_apb_agent.ap.connect(reg_cov.analysis_export);
+
 endfunction: connect_phase

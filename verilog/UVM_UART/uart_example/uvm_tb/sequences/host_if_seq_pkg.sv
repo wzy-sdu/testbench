@@ -17,7 +17,7 @@
 //   permissions and limitations under the License.
 //----------------------------------------------------------------------
 
-package host_if_seq_pkg;
+package host_if_seq_pkg;//相当于uart_sequence?
 
 import uvm_pkg::*;
 `include "uvm_macros.svh"
@@ -50,6 +50,8 @@ endtask: body
 
 endclass: host_if_base_seq
 
+
+////////////////////////////////////////////////////////////////////////////////
 class quick_reg_access_seq extends host_if_base_seq;
 
 `uvm_object_utils(quick_reg_access_seq)
