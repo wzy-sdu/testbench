@@ -44,12 +44,18 @@ function uart_test_base::new(string name = "uart_test_base", uvm_component paren
 endfunction
 
 function void uart_test_base::build_phase(uvm_phase phase);
+
+//env_config配置获取
   m_env_cfg = uart_env_config::type_id::create("m_env_cfg");
 
   rm = uart_reg_block::type_id::create("rm");
   rm.build();
   m_env_cfg.rm = rm;
-
+  
+  if(!uvm_config_db #(virtual interrupt_if)::get(this, "", "IRQ", m_env_cfg.IRQ)) begin
+    `uvm_error("build_phase", "Unable to find IRQ interface in the uvm_config_db")
+  end
+  //apb_config配置获取
   m_apb_cfg = apb_agent_config::type_id::create("m_apb_cfg");
   if(!uvm_config_db #(virtual apb_if)::get(this, "", "APB", m_apb_cfg.APB)) begin
     `uvm_error("build_phase", "Unable to find APB interface in the uvm_config_db")
@@ -57,44 +63,56 @@ function void uart_test_base::build_phase(uvm_phase phase);
   m_env_cfg.m_apb_agent_cfg = m_apb_cfg;
   m_apb_cfg.start_address[0] = 0;
   m_apb_cfg.range[0] = 32'h30;
+
+  //tx_uart_config配置获取
   m_tx_uart_cfg = uart_agent_config::type_id::create("m_tx_uart_cfg");
   if(!uvm_config_db #(virtual serial_if)::get(this, "", "TX_UART", m_tx_uart_cfg.sline)) begin
     `uvm_error("build_phase", "Unable to find UART interface in the uvm_config_db")
   end
   m_tx_uart_cfg.ACTIVE = 0;
   m_env_cfg.m_tx_uart_agent_cfg = m_tx_uart_cfg;
+
+  //rx_uart_config配置获取
   m_rx_uart_cfg = uart_agent_config::type_id::create("m_rx_uart_cfg");
   if(!uvm_config_db #(virtual serial_if)::get(this, "", "RX_UART", m_rx_uart_cfg.sline)) begin
     `uvm_error("build_phase", "Unable to find UART interface in the uvm_config_db")
   end
   m_env_cfg.m_rx_uart_agent_cfg = m_rx_uart_cfg;
-  if(!uvm_config_db #(virtual interrupt_if)::get(this, "", "IRQ", m_env_cfg.IRQ)) begin
-    `uvm_error("build_phase", "Unable to find IRQ interface in the uvm_config_db")
-  end
+
+  //modem_config配置获取
   m_modem_cfg = modem_config::type_id::create("m_modem_cfg");
   if(!uvm_config_db #(virtual modem_if)::get(this, "", "MODEM", m_modem_cfg.mif)) begin
     `uvm_error("build_phase", "Unable to find MODEM interface in the uvm_config_db")
   end
   m_env_cfg.m_modem_agent_cfg = m_modem_cfg;
+
+  //env配置发送
   m_env = uart_env::type_id::create("m_env", this);
   uvm_config_db #(uart_env_config)::set(this, "m_env*", "uart_env_config", m_env_cfg);
+
 endfunction: build_phase
 
+//初始化
 function void uart_test_base::init_vseq(uart_vseq_base vseq);
+//sequencer配置
   vseq.apb = m_env.m_apb_agent.m_sequencer;
   vseq.uart = m_env.m_rx_uart_agent.m_uart_sequencer;
   vseq.modem = m_env.m_modem_agent.m_sequencer;
+  //reg
   vseq.rm = rm;
+  //uart
   vseq.tx_uart_config = m_tx_uart_cfg;
   vseq.rx_uart_config = m_rx_uart_cfg;
+  //env
   vseq.cfg = m_env_cfg;
 endfunction: init_vseq
-
 
 //parker -start
 function void uart_test_base::connect_phase(uvm_phase phase);
 
+//打印验证环境的结构
 uvm_top.print_topology();
+
 endfunction: connect_phase
 //parker -end
 

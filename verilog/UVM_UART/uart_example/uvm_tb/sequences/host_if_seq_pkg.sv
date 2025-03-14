@@ -17,7 +17,7 @@
 //   permissions and limitations under the License.
 //----------------------------------------------------------------------
 
-package host_if_seq_pkg;//相当于uart_sequence?
+package host_if_seq_pkg;
 
 import uvm_pkg::*;
 `include "uvm_macros.svh"
@@ -26,7 +26,7 @@ import apb_agent_pkg::*;
 import uart_reg_pkg::*;
 import uart_env_pkg::*;
 
-class host_if_base_seq extends uvm_sequence #(apb_seq_item);
+class host_if_base_seq extends uvm_sequence #(apb_seq_item);//相当于apb_reg_sequence?
 `uvm_object_utils(host_if_base_seq)
 
 // To get the register model

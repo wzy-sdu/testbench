@@ -37,14 +37,17 @@ task body;
   repeat(no_rx_chars) begin
     start_item(rx_char);//后两项默认?
     assert(rx_char.randomize() with {data[4:0] != 0;});
-    rx_char.baud_divisor = baud_divisor;
-    rx_char.lcr = lcr;
-    if(no_errors) begin
+    $display("rx_char.data = %h", rx_char.data);
+
+    rx_char.baud_divisor = baud_divisor;//2
+    rx_char.lcr = lcr;//0
+
+    if(no_errors) begin//1
       rx_char.fe = 0;
       rx_char.pe = 0;
       rx_char.sbe = 0;
     end
-    finish_item(rx_char);
+    finish_item(rx_char);//
   end
 
 endtask: body

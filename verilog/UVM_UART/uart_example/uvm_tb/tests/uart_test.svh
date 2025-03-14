@@ -18,7 +18,7 @@
 //----------------------------------------------------------------------
 
 class uart_test extends uart_test_base;
-
+//reg读写test
 `uvm_component_utils(uart_test)
 
 extern function new(string name = "uart_test", uvm_component parent = null);
@@ -34,10 +34,10 @@ endfunction
 task uart_test::run_phase(uvm_phase phase);
   basic_reg_vseq vseq = basic_reg_vseq::type_id::create("vseq");
 
-  phase.raise_objection(this);
+  phase.raise_objection(this);//挂起,等初始化、reg读写
   init_vseq(vseq);
   vseq.start(null);
-  phase.drop_objection(this);
+  phase.drop_objection(this);//恢复
 endtask: run_phase
 
 function void uart_test::report_phase(uvm_phase phase);

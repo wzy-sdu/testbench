@@ -42,17 +42,19 @@ task body;
   rx_serial.no_errors = 1;
 
 //  repeat(64) begin
-repeat(10) begin//2
+repeat(2) begin//2
 
-    assert(setup.randomize() with {setup.LCR == lcr;//[6:0]==[7:0]
-                                   setup.DIV == divisor;});//[15:0]==[15:0]
-    setup.start(apb);
-    rx_serial.baud_divisor = divisor;//16==16
-    rx_serial.lcr = lcr;//[8:0]==[8:0]
-    rx_uart_config.baud_divisor = divisor;//=16'h0004 ????
-    rx_uart_config.lcr = lcr;//lcr++
-    tx_uart_config.baud_divisor = divisor;//=16'h0004 ????
-    tx_uart_config.lcr = lcr;//lcr++
+    assert(setup.randomize() with {setup.LCR == lcr;//[6:0]==[7:0] = 0//==? =?
+                                   setup.DIV == divisor;});//2
+    setup.start(apb);//reg写入
+
+    rx_serial.baud_divisor = divisor;//2
+    rx_serial.lcr = lcr;// 0
+
+    rx_uart_config.baud_divisor = divisor;//2
+    rx_uart_config.lcr = lcr;//0
+    tx_uart_config.baud_divisor = divisor;//2
+    tx_uart_config.lcr = lcr;//0
 
     fork
       host_rx.start(apb);

@@ -18,7 +18,7 @@
 //----------------------------------------------------------------------
 
 class basic_reg_vseq extends uart_vseq_base;
-
+//读写全部寄存器
 `uvm_object_utils(basic_reg_vseq)
 
 function new(string name = "basic_reg_vseq");

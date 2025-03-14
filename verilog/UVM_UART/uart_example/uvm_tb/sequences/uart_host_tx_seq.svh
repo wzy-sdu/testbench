@@ -38,7 +38,7 @@ task body;
     rm.LSR.read(status, data, .parent(this));
 
     // Wait for Tx FIFO to empty
-    while(!data[5]) begin
+    while(!data[5]) begin//TX FIFO has at least one character in it
       rm.LSR.read(status, data, .parent(this));
     end
     for(int j = 0; j < 16; j++) begin

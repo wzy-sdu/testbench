@@ -34,9 +34,9 @@ task body;
   for(int i = 0; i < no_rx_chars; i++) begin
     rm.LSR.read(status, data, .parent(this));
     // Wait for data to be available
-    while(!data[0]) begin
+    while(!data[0]) begin//==0 No characters in the RX FIFO
       rm.LSR.read(status, data, .parent(this));
-      cfg.wait_for_clock(10);
+      cfg.wait_for_clock(10);//IRQ.CLK 
     end
     rm.RXD.read(status, data, .parent(this));
   end

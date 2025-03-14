@@ -30,10 +30,11 @@ function new(string name = "uart_config_seq");
 endfunction
 
 task body;
+//配置LCR、DIV、FCR
   super.body();
-  $display("LCR = %b", LCR);
-  $display("DIV = %b", LCR);
-  $display("FCR = %b", LCR);
+  $display("LCR = %h", LCR);
+  $display("DIV = %h", LCR);
+  $display("FCR = %h", LCR);
 
   rm.LCR.write(status, {'0, LCR}, .parent(this));
   rm.LCR.read(status, data, .parent(this));
