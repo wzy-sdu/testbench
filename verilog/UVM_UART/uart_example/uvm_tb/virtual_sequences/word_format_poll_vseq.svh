@@ -31,7 +31,7 @@ task body;
   uart_rx_seq rx_serial = uart_rx_seq::type_id::create("rx_serial");
   bit[7:0] lcr;
   bit[15:0] divisor;
-  bit[1:0] fcr;
+  bit[1:0] fcr;//没用上
 
   lcr = 0;
   divisor = 2;
@@ -44,9 +44,9 @@ task body;
 //  repeat(64) begin
 repeat(2) begin//2
 
-    assert(setup.randomize() with {setup.LCR == lcr;//[6:0]==[7:0] = 0//==? =?
-                                   setup.DIV == divisor;});//2
-    setup.start(apb);//reg写入
+    assert(setup.randomize() with {setup.LCR == lcr;//[6:0]==[7:0] = 0
+                                   setup.DIV == divisor;});//= 2
+    setup.start(apb);//reg预写入、读取
 
     rx_serial.baud_divisor = divisor;//2
     rx_serial.lcr = lcr;// 0

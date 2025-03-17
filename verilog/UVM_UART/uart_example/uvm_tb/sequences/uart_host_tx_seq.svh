@@ -31,21 +31,30 @@ endfunction
 
 task body;
   int i;
-
+  int z;
+  
   super.body();
   i = 0;
+  $display("tx_no_tx_chars = %h", no_tx_chars);//2
   while(i < no_tx_chars) begin
     rm.LSR.read(status, data, .parent(this));
+    $display("2_read_LSR = %h", data);
 
     // Wait for Tx FIFO to empty
     while(!data[5]) begin//TX FIFO has at least one character in it
       rm.LSR.read(status, data, .parent(this));
+      $display("2_read_LSR_data[5] = %h", data);
     end
+
     for(int j = 0; j < 16; j++) begin
       // Fill the FIFO or run out of chars:
-      rm.TXD.write(status, $urandom(), .parent(this));
+      z = $urandom;
+      rm.TXD.write(status, z, .parent(this));
+      $display("2_write_TXD = %h", z);
       i++;
+
       if(i >= no_tx_chars) begin
+        $display("2_break!!!!!");
         break;
       end
       j++;

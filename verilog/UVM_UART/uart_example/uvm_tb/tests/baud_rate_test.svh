@@ -32,7 +32,7 @@ function baud_rate_test::new(string name = "baud_rate_test", uvm_component paren
 endfunction
 
 task baud_rate_test::run_phase(uvm_phase phase);
-  baud_rate_test_seq br_test = baud_rate_test_seq::type_id::create("br_test");
+  baud_rate_vseq br_test = baud_rate_vseq::type_id::create("br_test");
 
   phase.raise_objection(this);
   br_test.start(m_env.m_apb_agent.m_sequencer);

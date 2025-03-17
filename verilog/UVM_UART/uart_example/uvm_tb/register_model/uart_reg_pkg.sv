@@ -83,8 +83,8 @@ class uart_reg_block extends uvm_reg_block;
     map.add_reg(TXD, 32'h0, "WO");//reset:00
     map.add_reg(RXD, 32'h0, "RO");//00
     map.add_reg(IER, 32'h4, "RW");//00
-    map.add_reg(IID, 32'h8, "RO");//c1
-    map.add_reg(FCR, 32'h8, "WO");//c0//????
+    map.add_reg(IID, 32'h8, "RO");//c1//只读
+    map.add_reg(FCR, 32'h8, "WO");//c0//只写 32'h8地址读时为IIR，写时为FCR
     map.add_reg(LCR, 32'hc, "RW");//03
     map.add_reg(MCR, 32'h10, "RW");//00
     map.add_reg(LSR, 32'h14, "RO");//00

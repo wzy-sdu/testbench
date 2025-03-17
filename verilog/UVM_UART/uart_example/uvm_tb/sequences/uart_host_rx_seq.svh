@@ -31,14 +31,21 @@ endfunction
 
 task body;
   super.body();
-  for(int i = 0; i < no_rx_chars; i++) begin
+  $display("rx_no_rx_chars = %h", no_rx_chars);
+
+  for(int i = 0; i < no_rx_chars; i++) begin//2
     rm.LSR.read(status, data, .parent(this));
+    $display("1_read_LSR = %h", data);
+
     // Wait for data to be available
     while(!data[0]) begin//==0 No characters in the RX FIFO
       rm.LSR.read(status, data, .parent(this));
+      $display("1_read_LSR_data[0] = %h", data);
       cfg.wait_for_clock(10);//IRQ.CLK 
     end
+    
     rm.RXD.read(status, data, .parent(this));
+    $display("1_read_RXD = %h", data);
   end
 endtask: body
 
