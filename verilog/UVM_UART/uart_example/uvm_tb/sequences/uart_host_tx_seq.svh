@@ -32,7 +32,7 @@ endfunction
 task body;
   int i;
   int z;
-  
+
   super.body();
   i = 0;
   $display("tx_no_tx_chars = %h", no_tx_chars);//2
@@ -49,7 +49,7 @@ task body;
     for(int j = 0; j < 16; j++) begin
       // Fill the FIFO or run out of chars:
       z = $urandom;
-      rm.TXD.write(status, z, .parent(this));
+      rm.TXD.write(status, z, .parent(this));//TXD,RXD走serial_if?
       $display("2_write_TXD = %h", z);
       i++;
 

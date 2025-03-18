@@ -40,6 +40,9 @@ task body;
     // Wait for data to be available
     while(!data[0]) begin//==0 No characters in the RX FIFO
       rm.LSR.read(status, data, .parent(this));
+
+  //！！！！！！！！注意，寄存器读出来的PRDATA不一定是本值，看rtl设定！！！！！！！！！！！！！！
+
       $display("1_read_LSR_data[0] = %h", data);
       cfg.wait_for_clock(10);//IRQ.CLK 
     end
@@ -50,3 +53,8 @@ task body;
 endtask: body
 
 endclass: uart_host_rx_seq
+/*
+while:
+cfg.wait_for_clock(10); 等待 10 个时钟周期，然后再次检查 LSR 寄存器的值,
+当 data[0] 变为 1 时，表示接收 FIFO 中有数据可用，while 循环结束。
+*/

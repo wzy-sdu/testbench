@@ -34,7 +34,7 @@ endfunction
 task body;
   uart_seq_item rx_char = uart_seq_item::type_id::create("rx_char");
 
-  repeat(no_rx_chars) begin
+  repeat(no_rx_chars) begin//2
     start_item(rx_char);//后两项默认?
     assert(rx_char.randomize() with {data[4:0] != 0;});
     $display("3_rx_char_seq_item.data = %h", rx_char.data);

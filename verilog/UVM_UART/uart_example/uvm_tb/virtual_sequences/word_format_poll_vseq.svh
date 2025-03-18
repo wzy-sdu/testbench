@@ -56,7 +56,7 @@ repeat(2) begin//2
     tx_uart_config.baud_divisor = divisor;//2
     tx_uart_config.lcr = lcr;//0
 
-    fork
+    fork//并行
       host_rx.start(apb);
       host_tx.start(apb);
       rx_serial.start(uart);

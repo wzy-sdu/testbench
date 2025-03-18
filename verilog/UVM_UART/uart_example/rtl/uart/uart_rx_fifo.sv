@@ -32,8 +32,8 @@ module uart_rx_fifo(
   output logic[4:0] count,
   output logic[10:0] data_out);
 
-logic[3:0] ip_count;//0-15
-logic[3:0] op_count;//队列指针位置?
+logic[3:0] ip_count;//0-15 下一个写入的位置
+logic[3:0] op_count;//下一个读取的位置
 typedef logic[10:0] fifo_t;
 
 fifo_t data_fifo[15:0]; // =data_fifo[15:0] logic[10:0] 16个11位
@@ -49,7 +49,7 @@ always @(posedge clk)
       end
     end
     else begin
-      case({push, pop})//{pop出, push入}?
+      case({push, pop})//{pop出, push进}?
         2'b01: begin
                  if(count > 0) begin
                    op_count <= op_count + 1;
@@ -58,8 +58,8 @@ always @(posedge clk)
                end
         2'b10: begin
                  if(count <= 5'hf) begin//count <= 15 共16
-                   ip_count <= ip_count + 1;//f + 1 = 0
-                   data_fifo[ip_count] <= data_in;//这样data_fifo[0]没写入过?只有15个入队
+                   ip_count <= ip_count + 1;//<=并行处理
+                   data_fifo[ip_count] <= data_in;//ip_count为旧值
                    count <= count + 1;
                  end
                end

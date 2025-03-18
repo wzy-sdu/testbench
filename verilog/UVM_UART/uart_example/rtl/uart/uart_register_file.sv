@@ -66,6 +66,7 @@ module uart_register_file (input PCLK,
                           );
 
 // Include defines for addresses and offsets
+//reg_map索引
 `define DR 5'h0
 `define IER 5'h1
 `define IIR 5'h2
@@ -76,6 +77,35 @@ module uart_register_file (input PCLK,
 `define MSR 5'h6
 `define DIV1 5'h7
 `define DIV2 5'h8
+
+/*与uart_reg_pkg.sv对照看
+1. APB Address
+APB（Advanced Peripheral Bus）是ARM公司定义的一种低功耗、低复杂度的总线协议，常用于连接微控制器与外设。
+
+APB Address 指的是在APB总线上，外设或寄存器的地址。这个地址用于在APB总线上访问特定的外设或寄存器。
+
+APB地址通常是相对于APB总线基地址的偏移量。
+
+2. REG Address
+REG Address 指的是某个外设内部寄存器的地址。这个地址是相对于外设基地址的偏移量。
+
+每个外设通常有多个寄存器，用于配置和控制外设的行为。REG Address 就是这些寄存器在外设地址空间中的具体位置。
+
+区别
+范围不同：APB Address 是在整个APB总线地址空间中的地址，而 REG Address 是在某个外设地址空间中的地址。
+
+用途不同：APB Address 用于在APB总线上定位外设，而 REG Address 用于在外设内部定位具体的寄存器。
+
+示例
+假设有一个APB总线，基地址为 0x40000000，外设A的APB地址偏移为 0x1000，外设A内部有一个寄存器，偏移为 0x04。
+
+APB Address 为 0x40001000（基地址 + 外设偏移）。
+
+REG Address 为 0x04（外设内部的寄存器偏移）。
+
+访问这个寄存器的完整地址为 0x40001004（APB Address + REG Address）。
+*/
+
 
 // APB interface FSM states
 typedef enum {IDLE, SETUP, ACCESS} APB_STATE;
