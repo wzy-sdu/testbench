@@ -49,8 +49,10 @@ task body;
     for(int j = 0; j < 16; j++) begin
       // Fill the FIFO or run out of chars:
       z = $urandom;
-      rm.TXD.write(status, z, .parent(this));//TXD,RXD走serial_if?
+      rm.TXD.write(status, z, .parent(this));//TXD, RXD读写走serial_if给rx_data_out[],波形看不到，reg file定义也没有, LSR波形有发送指示位1
+      //rm.RXD.read(status, data, .parent(this));
       $display("2_write_TXD = %h", z);
+      //$display("2_read_RXD = %h", data);
       i++;
 
       if(i >= no_tx_chars) begin

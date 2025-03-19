@@ -48,7 +48,7 @@ task body;
     end
     
     rm.RXD.read(status, data, .parent(this));
-    $display("1_read_RXD = %h", data);
+    $display("1_read_RXD = %h", data);//读的是DR的地址，DR的数据
   end
 endtask: body
 

@@ -67,7 +67,7 @@ module uart_register_file (input PCLK,
 
 // Include defines for addresses and offsets
 //reg_map索引
-`define DR 5'h0
+`define DR 5'h0 //TXD, RXD读写走serial_if给rx_data_out[]波形看不到，reg file定义也没有, LSR波形有发送指示位1
 `define IER 5'h1
 `define IIR 5'h2
 `define FCR 5'h2
@@ -345,7 +345,7 @@ always @(posedge PCLK)
 always_comb begin
     PSLVERR = 0;
     case(PADDR)
-      `DR: PRDATA = {24'h0, rx_data_out[7:0]};
+      `DR: PRDATA = {24'h0, rx_data_out[7:0]};//TXD, RXD读写走serial_if给rx_data_out[],波形看不到,reg file定义也没有, LSR波形有发送指示位1
       `IER: PRDATA = {28'h0, IER};
       `IIR: PRDATA = {28'hc, IIR};
       `LCR: PRDATA = {24'h0, LCR};

@@ -45,8 +45,8 @@ task body;
   rx_serial.no_errors = 1;
 
   repeat(5) begin//64
-    assert(setup.randomize() with {setup.LCR == lcr;
-                                   setup.DIV == divisor;});
+    assert(setup.randomize() with {setup.LCR == lcr;//0
+                                   setup.DIV == divisor;});//2
     setup.start(apb);
     ien.IER = 4'h3;
     ien.start(apb);

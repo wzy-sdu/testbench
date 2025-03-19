@@ -58,7 +58,7 @@ repeat(2) begin//2
 
     fork//并行
       host_rx.start(apb);
-      host_tx.start(apb);
+      host_tx.start(apb);//看不到tx结果
       rx_serial.start(uart);
     join
     lcr++;

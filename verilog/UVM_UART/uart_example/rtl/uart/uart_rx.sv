@@ -72,7 +72,7 @@ always @(posedge PCLK) begin
 end
 
 always_comb
-  case(filter)//?
+  case(filter)//?//0001_1010
     3'b000: filtered_rxd = 0;
     3'b001: filtered_rxd = 0;
     3'b010: filtered_rxd = 0;
