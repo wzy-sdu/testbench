@@ -33,6 +33,7 @@ task body;
   // Wait for Tx Channel to empty
   while(!data[6]) begin
     rm.LSR.read(status, data, .parent(this));
+    $display("Wait for Tx Channel to empty");
   end
 endtask: body
 
