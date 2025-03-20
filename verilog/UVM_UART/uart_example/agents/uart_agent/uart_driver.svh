@@ -62,7 +62,7 @@ task send_pkts;
         bitPtr = 0;
         bitPeriod;
         // Data bits 0 to 4
-        while(bitPtr < 5)
+        while(bitPtr < 5)//发送前5位
           begin
             sline.sdata = pkt.data[bitPtr];
             bitPeriod;

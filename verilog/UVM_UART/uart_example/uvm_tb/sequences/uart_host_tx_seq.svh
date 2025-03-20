@@ -34,6 +34,7 @@ task body;
   int z;
 
   super.body();
+  rm.MCR.write(status, 32'h10, .parent(this));//loopback mode
   i = 0;
   $display("tx_no_tx_chars = %h", no_tx_chars);//2
   while(i < no_tx_chars) begin
@@ -48,10 +49,10 @@ task body;
 
     for(int j = 0; j < 16; j++) begin
       // Fill the FIFO or run out of chars:
-      z = $urandom;
-      rm.TXD.write(status, z, .parent(this));//TXD, RXD读写走serial_if给rx_data_out[],波形看不到，reg file定义也没有, LSR波形有发送指示位1
+      //z = $urandom;
+      rm.TXD.write(status, 32'h55, .parent(this));//TXD, RXD读写走serial_if给rx_data_out[], 由uart_driver, uart_monitor给赋值?
       //rm.RXD.read(status, data, .parent(this));
-      $display("2_write_TXD = %h", z);
+      $display("2_write_TXD = %h", 8'h55);
       //$display("2_read_RXD = %h", data);
       i++;
 

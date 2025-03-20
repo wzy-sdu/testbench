@@ -83,7 +83,7 @@ task body;
   $display("DIV2 = %0h", data);
 
   // write to all the registers
-  data = 32'haaaaaaaa;//0000 0000 0000 0000 0000 0000 1010 1010//
+  data = 32'haa;//0000 0000 0000 0000 0000 0000 1010 1010//
   rm.TXD.write(status, data, .parent(this));
   //$display("TXD = %0h", data);
   rm.IER.write(status, data, .parent(this));
