@@ -31,6 +31,7 @@ task body;
   super.body(); 
   assert(this.randomize() with {data[4] == loopback;});
   rm.MCR.write(status, data, .parent(this));
+  $display("MCR = %h", data);
 endtask: body
 
 endclass: uart_host_mcr_seq

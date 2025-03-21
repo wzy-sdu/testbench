@@ -9,6 +9,7 @@ endfunction
 task body;
   super.body();
   rm.MSR.read(status, data, .parent(this));
+  $display("MSR = %h", data);
 endtask: body
 
 endclass: uart_host_msr_seq

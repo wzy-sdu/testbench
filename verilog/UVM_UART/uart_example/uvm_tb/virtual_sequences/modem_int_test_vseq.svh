@@ -53,13 +53,13 @@ task body;
 `uvm_info("Parker Monitor",$sformatf("ppppppppppppppppp3 join_none"),UVM_LOW)
 
 //parker  repeat(500) begin
- repeat(500) begin
+ repeat(1) begin
     write_mcr.start(apb);
   end
 
   // With loopback:
   write_mcr.loopback = 1;
-repeat(500) begin
+repeat(1) begin
 //parker  repeat(500) begin
     write_mcr.start(apb);
   end

@@ -30,6 +30,8 @@ endfunction
 task body;
   super.body();
   rm.IER.write(status, {'0, IER}, .parent(this));//前面用0填充
+  $display("IER, Interrupt Enable Register, writen!!!!");
+  $display("Receive Data Interrupt enable, Transmit Holding Register empty interrupt enable");
 endtask: body
 
 endclass: uart_int_enable_seq

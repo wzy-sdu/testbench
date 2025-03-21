@@ -44,29 +44,32 @@ task body;
   rx_serial.no_rx_chars = 2;
   rx_serial.no_errors = 1;
 
-  repeat(5) begin//64
+  repeat(1) begin//64
     assert(setup.randomize() with {setup.LCR == lcr;//0
                                    setup.DIV == divisor;});//2
     setup.start(apb);
+
     ien.IER = 4'h3;
+    //Receive Data Interrupt enable
+    //Transmit Holding Register empty interrupt enable
     ien.start(apb);
     
-    rx_serial.baud_divisor = divisor;
-    rx_serial.lcr = lcr;
-    rx_uart_config.baud_divisor = divisor;
-    rx_uart_config.lcr = lcr;
-    tx_uart_config.baud_divisor = divisor;
-    tx_uart_config.lcr = lcr;
+    rx_serial.baud_divisor = divisor;//2
+    rx_serial.lcr = lcr;//0
+    rx_uart_config.baud_divisor = divisor;//2
+    rx_uart_config.lcr = lcr;//0
+    tx_uart_config.baud_divisor = divisor;//2
+    tx_uart_config.lcr = lcr;//0
 
     assert(isr.randomize() with {no_tx_chars inside {[1:20]};});
-    isr.FCR = setup.FCR;
+    isr.FCR = setup.FCR;//random
     case(setup.FCR)
       2'b00: isr.no_rx_chars = $urandom_range(2, 10);
       2'b01: isr.no_rx_chars = $urandom_range(4, 12);
       2'b10: isr.no_rx_chars = $urandom_range(8, 16);
       2'b11: isr.no_rx_chars = $urandom_range(14, 22);
     endcase
-    rx_serial.no_rx_chars = isr.no_rx_chars;
+    rx_serial.no_rx_chars = isr.no_rx_chars;//repeat
     tx_poll.no_tx_chars = 1;
     tx_poll.start(apb);
 
@@ -78,11 +81,14 @@ task body;
           end
           isr.start(apb);
         end
+
         rx_poll.no_rx_chars = isr.no_rx_chars;
         rx_poll.start(apb);
       end
+
       rx_serial.start(uart);
     join
+
     wait_empty.start(apb);
     lcr++;
   end

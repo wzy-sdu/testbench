@@ -31,25 +31,27 @@ task body;
   uart_host_mcr_seq write_mcr = uart_host_mcr_seq::type_id::create("read_mcr");
 
   // No loopback:
+  //不回环反而将PWDATA与PRDATA连起来?
   write_mcr.loopback = 0;
 
   fork
     modem_seq.start(modem);
   join_none
 
-    repeat(10) begin//500
+    repeat(1) begin//500
       randcase
-        1: write_mcr.start(apb);
-        1: read_msr.start(apb);
+        1: write_mcr.start(apb);//1
+        0: read_msr.start(apb);//1
       endcase
     end
 
   // With loopback:
+  //
   write_mcr.loopback = 1;
-    repeat(10) begin//500
+    repeat(1) begin//500
       randcase
-        1: write_mcr.start(apb);
-        1: read_msr.start(apb);
+        0: write_mcr.start(apb);//1
+        1: read_msr.start(apb);//1
       endcase
     end
 

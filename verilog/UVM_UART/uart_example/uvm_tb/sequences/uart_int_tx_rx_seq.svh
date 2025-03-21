@@ -45,31 +45,38 @@ task body;
   endcase
 
   rm.IID.read(status, data, .parent(this));
+  $display("IIR = %h", data);
   if(data[0] == 0) begin
     case(data[3:1])
-      3'b011: begin
+      3'b011: begin//0x6
                 rm.LSR.read(status, data, .parent(this));
+                $display("LSR = %h", data);
+                $display("Reading the line status register");
               end
-      3'b010: begin
+      3'b010: begin//0x4
                 for(int i = 0; i < rx_fifo_threshold; i++) begin
                   rm.RXD.read(status, data, .parent(this));
+                  $display("RXD = %h", data);
                   no_rx_chars--;
                   if(no_rx_chars == 0) begin
                     break;
                   end
                 end
+                $display("RX FIFO drops below the trigger level");
               end
-      3'b001: begin
+      3'b001: begin//0x2
                 for(int j = 0; j < 16; j++) begin
                   if(no_tx_chars > 0) begin
                     data = $urandom();
                     rm.TXD.write(status, data, .parent(this));
+                    $display("TXD = %h", data);
                     no_tx_chars--;
                   end
                   else begin
                     break;
                   end
                 end
+                $display("Reading the IIR register or writing to the transmit data register");
               end
     endcase
   end

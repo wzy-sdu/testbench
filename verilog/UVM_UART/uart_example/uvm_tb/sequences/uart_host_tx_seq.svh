@@ -34,7 +34,7 @@ task body;
   int z;
 
   super.body();
-  rm.MCR.write(status, 32'h10, .parent(this));//loopback mode
+  //rm.MCR.write(status, 32'h10, .parent(this));//loopback mode
   i = 0;
   $display("tx_no_tx_chars = %h", no_tx_chars);//2
   while(i < no_tx_chars) begin

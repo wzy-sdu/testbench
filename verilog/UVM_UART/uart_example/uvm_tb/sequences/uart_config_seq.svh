@@ -37,9 +37,9 @@ task body;
   rm.LCR.read(status, data, .parent(this));
   $display("LCR = %h", data);
 
-  rm.FCR.write(status, {'0, FCR, 6'b0}, .parent(this));//1100_0000
+  rm.FCR.write(status, {'0, FCR, 6'b0}, .parent(this));//random
   //rm.FCR.read(status, data, .parent(this));//FCR只写
-  //$display("FCR = %h", data);
+  $display("FCR = %h", FCR);
 
   rm.DIV1.write(status, {'0, DIV[7:0]}, .parent(this));
   rm.DIV1.read(status, data, .parent(this));

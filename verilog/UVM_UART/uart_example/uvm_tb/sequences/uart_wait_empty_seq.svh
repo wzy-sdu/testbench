@@ -30,6 +30,7 @@ task body;
 
   super.body();
   rm.LSR.read(status, data, .parent(this));
+  $display("LSR = %h", data);
   // Wait for Tx Channel to empty
   while(!data[6]) begin
     rm.LSR.read(status, data, .parent(this));
